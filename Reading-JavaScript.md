@@ -102,7 +102,7 @@ this.defaultOptions = {
 9
 ```javascript
     swfTitle = 'JS/Flash audio component (SoundManager 2)'
-    ```
+```
 * A string: "JS/Flash audio component (SoundManager 2)" 
 
 10
