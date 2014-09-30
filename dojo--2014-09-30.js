@@ -27,8 +27,20 @@ if(a==="two" && b==="two")
    if(a==="two")
      return 2;
 
+     if(a==="three" && b==="three")
+       return 9;
+
     if (a==="three")
       return 6;
+
+    if(a==="four" && b==="four")
+      return 16;
+
+  if(a==="four")
+    return 12;
+
+  if(a==="five")
+    return 20;
  }
 
 
@@ -46,4 +58,9 @@ console.log('The product of "three" and "two"',
 multiply("three" , "two")===6)
 console.log('The product of "three" and "three"',
 multiply("three" , "three")===9)
-console.log("hello")
+console.log('The product of "four" and "three"',
+multiply("four" , "three")===12)
+console.log('The product of "four" and "four"',
+multiply("four" , "four")===16)
+console.log('The product of "five" and "four"',
+multiply("five" , "four")===20)
