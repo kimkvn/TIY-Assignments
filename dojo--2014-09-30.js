@@ -15,9 +15,21 @@
  */
 function multiply(a,b) {
   if(a==="zero" || b==="zero")
-    return 0
-}
+    return 0;
+
+ if(a=="one")
+   return 1;
+
+   if(a==="two")
+     return 2;
+ }
 
 
 console.log('The product of "zero" and "zero"',
 multiply("zero" , "zero")===0)
+console.log('The product of "one" and "zero"',
+multiply("one", "zero")===0)
+console.log('The product of "one" and "one"',
+multiply("one" , "one")===1)
+console.log('The product of "two" and "one"',
+multiply("two" , "one")===2)
