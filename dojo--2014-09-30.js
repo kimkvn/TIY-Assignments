@@ -46,3 +46,4 @@ console.log('The product of "three" and "two"',
 multiply("three" , "two")===6)
 console.log('The product of "three" and "three"',
 multiply("three" , "three")===9)
+console.log("hello")
