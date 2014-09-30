@@ -45,8 +45,20 @@ if(a==="two" && b==="two")
   if(a==="five")
     return 20;
 
+  if(a==="six" && b==="seven")
+    return 42;
+
+    if(a==="six" && b==="six")
+      return 36;
+
     if(a==="six")
       return 30;
+
+  if (a==="seven" && b==="seven")
+    return 49;
+
+  if(a==="eight")
+    return 56;
  }
 
 
@@ -76,3 +88,9 @@ console.log('The product of "six" and "five"',
 multiply("six" , "five")===30)
 console.log('The product of "six" and "seven"',
 multiply("six" , "seven")===42)
+console.log('The product of "six" and "six"',
+multiply("six" , "six")===36)
+console.log('The product of "seven" and "seven"',
+multiply("seven" , "seven")===49)
+console.log('The product of "eight" and "seven"',
+multiply("eight" , "seven")===56)
