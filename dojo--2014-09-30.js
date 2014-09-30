@@ -39,8 +39,14 @@ if(a==="two" && b==="two")
   if(a==="four")
     return 12;
 
+    if(a==="five" && b==="five")
+      return 25;
+
   if(a==="five")
     return 20;
+
+    if(a==="six")
+      return 30;
  }
 
 
@@ -64,3 +70,9 @@ console.log('The product of "four" and "four"',
 multiply("four" , "four")===16)
 console.log('The product of "five" and "four"',
 multiply("five" , "four")===20)
+console.log('The product of "five" and "five"',
+multiply("five" , "five")===25)
+console.log('The product of "six" and "five"',
+multiply("six" , "five")===30)
+console.log('The product of "six" and "seven"',
+multiply("six" , "seven")===42)
