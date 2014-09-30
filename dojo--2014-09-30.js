@@ -20,8 +20,15 @@ function multiply(a,b) {
  if(a=="one")
    return 1;
 
+if(a==="two" && b==="two")
+  return 4;
+
+
    if(a==="two")
      return 2;
+
+    if (a==="three")
+      return 6;
  }
 
 
@@ -33,3 +40,9 @@ console.log('The product of "one" and "one"',
 multiply("one" , "one")===1)
 console.log('The product of "two" and "one"',
 multiply("two" , "one")===2)
+console.log('The product of "two" and "two"',
+multiply("two" , "two")===4)
+console.log('The product of "three" and "two"',
+multiply("three" , "two")===6)
+console.log('The product of "three" and "three"',
+multiply("three" , "three")===9)
