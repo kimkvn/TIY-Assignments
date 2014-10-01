@@ -81,7 +81,11 @@ function doubleDigits(a,b){
 }
 
 function tripleDigits(a,b,c){
-  
+  if (a===1){
+    if (b===0 && c==0){return "one hundred"};
+      else if (b===0){return "one hundred "+singleDigit(c)};
+        else return "one hundred "+
+  }
 }
 
 
@@ -109,3 +113,5 @@ console.log(changeNum(53));
 console.log(changeNum(88));
 console.log(changeNum(73));
 console.log(changeNum(60));
+console.log('given the number 100, it returns "one hundred"',
+  changeNum(100) === "one hundred");
