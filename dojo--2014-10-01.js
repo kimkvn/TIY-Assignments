@@ -44,9 +44,22 @@ function doubleDigits(a,b){
     }
 
   if (a===2){
+    if(b===0){return "twenty"}
     return "twenty "+singleDigit(b);
     }
-  
+    if (a===3){
+      if(b===0){return "thirty"}
+      return "thirty "+singleDigit(b);
+      }
+    if (a===4){
+      if(b===0){return "forty"}
+      return "forty "+singleDigit(b);
+      }
+    if (a===5){
+      if(b===0){return "fifty"}
+      return "fifty "+singleDigit(b);
+      }
+
 
 }
 
@@ -60,9 +73,17 @@ function doubleDigits(a,b){
 
 console.log ('given the number 2, it returns "two"',
   changeNum(2) === "two");
-console.log ('given the number 2, it returns "two"',
+console.log ('given the number 4, it returns "four"',
   changeNum(4) === "four");
-console.log ('given the number 2, it returns "two"',
+console.log ('given the number 8, it returns "eight"',
   changeNum(8) === "eight");
+console.log(changeNum(16));
 console.log ('given the number 23, it returns "twenty three"',
   changeNum(23) === "twenty three");
+console.log('given the number 20, it returns "twenty"',
+  changeNum(20) === "twenty");
+console.log('given the number 35, it returns "thirty five"',
+  changeNum(35) === "thirty five");
+console.log('given the number 50, it returns "fifty"',
+  changeNum(50) === "fifty");
+console.log(changeNum(53));
