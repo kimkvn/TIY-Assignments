@@ -86,6 +86,31 @@ function tripleDigits(a,b,c){
       if (b===0){return "one hundred "+singleDigit(c)}
         else {return "one hundred "+ doubleDigits(b,c)};
   }
+  if (a===2){
+    if (b===0 && c==0){return "two hundred"};
+      if (b===0){return "two hundred "+singleDigit(c)}
+        else {return "two hundred "+ doubleDigits(b,c)};
+  }
+  if (a===3){
+    if (b===0 && c==0){return "three hundred"};
+      if (b===0){return "three hundred "+singleDigit(c)}
+        else {return "three hundred "+ doubleDigits(b,c)};
+  }
+  if (a===4){
+    if (b===0 && c==0){return "four hundred"};
+      if (b===0){return "four hundred "+singleDigit(c)}
+        else {return "four hundred "+ doubleDigits(b,c)};
+  }
+  if (a===5){
+    if (b===0 && c==0){return "five hundred"};
+      if (b===0){return "five hundred "+singleDigit(c)}
+        else {return "five hundred "+ doubleDigits(b,c)};
+  }
+  if (a===6){
+    if (b===0 && c==0){return "six hundred"};
+      if (b===0){return "six hundred "+singleDigit(c)}
+        else {return "six hundred "+ doubleDigits(b,c)};
+  }
 }
 
 
@@ -119,3 +144,8 @@ console.log('given the number 105, it returns "one hundred five"',
   changeNum(105) === "one hundred five");
 console.log('given the number 134, it returns "one hundred thirty five',
   changeNum(135) === "one hundred thirty five");
+console.log(changeNum(645));
+console.log(changeNum(264));
+console.log(changeNum(504));
+console.log(changeNum(300));
+console.log(changeNum(499));
