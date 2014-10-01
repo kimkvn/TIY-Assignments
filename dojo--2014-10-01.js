@@ -10,8 +10,10 @@
     return singleDigit(Math.floor(arrDigits[0]));
   }
   if(arrDigits.length === 2){
-
     return doubleDigits(Math.floor(arrDigits[0]) , Math.floor(arrDigits[1]));
+  }
+  if(arrDigits.length === 3){
+    return tripleDigits(Math.floor(arrDigits[0]), Math.floor(arrDigits[1]), Math.floor(arrDigits[2]));
   }
 }
 
@@ -44,26 +46,43 @@ function doubleDigits(a,b){
     }
 
   if (a===2){
-    if(b===0){return "twenty"}
+      if(b===0){return "twenty"}
     return "twenty "+singleDigit(b);
     }
-    if (a===3){
+  if (a===3){
       if(b===0){return "thirty"}
-      return "thirty "+singleDigit(b);
-      }
-    if (a===4){
+    return "thirty "+singleDigit(b);
+    }
+  if (a===4){
       if(b===0){return "forty"}
-      return "forty "+singleDigit(b);
-      }
-    if (a===5){
+    return "forty "+singleDigit(b);
+    }
+  if (a===5){
       if(b===0){return "fifty"}
-      return "fifty "+singleDigit(b);
-      }
-
+    return "fifty "+singleDigit(b);
+    }
+  if (a===6){
+      if(b===0){return "sixty"}
+    return "sixty "+singleDigit(b);
+    }
+  if (a===7){
+      if(b===0){return "seventy"}
+    return "seventy "+singleDigit(b);
+    }
+  if (a===8){
+      if(b===0){return "eighty"}
+    return "eighty "+singleDigit(b);
+    }
+  if (a===9){
+      if(b===0){return "ninety"}
+    return "ninety "+singleDigit(b);
+    }
 
 }
 
-
+function tripleDigits(a,b,c){
+  
+}
 
 
 
@@ -87,3 +106,6 @@ console.log('given the number 35, it returns "thirty five"',
 console.log('given the number 50, it returns "fifty"',
   changeNum(50) === "fifty");
 console.log(changeNum(53));
+console.log(changeNum(88));
+console.log(changeNum(73));
+console.log(changeNum(60));
