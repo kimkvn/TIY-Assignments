@@ -113,11 +113,31 @@ function tripleDigits(a,b,c){
       if (b===0){return "six hundred "+singleDigit(c)}
         else {return "six hundred "+ doubleDigits(b,c)};
   }
+  if (a===7){
+    if (b===0 && c==0){return "seven hundred"};
+      if (b===0){return "seven hundred "+singleDigit(c)}
+        else {return "seven hundred "+ doubleDigits(b,c)};
+  }
+  if (a===8){
+    if (b===0 && c==0){return "eight hundred"};
+      if (b===0){return "eight hundred "+singleDigit(c)}
+        else {return "eight hundred "+ doubleDigits(b,c)};
+  }
+  if (a===9){
+    if (b===0 && c==0){return "nine hundred"};
+      if (b===0){return "nine hundred "+singleDigit(c)}
+        else {return "nine hundred "+ doubleDigits(b,c)};
+  }
 }
 
 
+var x=960;
+while (x<1000){
+ console.log(changeNum(x));
+ x++
+}
 
-
+/*
 console.log ('given the number 2, it returns "two"',
   changeNum(2) === "two");
 console.log ('given the number 4, it returns "four"',
@@ -149,3 +169,4 @@ console.log(changeNum(504));
 console.log(changeNum(300));
 console.log(changeNum(499));
 console.log(changeNum(12));
+*/
