@@ -10,6 +10,7 @@
     return singleDigit(arrDigits[0]);
   }
   if(arrDigits.length === 2){
+
     return doubleDigits(arrDigits[0] , arrDigits[1]);
   }
 }
@@ -30,6 +31,21 @@ function singleDigit(a){
 }
 
 function doubleDigits(a,b){
+  if (a==="1"){
+    if (b==="1"){return "eleven";}
+    if (b==="2"){return "twelve";}
+    if (b==="3"){return "thirteen";}
+    if (b==="4"){return "fourteen";}
+    if (b==="5"){return "fifteen";}
+    if (b==="6"){return "sixteen";}
+    if (b==="7"){return "seventeen";}
+    if (b==="8"){return "eighteen";}
+    if (b==="9"){return "nineteen" ;}
+    if (b==="0"){return "twenty"};
+    }
+
+  
+
   if (a==="2"){
     if (b==="3"){
       return "twenty three";
@@ -51,6 +67,6 @@ console.log ('given the number 2, it returns "two"',
 console.log ('given the number 2, it returns "two"',
   changeNum(4) === "four");
 console.log ('given the number 2, it returns "two"',
-    changeNum(8) === "eight");
+  changeNum(8) === "eight");
 console.log ('given the number 23, it returns "twenty three"',
   changeNum(23) === "twenty three");
