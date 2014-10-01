@@ -83,8 +83,9 @@ function doubleDigits(a,b){
 function tripleDigits(a,b,c){
   if (a===1){
     if (b===0 && c==0){return "one hundred"};
-      else if (b===0){return "one hundred "+singleDigit(c)};
-        else return "one hundred "+
+/*      else if (b===0){return "one hundred "+singleDigit(c)};
+        else {return "one hundred "+ doubleDigits(b,c)};
+*/
   }
 }
 
