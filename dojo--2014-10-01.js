@@ -43,6 +43,7 @@ function doubleDigits(a,b){
     if (b===7){return "seventeen";}
     if (b===8){return "eighteen";}
     if (b===9){return "nineteen";}
+    if (b===0){return "ten";}
     }
 
   if (a===2){
@@ -116,9 +117,6 @@ function tripleDigits(a,b,c){
 
 
 
-
-
-
 console.log ('given the number 2, it returns "two"',
   changeNum(2) === "two");
 console.log ('given the number 4, it returns "four"',
@@ -149,3 +147,9 @@ console.log(changeNum(264));
 console.log(changeNum(504));
 console.log(changeNum(300));
 console.log(changeNum(499));
+
+var x = 1
+while (x < 700){
+  console.log(changeNum(x));
+  x++;
+}
