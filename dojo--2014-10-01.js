@@ -34,6 +34,7 @@ function singleDigit(a){
 
 function doubleDigits(a,b){
   if (a===1){
+    if (b===0){return "ten";}
     if (b===1){return "eleven";}
     if (b===2){return "twelve";}
     if (b===3){return "thirteen";}
@@ -43,7 +44,7 @@ function doubleDigits(a,b){
     if (b===7){return "seventeen";}
     if (b===8){return "eighteen";}
     if (b===9){return "nineteen";}
-    if (b===0){return "ten";}
+
     }
 
   if (a===2){
@@ -147,9 +148,4 @@ console.log(changeNum(264));
 console.log(changeNum(504));
 console.log(changeNum(300));
 console.log(changeNum(499));
-
-var x = 1
-while (x < 700){
-  console.log(changeNum(x));
-  x++;
-}
+console.log(changeNum(12));
