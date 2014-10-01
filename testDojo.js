@@ -16,9 +16,28 @@ function conway(cell, neighbors){
 
 function numberOfLiveNeighbors(){
 
-  if (neighbors[0] == true){
-      return 1;
+  var liveCells = 0;
+
+  while ( index < neighbors.length ){
+    if (neighbors[index] === true){
+      liveCells++;
+    }
+    index++;
   }
+  return liveCells;
+
+  if (neighbors[0] === true){
+      liveCells ++; //liveCells = liveCells + 1
+  }
+  if (neighbors[1] === true){
+      liveCells++;
+  }
+  if (neighbors[2] === true){
+      liveCells++;
+  }
+  //...and so on, so forth.
+
+
   //with each neighbor...
     // If neighbor is TRUE
       //add 1 live neighbor
@@ -59,8 +78,6 @@ var cell = false,
       false,        false,
       false, false, false
     ];
-
-///////TESTING
 
 assert.equal(conway(cell, neighbors), false,
 'an empty board should remain empty') || console.log('pass!');
