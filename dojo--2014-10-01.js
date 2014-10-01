@@ -40,17 +40,13 @@ function doubleDigits(a,b){
     if (b===6){return "sixteen";}
     if (b===7){return "seventeen";}
     if (b===8){return "eighteen";}
-    if (b===9){return "nineteen" ;}
-    if (b===0){return "twenty"};
+    if (b===9){return "nineteen";}
     }
-
-
 
   if (a===2){
-    if (b===3){
-      return "twenty three";
+    return "twenty "+singleDigit(b);
     }
-  }
+  
 
 }
 
