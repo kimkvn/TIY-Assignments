@@ -44,11 +44,8 @@ function numChange(a){
   var arrDigits = [];
   arrDigits = a.toString().split("");
 
-    if (arrDigits.length < 20){return(ones[a])};
+    if (arrDigits.length < 20){return(ones[arrDigits[0]+arrDigits[1]])}
 
-    if (arrDigits.length < 100){
-      return(twos[a], ones[b])
-    };
 
 
 
@@ -59,4 +56,3 @@ function numChange(a){
 console.log(numChange(11))
 console.log(numChange(8))
 console.log(numChange(23))
-console.log(arrDigits.length)
