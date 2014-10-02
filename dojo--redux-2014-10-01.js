@@ -67,8 +67,8 @@ function numChange(a){
         if (a % 10 === 0){     //numbers between 100-999 and divisible by 10
         return(hundreds[value[0]]+tens[value[1]]);
         }
-          if (a < 120 && a > 110) {
-          return(hundreds[value[0]] + teens[value[1]]);
+          if (value[1] < 2) {   //hundreds digits, _10 < x < _20
+          return(hundreds[value[0]] + teens[value[2]]);
           }
       return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
     }
@@ -77,7 +77,10 @@ function numChange(a){
 
 }
 
-
+var balls=700;
+while (balls<750){
+ console.log(numChange(balls));
+ balls++}
 //////////////////////TEST////////////////////
 console.log(numChange(0))
 console.log(numChange(11))
@@ -96,4 +99,4 @@ console.log(numChange(520))
 console.log(numChange(270))
 console.log(numChange(214))
 console.log(numChange(119))
-console.log(value[numChange(3)])
+console.log(numChange(517))
