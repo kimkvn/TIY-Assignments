@@ -47,6 +47,10 @@ var hundreds = ["zero", "one hundred", "two hundred", "three hundred",
 "four hundred", "five hundred", "six hundred", "seven hundred",
 "eight hundred", "nine hundred"];
 
+var thousands = ["zero", "one thousand", "two thousand", "three thousand",
+"four thousand", "five thousand", "six thousand", "seven thousand",
+"eight thousand", "nine thousand"];
+
 function numChange(a){
 
   var value = a.toString().split("");
@@ -73,14 +77,27 @@ function numChange(a){
       return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
     }
 
-
+  if (a < 10000){
+    if (a % 1000 === 0){
+      return(thousands[value[0]]);
+    }
+      if (a % 100 === 0){
+        return(thousands[value[0]] + hundreds[value[1]]);
+      }
+        if (a % 10 === 0){
+        return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]]);
+        }
+  }
 
 }
 
-var balls=700;
+// testing large quantities of #s at once
+/*var balls=700;
 while (balls<750){
  console.log(numChange(balls));
  balls++}
+ */
+
 //////////////////////TEST////////////////////
 console.log(numChange(0))
 console.log(numChange(11))
@@ -100,3 +117,9 @@ console.log(numChange(270))
 console.log(numChange(214))
 console.log(numChange(119))
 console.log(numChange(517))
+console.log(numChange(3000))
+console.log(numChange(8000))
+console.log(numChange(5400))
+console.log(numChange(1100))
+console.log(numChange(3210))
+console.log(numChange(8290))
