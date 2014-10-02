@@ -15,6 +15,9 @@
   if(arrDigits.length === 3){
     return tripleDigits(Math.floor(arrDigits[0]), Math.floor(arrDigits[1]), Math.floor(arrDigits[2]));
   }
+  if(arrDigits.length === 4){
+    return quadDigits(Math.floor(arrDigits[0]), Math.floor(arrDigits[1]), Math.floor(arrDigits[2]), Math.floor(arrDigits[3]));
+  }
 }
 
 
@@ -130,13 +133,27 @@ function tripleDigits(a,b,c){
   }
 }
 
+function quadDigits(a,b,c,d){
+if (a===1){
+  return "one thousand";
+  }
+}
+    //if (b===0 && c==0){return "one thousand "+singleDigit(d)};
+      //if(b===0){return "one thousand "+doubleDigit(c,d)}
+        //else {return "one thousand "+ tripleDigits(b,c,d)};
 
-var x=960;
+*/
+console.log ('given the number 1000, it returns "one thousand"',
+  changeNum(1000) === "one thousand");
+//Created a little somethin' to test large groups of numbers
+//as the no. of digits I'm testing for, grows.
+/*var x=960;
 while (x<1000){
  console.log(changeNum(x));
  x++
 }
 
+//.............Testing bench.
 /*
 console.log ('given the number 2, it returns "two"',
   changeNum(2) === "two");
