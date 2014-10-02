@@ -37,22 +37,36 @@ var ones = ["zero", "one", "two", "three", "four", "five", "six",
 "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
 "nineteen"];
 
+var teens = ["zero", "eleven", "twelve", "thirteen", "fourteen",
+"fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+
 var tens = ["zero", "ten", "twenty", "thirty", "forty", "fifty",
 "sixty", "seventy", "eighty", "ninety"];
+
+var hundreds = ["zero", "one hundred", "two hundred", "three hundred",
+"four hundred", "five hundred", "six hundred", "seven hundred",
+"eight hundred", "nine hundred"];
 
 function numChange(a){
 
   var value = a.toString().split("");
 
     if (a < 20){return(ones[a])}; //for numbers 0-19
-
-    if (a < 100){
+////////////////////////////////////////////////////////////
+    if (a < 100){                 //for numbers 20-99
       if (a % 10 === 0){
         return(tens[value[0]]);
       }
       return(tens[value[0]] + ones[value[1]])
     };
-
+////////////////////////////////////////////////////////////
+    if (a < 1000){                 //for numbers 100-999
+      if (a % 100 === 0){
+        return(hundreds[value[0]]);
+      }
+      if(value[])
+      return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
+    }
 
 
 
@@ -68,3 +82,8 @@ console.log(numChange(42))
 console.log(numChange(50))
 console.log(numChange(60))
 console.log(numChange(79))
+console.log(numChange(800))
+console.log(numChange(300))
+console.log(numChange(214))
+console.log(numChange(445))
+console.log(numChange(520))
