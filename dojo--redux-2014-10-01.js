@@ -64,7 +64,12 @@ function numChange(a){
       if (a % 100 === 0){
         return(hundreds[value[0]]);
       }
-      if(value[])
+        if (a % 10 === 0){     //numbers between 100-999 and divisible by 10
+        return(hundreds[value[0]]+tens[value[1]]);
+        }
+          if (a < 120 && a > 110) {
+          return(hundreds[value[0]] + teesn[value[1]]);
+          }
       return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
     }
 
@@ -84,6 +89,8 @@ console.log(numChange(60))
 console.log(numChange(79))
 console.log(numChange(800))
 console.log(numChange(300))
-console.log(numChange(214))
 console.log(numChange(445))
 console.log(numChange(520))
+console.log(numChange(270))
+console.log(numChange(214))
+console.log(numChange(119))
