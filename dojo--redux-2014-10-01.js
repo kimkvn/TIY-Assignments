@@ -51,7 +51,7 @@ function numChange(a){
 
   var value = a.toString().split("");
 
-    if (a < 20){return(ones[value[0])}; //for numbers 0-19
+    if (a < 20){return(ones[a])}; //for numbers 0-19
 ////////////////////////////////////////////////////////////
     if (a < 100){                 //for numbers 20-99
       if (a % 10 === 0){
@@ -81,7 +81,8 @@ function numChange(a){
 //////////////////////TEST////////////////////
 console.log(numChange(0))
 console.log(numChange(11))
-console.log(numChange(13))
+console.log(numChange(14))
+console.log(numChange(1))
 console.log(numChange(8))
 console.log(numChange(23))
 console.log(numChange(42))
@@ -95,3 +96,4 @@ console.log(numChange(520))
 console.log(numChange(270))
 console.log(numChange(214))
 console.log(numChange(119))
+console.log(value[numChange(3)])
