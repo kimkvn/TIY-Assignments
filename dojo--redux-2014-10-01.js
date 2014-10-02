@@ -78,15 +78,11 @@ function numChange(a){
     }
 
   if (a < 10000){
-    if (a % 1000 === 0){
-      return(thousands[value[0]]);
-    }
-      if (a % 100 === 0){
-        return(thousands[value[0]] + hundreds[value[1]]);
-      }
-        if (a % 10 === 0){
-        return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]]);
-        }
+    if (a % 1000 === 0){return(thousands[value[0]]);}
+      if (a % 100 === 0){return(thousands[value[0]] + hundreds[value[1]]);}
+        if (a % 10 === 0){return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]]);}
+          if (value[2] < 2) {return(thousands[value[0]] + hundreds[value[1]] + teens[value[3]]);}
+    return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]] + ones[value[3]])
   }
 
 }
@@ -123,3 +119,6 @@ console.log(numChange(5400))
 console.log(numChange(1100))
 console.log(numChange(3210))
 console.log(numChange(8290))
+console.log(numChange(7414))
+console.log(numChange(4912))
+console.log(numChange(1234))
