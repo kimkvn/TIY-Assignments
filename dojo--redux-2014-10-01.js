@@ -46,7 +46,12 @@ function numChange(a){
 
     if (a < 20){return(ones[a])};
 
-    if (a < 100){return(value[tens[0]] + value[ones[1]])}
+    if (a < 100){
+      if (a % 10 === 0){
+        return(tens[value[0]]);
+      }
+      return(tens[value[0]] + ones[value[1]])
+    };
 
 
 
@@ -58,3 +63,5 @@ function numChange(a){
 console.log(numChange(11))
 console.log(numChange(8))
 console.log(numChange(23))
+console.log(numChange(42))
+console.log(numChange(50))
