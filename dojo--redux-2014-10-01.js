@@ -37,13 +37,21 @@ var ones = ["zero", "one", "two", "three", "four", "five", "six",
 "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
 "nineteen"];
 
+var twos = ["zero", "ten", "twenty", "thirty", "forty", "fifty",
+"sixty", "seventy", "eighty", "ninety"];
+
 function numChange(a){
   var arrDigits = [];
   arrDigits = a.toString().split("");
 
-    if (arrDigits.length < 20){
-    return(ones[a])
-    }
+    if (arrDigits.length < 20){return(ones[a])};
+
+    if (arrDigits.length < 100){
+      return(twos[a], ones[b])
+    };
+
+
+
 }
 
 
@@ -51,3 +59,4 @@ function numChange(a){
 console.log(numChange(11))
 console.log(numChange(8))
 console.log(numChange(23))
+console.log(arrDigits.length)
