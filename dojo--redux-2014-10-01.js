@@ -41,10 +41,12 @@ var tens = ["zero", "ten", "twenty", "thirty", "forty", "fifty",
 "sixty", "seventy", "eighty", "ninety"];
 
 function numChange(a){
-  
-  var split = a.toString().split("");
 
-    if (split.length < 20){return(ones[a])};
+  var value = a.toString().split("");
+
+    if (a < 20){return(ones[a])};
+
+    if (a < 100){return(value[tens[0]] + value[ones[1]])}
 
 
 
