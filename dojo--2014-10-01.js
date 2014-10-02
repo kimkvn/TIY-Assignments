@@ -135,16 +135,19 @@ function tripleDigits(a,b,c){
 
 function quadDigits(a,b,c,d){
 if (a===1){
-  return "one thousand";
+    if(b===0 && c===0 && d===0){return "one thousand"};
+      if(b===0 && c==0){return "one thousand "+singleDigit(d)};
   }
+
 }
     //if (b===0 && c==0){return "one thousand "+singleDigit(d)};
       //if(b===0){return "one thousand "+doubleDigit(c,d)}
         //else {return "one thousand "+ tripleDigits(b,c,d)};
 
-*/
+
 console.log ('given the number 1000, it returns "one thousand"',
   changeNum(1000) === "one thousand");
+console.log(changeNum(1004))
 //Created a little somethin' to test large groups of numbers
 //as the no. of digits I'm testing for, grows.
 /*var x=960;
