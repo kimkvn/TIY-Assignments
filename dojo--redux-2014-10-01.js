@@ -41,25 +41,13 @@ function numChange(a){
   var arrDigits = [];
   arrDigits = a.toString().split("");
 
-    if (arrDigits.length === 1){
-    console.log(ones[a])
+    if (arrDigits.length < 20){
+    return(ones[a])
     }
 }
 
 
-
-/** var arrDigits = [];
-arrDigits = a.toString().split("");
-
-if (arrDigits.length === 1){
-  console.log(ones[a])
-}
-
-function numChange(a){
-  if (a===2){
-  return "two";}
-}
-*/
-
 //////////////////////TEST////////////////////
-console.log(numChange(6))
+console.log(numChange(11))
+console.log(numChange(8))
+console.log(numChange(23))
