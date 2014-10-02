@@ -37,13 +37,29 @@ var ones = ["zero", "one", "two", "three", "four", "five", "six",
 "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
 "nineteen"];
 
-var arrDigits = [];
+function numChange(a){
+  var arrDigits = [];
+  arrDigits = a.toString().split("");
+
+    if (arrDigits.length === 1){
+    console.log(ones[a])
+    }
+}
+
+
+
+/** var arrDigits = [];
 arrDigits = a.toString().split("");
+
+if (arrDigits.length === 1){
+  console.log(ones[a])
+}
 
 function numChange(a){
   if (a===2){
   return "two";}
 }
+*/
 
-console.log('Given 2 should be "two"',
-  numChange(2)==="two");
+//////////////////////TEST////////////////////
+console.log(numChange(6))
