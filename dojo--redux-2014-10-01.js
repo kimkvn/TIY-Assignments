@@ -4,6 +4,7 @@
 *  assert(actual === expected) || console.log(success);
 *}
 */
+
 /** Check writing
 *
 * Given a Number representing money -- $1234.56 -- convert
@@ -16,8 +17,7 @@
 * practice here, but backwards. Yey.
 */
 
-/**
-* Sample Data:
+/** Sample Data:
 * 1234.56 => "one thousand, two hundred thirty four, and 56/100s"
 * 123.45 => "one hundred twenty three and 45/100s"
 * 12.34 => "twelve and 34/100s"
@@ -32,6 +32,13 @@
 * Make up your own, too.
 */
 
+var ones = ["zero", "one", "two", "three", "four", "five", "six",
+"seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+"fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
+"nineteen"];
+
+var arrDigits = [];
+arrDigits = a.toString().split("");
 
 function numChange(a){
   if (a===2){
