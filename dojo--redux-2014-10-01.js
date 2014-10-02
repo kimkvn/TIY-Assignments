@@ -55,26 +55,19 @@ function numChange(a){
 
   var value = a.toString().split("");
 
+//////////0-19///////////////////////////////////////////////
     if (a < 20){return(ones[a])}; //for numbers 0-19
-////////////////////////////////////////////////////////////
-    if (a < 100){                 //for numbers 20-99
-      if (a % 10 === 0){
-        return(tens[value[0]]);
-      }
-      return(tens[value[0]] + ones[value[1]])
-    };
-////////////////////////////////////////////////////////////
-    if (a < 1000){                 //for numbers 100-999
-      if (a % 100 === 0){
-        return(hundreds[value[0]]);
-      }
-        if (a % 10 === 0){     //numbers between 100-999 and divisible by 10
-        return(hundreds[value[0]]+tens[value[1]]);
-        }
-          if (value[1] < 2) {   //hundreds digits, _10 < x < _20
-          return(hundreds[value[0]] + teens[value[2]]);
-          }
-      return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
+///////////20-99/////////////////////////////////////////////////
+    if (a < 100){
+      if (a % 10 === 0){return(tens[value[0]]);}
+    return(tens[value[0]] + ones[value[1]])
+    }
+///////////100-999/////////////////////////////////////////////////
+    if (a < 1000){
+      if (a % 100 === 0){return(hundreds[value[0]]);}
+        if (a % 10 === 0){return(hundreds[value[0]]+tens[value[1]]);}
+          if (value[1] < 2) {return(hundreds[value[0]] + teens[value[2]]);}
+    return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
     }
 
   if (a < 10000){
