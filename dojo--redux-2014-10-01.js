@@ -37,14 +37,14 @@ var ones = ["zero", "one", "two", "three", "four", "five", "six",
 "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
 "nineteen"];
 
-var twos = ["zero", "ten", "twenty", "thirty", "forty", "fifty",
+var tens = ["zero", "ten", "twenty", "thirty", "forty", "fifty",
 "sixty", "seventy", "eighty", "ninety"];
 
 function numChange(a){
-  var arrDigits = [];
-  arrDigits = a.toString().split("");
+  
+  var split = a.toString().split("");
 
-    if (arrDigits.length < 20){return(ones[arrDigits[0]+arrDigits[1]])}
+    if (split.length < 20){return(ones[a])};
 
 
 
