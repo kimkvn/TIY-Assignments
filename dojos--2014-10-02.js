@@ -161,6 +161,7 @@ function neighborsOf(a,b){
 
 
 }
-
+console.log(neighborsOf(2,0))
+console.log(neighborsOf(1,1))
 console.log(neighborsOf(0,0))
 console.log("MY SANITY")
