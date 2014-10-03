@@ -133,12 +133,14 @@ function board(){
         [ false, false, false ],
     ];
 }
+
+
 function tick(){}
 function conway(cells, neighbors){}
 function neighborsOf(a,b){
 
     if (a === 0 && b=== 0){
-      return [0][1], [1][0], [1][1]
+      return ["1,0", "0,1", "1,1"]
     };
 
 
