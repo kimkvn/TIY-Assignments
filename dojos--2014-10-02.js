@@ -151,9 +151,9 @@ var pos = board()
 function neighborsOf(a,b){
 
     if (a === 0 && b=== 0){
-      return [pos[1][0], pos[0][1], pos[1][1]]};
+      return [pos[0][1], pos[1][0], pos[1][1]]};
     if (a === 0 && b=== 1){
-      return [pos[0][0], pos[1][0], pos[1][1], pos[1][2], pos[0][2]]};
+      return [pos[0][0], pos[0][2], pos[1][0], pos[1][1], pos[1][2]]};
     if (a === 0 && b=== 2){
       return [pos[0][1], pos[1][1], pos[0][2]]};
     if (a === 1 && b=== 0){
