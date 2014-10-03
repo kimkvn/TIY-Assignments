@@ -133,7 +133,11 @@ function board(){
         [ false, false, false ],
     ];
 }
-console.log(board()[2][2])  //REALLY FUCKING IMPORTANT///
+console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the function board()
+//to tell whether the cell is true/false? board(), while a function, basically behaves as an
+//array. To call the identity of a thing in an array while knowing its location, input
+//<array[x] returns the thing @x. To get the T/F value of board() ::: board()[x][y]
+//HELL YEAH. Thank you Brian.
 
 function tick(){}
 function conway(cells, neighbors){}
@@ -142,7 +146,7 @@ function conway(cells, neighbors){}
 function neighborsOf(a,b){
 
     if (a === 0 && b=== 0){
-      return ["1,0", "0,1", "1,1"]};
+      return [board()[1][0], "0,1", "1,1"]};
     if (a === 0 && b=== 1){
       return ["0,0", "1,0", "1,1", "1,2", "0,2"]};
     if (a === 0 && b=== 2){
