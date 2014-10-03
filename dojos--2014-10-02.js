@@ -133,6 +133,8 @@ function board(){
         [ false, false, false ],
     ];
 }
+
+
 console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the function board()
 //to tell whether the cell is true/false? board(), while a function, basically behaves as an
 //array. To call the identity of a thing in an array while knowing its location, input
@@ -142,8 +144,10 @@ console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the fu
 function tick(){}
 function conway(cells, neighbors){}
 
-var pos = board()
 
+
+
+var pos = board()
 function neighborsOf(a,b){
 
     if (a === 0 && b=== 0){
@@ -155,7 +159,7 @@ function neighborsOf(a,b){
     if (a === 1 && b=== 0){
       return [pos[0][0], pos[0][1], pos[1][1], pos[2][0], pos[2][1]]};
     if (a === 1 && b=== 1){
-      return [pos[0][0], pos[1][0], pos[2][0], pos[1][0], pos[1][2], pos[2][0], pos[2][1], pos[2][2]]};
+      return [pos[0][0], pos[0][1], pos[0][2], pos[1][0], pos[1][2], pos[2][0], pos[2][1], pos[2][2]]};
     if (a === 1 && b=== 2){
       return [pos[0][1], pos[0][2], pos[1][1], pos[2][1], pos[2][2]]};
     if (a === 2 && b=== 0){
