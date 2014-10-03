@@ -157,17 +157,22 @@ function neighborsOf(a,b){
     if (a === 1 && b=== 1){
       return [pos[0][0], pos[1][0], pos[2][0], pos[1][0], pos[1][2], pos[2][0], pos[2][1], pos[2][2]]};
     if (a === 1 && b=== 2){
-      return ["0,1", "0,2", "1,1", "2,1", "2,2"]};
+      return [pos[0][1], pos[0][2], pos[1][1], pos[2][1], pos[2][2]]};
     if (a === 2 && b=== 0){
-      return ["1,0", "1,1", "2,1"]};
+      return [pos[1][0], pos[1][1], pos[2][1]]};
     if (a === 2 && b=== 1){
-      return ["1,0", "1,1", "1,2", "2,1", "2,2"]};
+      return [pos[1][0], pos[1][1], pos[1][2], pos[2][1], pos[2][2]]};
     if (a === 2 && b=== 2){
-      return ["1,1", "1,2", "2,1"]};
+      return [pos[1][1], pos[1][2], pos[2][1]]};
 }
 
-
-console.log(neighborsOf(2,0))
-console.log(neighborsOf(1,1))
-console.log(neighborsOf(0,0))
 console.log("MY SANITY")
+console.log(neighborsOf(0,0))
+console.log(neighborsOf(0,1))
+console.log(neighborsOf(0,2))
+console.log(neighborsOf(1,0))
+console.log(neighborsOf(1,1))
+console.log(neighborsOf(1,2))
+console.log(neighborsOf(2,0))
+console.log(neighborsOf(2,1))
+console.log(neighborsOf(2,2))
