@@ -133,10 +133,12 @@ function board(){
         [ false, false, false ],
     ];
 }
-
+console.log(board()[2][2])  //REALLY FUCKING IMPORTANT///
 
 function tick(){}
 function conway(cells, neighbors){}
+
+
 function neighborsOf(a,b){
 
     if (a === 0 && b=== 0){
@@ -157,10 +159,9 @@ function neighborsOf(a,b){
       return ["1,0", "1,1", "1,2", "2,1", "2,2"]};
     if (a === 2 && b=== 2){
       return ["1,1", "1,2", "2,1"]};
-
-
-
 }
+
+
 console.log(neighborsOf(2,0))
 console.log(neighborsOf(1,1))
 console.log(neighborsOf(0,0))
