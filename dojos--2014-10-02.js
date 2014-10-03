@@ -142,14 +142,19 @@ console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the fu
 //HELL YEAH. Thank you Brian.
 
 function tick(){}
-function conway(cells, neighbors){}
+function conway(cells, neighbors){
+/*given live cell:
+* if (cell === 2 || ===)
+
+*/
+}
 
 
 
 
 var pos = board()
 function neighborsOf(a,b){
-
+//cells are returned in order of left to right, starting from top left working down each row
     if (a === 0 && b=== 0){
       return [pos[0][1], pos[1][0], pos[1][1]]};
     if (a === 0 && b=== 1){
@@ -179,4 +184,4 @@ console.log(neighborsOf(1,1))
 console.log(neighborsOf(1,2))
 console.log(neighborsOf(2,0))
 console.log(neighborsOf(2,1))
-console.log(neighborsOf(2,2))
+console.log(neighborsOf(2,2).length)
