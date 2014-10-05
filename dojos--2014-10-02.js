@@ -148,7 +148,7 @@ function conway(cells, neighbors){
 
 */
 }
-
+var neighbors;
 
 
 
@@ -156,23 +156,25 @@ var pos = board()
 function neighborsOf(a,b){
 //cells are returned in order of left to right, starting from top left working down each row
     if (a === 0 && b=== 0){
-      return [pos[0][1], pos[1][0], pos[1][1]]};
+      neighbors = [pos[0][1], pos[1][0], pos[1][1]]};
     if (a === 0 && b=== 1){
-      return [pos[0][0], pos[0][2], pos[1][0], pos[1][1], pos[1][2]]};
+      neighbors = [pos[0][0], pos[0][2], pos[1][0], pos[1][1], pos[1][2]]};
     if (a === 0 && b=== 2){
-      return [pos[0][1], pos[1][1], pos[0][2]]};
+      neighbors = [pos[0][1], pos[1][1], pos[0][2]]};
     if (a === 1 && b=== 0){
-      return [pos[0][0], pos[0][1], pos[1][1], pos[2][0], pos[2][1]]};
+      neighbors = [pos[0][0], pos[0][1], pos[1][1], pos[2][0], pos[2][1]]};
     if (a === 1 && b=== 1){
-      return [pos[0][0], pos[0][1], pos[0][2], pos[1][0], pos[1][2], pos[2][0], pos[2][1], pos[2][2]]};
+      neighbors = [pos[0][0], pos[0][1], pos[0][2], pos[1][0], pos[1][2], pos[2][0], pos[2][1], pos[2][2]]};
     if (a === 1 && b=== 2){
-      return [pos[0][1], pos[0][2], pos[1][1], pos[2][1], pos[2][2]]};
+      neighbors = [pos[0][1], pos[0][2], pos[1][1], pos[2][1], pos[2][2]]};
     if (a === 2 && b=== 0){
-      return [pos[1][0], pos[1][1], pos[2][1]]};
+      neighbors = [pos[1][0], pos[1][1], pos[2][1]]};
     if (a === 2 && b=== 1){
-      return [pos[1][0], pos[1][1], pos[1][2], pos[2][1], pos[2][2]]};
+      neighbors = [pos[1][0], pos[1][1], pos[1][2], pos[2][1], pos[2][2]]};
     if (a === 2 && b=== 2){
-      return [pos[1][1], pos[1][2], pos[2][1]]};
+      neighbors = [pos[1][1], pos[1][2], pos[2][1]]};
+
+    return neighbors;
 }
 
 console.log("MY SANITY")
