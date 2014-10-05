@@ -168,20 +168,22 @@ function neighborsOf(a,b){
 
     return neighbors;
 }
-
+var cellNew;
 function conway(cell, neighbors){
   var alive = 0;
   for(var = i; i < neighbors.length; i++){
     if (neighbors[i] === true){alive ++;}
-    }
+
     if (cell === true){
-      if (alive < 2){return cell = false};
-      if (alive === 2 || alive === 3){return cell = true};
-      if (alive > 3){return cell = true};
-    }
-    if (cell === false){
-      if (alive === 3){return cell = true};
-    }
+      if (alive < 2){cellNew = false};
+      if (alive === 2 || alive === 3){cellNew = true};
+      if (alive > 3){cellNew = false};
+      }
+    else {if (cell === false && alive ===3){cellNew = true}
+          else{cellNew = false}
+          }
+    return cellNew;
+  }
 }
 
 
