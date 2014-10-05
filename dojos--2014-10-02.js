@@ -142,19 +142,25 @@ console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the fu
 //HELL YEAH. Thank you Brian.
 
 function tick(){}
-function conway(cells, neighbors){
-/*given live cell:
-* if (cell === 2 || ===)
+function conway(cell, neighbors){
+  var alive = 0;
+  for(var = i; i < neighbors.length; i++){
+    if (neighbors[i] === 'true'){
+      alive += 1;
+      }
+  };
+  if(alive > 2 && alive < 4){
+    return cells
+  }
+  //find the # of alive(true) neighboring cells
+    //compare that # to the ConwayRules
 
-*/
 }
+
 var neighbors;
-
-
-
-var pos = board()
 function neighborsOf(a,b){
 //cells are returned in order of left to right, starting from top left working down each row
+    var pos = board();
     if (a === 0 && b=== 0){
       neighbors = [pos[0][1], pos[1][0], pos[1][1]]};
     if (a === 0 && b=== 1){
