@@ -145,8 +145,8 @@ function tick(){}
 function conway(cell, neighbors){
   var alive = 0;
   for(var = i; i < neighbors.length; i++){
-    if (neighbors[i] === 'true'){
-      alive += 1;
+    if (neighbors[i] === true){
+      alive ++;
       }
   };
   if(alive > 2 && alive < 4){
