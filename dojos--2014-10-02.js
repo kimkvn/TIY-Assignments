@@ -167,7 +167,10 @@ var cellNew; //declared because I want to differentiate between the two stages o
 
 function conway(cell, neighbors){
   var alive = 0;
-  for(var i = 0; i < neighbors.length; i++){
+
+/*for(var i = 0; i < neighbors.length; i++){
+    */
+
     if (neighbors[i] === true){alive ++;}
   }
     if (cell === true){
@@ -180,7 +183,7 @@ function conway(cell, neighbors){
           else{cellNew = false}
           }
     return cellNew;
-}
+//}
 
 function tick(board){
 
@@ -204,7 +207,7 @@ function tick(board){
   return newBoard
 }
 
-console.log(tick(board))
+//console.log(tick(board))
 
 console.log(conway(board[0][0], neighborsOf(board,0,0)));
 console.log(conway(board[0][1], neighborsOf(board,0,1)));
