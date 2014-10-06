@@ -135,10 +135,11 @@ var board =
 
 function tick(){}
 
-var neighbors;
-function neighborsOf(board,a,b){
-//cells are returned in order of left to right, starting from top left working down each row
+var neighbors; //defined 'neighbors' to be later used in conway(). Also, less typing.
 
+function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (board "row") and b (board "column") will return a list of neighboring cells surrounding var board.
+
+//cells are returned in order of left to right, starting from top left working down each row
     if (a === 0 && b=== 0){
       neighbors = [board[0][1], board[1][0], board[1][1]]};
     if (a === 0 && b=== 1){
@@ -162,7 +163,7 @@ function neighborsOf(board,a,b){
 }
 
 
-var cellNew;
+var cellNew; //declared because I want to differentiate between the two stages of the starting cell, initial, then "tick"
 
 function conway(cell, neighbors){
   var alive = 0;
