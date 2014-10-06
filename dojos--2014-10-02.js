@@ -165,25 +165,20 @@ function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (boar
 
 var cellNew; //declared because I want to differentiate between the two stages of the starting cell, initial, then "tick"
 
-function conway(cell, neighbors){
+function conway(cell){
   var alive = 0;
-
-/*for(var i = 0; i < neighbors.length; i++){
-    */
-
-    if (neighbors[i] === true){alive ++;}
-  }
-    if (cell === true){
-      if (alive < 2){cellNew = false};
-      if (alive === 2 || alive === 3){cellNew = true};
-      if (alive > 3){cellNew = false};
-      }
-  else {if (alive ===3)
+  if (cell === true){
+    if (alive < 2){cellNew = false};
+    if (alive === 2 || alive === 3){cellNew = true};
+    if (alive > 3){cellNew = false};
+    }
+    else {if (alive ===3)
             {cellNew = true}
           else{cellNew = false}
           }
     return cellNew;
-//}
+  }
+neighbors.forEach(conway(board[0][0]))
 
 function tick(board){
 
