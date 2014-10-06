@@ -181,9 +181,26 @@ function conway(cell, neighbors){
     return cellNew;
 }
 
-
+function tick(board){
+  board[0][0] = conway(board[0][0], neighborsOf(board,0,0))
+  board[0][1] = conway(board[0][1], neighborsOf(board,0,1))
+  board[0][2] = conway(board[0][2], neighborsOf(board,0,2))
+  board[1][0] = conway(board[1][0], neighborsOf(board,1,0))
+  board[1][1] = conway(board[1][1], neighborsOf(board,1,1))
+  board[1][2] = conway(board[1][2], neighborsOf(board,1,2))
+  board[2][0] = conway(board[2][0], neighborsOf(board,2,0))
+  board[2][1] = conway(board[2][1], neighborsOf(board,2,1))
+  board[2][2] = conway(board[2][2], neighborsOf(board,2,2))
+  //checks cell [0][0]
+    //does it live after running through Conway()?
+      //if yes, board[0][0] = true
+  return board
+}
+console.log(neighborsOf(board, 1, 0))
 console.log(conway(board[0][0], neighborsOf(board,0,0)))
 console.log(conway(board[1][1], neighborsOf(board,1,1)))
+console.log(conway(board[1][0], neighborsOf(board,1,0)))
+console.log(tick(board))
 
 
 
