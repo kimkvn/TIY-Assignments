@@ -154,13 +154,13 @@ function neighborsOf(board,a,b){
     if (a === 2 && b=== 0){
       neighbors = [board[1][0], board[1][1], board[2][1]]};
     if (a === 2 && b=== 1){
-      neighbors = [board[1][0], board[1][1], board[1][2], board[2][1], board[2][2]]};
+      neighbors = [board[1][0], board[1][1], board[1][2], board[2][0], board[2][2]]};
     if (a === 2 && b=== 2){
       neighbors = [board[1][1], board[1][2], board[2][1]]};
 
     return neighbors;
 }
-console.log(neighborsOf(board,2,2))
+//console.log(neighborsOf(board,2,2))
 
 var cellNew;
 
@@ -171,7 +171,7 @@ function conway(cell, neighbors){
   }
     if (cell === true){
       if (alive < 2){cellNew = false};
-      if (alive >1 && alive < 4){cellNew = true};
+      if (alive === 2 || alive === 3){cellNew = true};
       if (alive > 3){cellNew = false};
       }
   else {if (alive ===3)
@@ -180,8 +180,7 @@ function conway(cell, neighbors){
           }
     return cellNew;
 }
-console.log(conway(board[2][2], neighborsOf(board,2,2)))
-console.log(conway(board[1][0], neighborsOf(board,1,0)))
+
 function tick(board){
   board[0][0] = conway(board[0][0], neighborsOf(board,0,0));
   board[0][1] = conway(board[0][1], neighborsOf(board,0,1));
@@ -194,10 +193,19 @@ function tick(board){
   board[2][2] = conway(board[2][2], neighborsOf(board,2,2));
   return board
 }
-//console.log(neighborsOf(board, 1, 0))
-//console.log(conway(board[0][0], neighborsOf(board,0,0)))
-//console.log(conway(board[1][1], neighborsOf(board,1,1)))
-//console.log(conway(board[1][0], neighborsOf(board,1,0)))
+
+console.log(conway(board[0][0], neighborsOf(board,0,0)));
+console.log(conway(board[0][1], neighborsOf(board,0,1)));
+console.log(conway(board[0][2], neighborsOf(board,0,2)));
+console.log(conway(board[1][0], neighborsOf(board,1,0)));
+console.log(conway(board[1][1], neighborsOf(board,1,1)));
+console.log(conway(board[1][2], neighborsOf(board,1,2)));
+console.log(conway(board[2][0], neighborsOf(board,2,0)));
+console.log(conway(board[2][1], neighborsOf(board,2,1)));
+  console.log(neighborsOf(board,2,1))
+console.log(conway(board[2][2], neighborsOf(board,2,2)));
+
+
 console.log(tick(board))
 
 //console.log(conway(board[2][2], neighborsOf(board,2,2)))
