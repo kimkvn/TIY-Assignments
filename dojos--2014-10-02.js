@@ -128,9 +128,9 @@ function test(actual, expected, success){
  */
 var board =
         [
-        [ false, true, false ],
-        [ false, true, false ],
-        [ false, true, false],
+        [ false, false, false ],
+        [ true, true, true ],
+        [ false, false, false],
         ];
 
 function tick(){}
@@ -202,7 +202,6 @@ console.log(conway(board[1][1], neighborsOf(board,1,1)));
 console.log(conway(board[1][2], neighborsOf(board,1,2)));
 console.log(conway(board[2][0], neighborsOf(board,2,0)));
 console.log(conway(board[2][1], neighborsOf(board,2,1)));
-  console.log(neighborsOf(board,2,1))
 console.log(conway(board[2][2], neighborsOf(board,2,2)));
 
 
