@@ -128,9 +128,9 @@ function test(actual, expected, success){
  */
 var board =
         [
-        [ false, true, false],
-        [ false, true, false ],
-        [ false, true, false],
+        [ false, false, false],
+        [ true, true, true ],
+        [ false, false, false],
         ];
 
 function tick(){}
