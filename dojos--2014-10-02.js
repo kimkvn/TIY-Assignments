@@ -128,8 +128,8 @@ function test(actual, expected, success){
  */
 var board =
         [
-        [ false, false, false ],
-        [ false, false, false ],
+        [ true, true, false ],
+        [ false, true, false ],
         [ false, false, false ],
         ];
 
@@ -160,19 +160,18 @@ function neighborsOf(board,a,b){
 
     return neighbors;
 }
-
-
+console.log(neighborsOf(board,0,0))
 
 var cellNew;
 
 function conway(cell, neighbors){
   var alive = 0;
   for(var i = 0; i < neighbors.length; i++){
-    if (neighbors[i] === true){alive ++;}
+    if (neighbors[i] === true){alive += 1;}
   }
     if (cell === true){
       if (alive < 2){cellNew = false};
-      if (alive === 2 || alive === 3){cellNew = true};
+      if (alive >1 && alive < 4){cellNew = true};
       if (alive > 3){cellNew = false};
       }
   else {if (alive ===3)
@@ -183,7 +182,8 @@ function conway(cell, neighbors){
 }
 
 
-
+console.log(conway(board[0][0], neighborsOf(board,0,0)))
+console.log(conway(board[1][1], neighborsOf(board,1,1)))
 
 
 
