@@ -42,7 +42,7 @@
  * - THEN returns a NEW `board` representing the next generation.
  *
  * Use the provided `board` function to produce the initially empty
- * board, and test the following starting positions:
+ * board, and test the following starting boarditions:
  *
  * Initially Empty Board
  * =====================
@@ -101,7 +101,7 @@
  * 2 |   | X |   |    2 |   |   |   |    2 |   | X |   |
  *   +---+---+---+      +---+---+---+      +---+---+---+
  *
- * You may test more starting position, if you like, of course.
+ * You may test more starting boardition, if you like, of course.
  */
 
 var assert = require('assert');
@@ -126,52 +126,42 @@ function test(actual, expected, success){
  *
  * @return Array of Array of Boolean
  */
-function board(){
-    return [
+var board =
+        [
         [ false, false, false ],
         [ false, false, false ],
         [ false, false, false ],
-    ];
-}
-
-
-//console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the function board()
-//to tell whether the cell is true/false? board(), while a function, basically behaves as an
-//array. To call the identity of a thing in an array while knowing its location, input
-//<array[x] returns the thing @x. To get the T/F value of board() ::: board()[x][y]
-//HELL YEAH. Thank you Brian.
+        ];
 
 function tick(){}
 
 var neighbors;
-function neighborsOf(a,b){
+function neighborsOf(board,a,b){
 //cells are returned in order of left to right, starting from top left working down each row
-    var pos = board();
+
     if (a === 0 && b=== 0){
-      neighbors = [pos[0][1], pos[1][0], pos[1][1]]};
+      neighbors = [board[0][1], board[1][0], board[1][1]]};
     if (a === 0 && b=== 1){
-      neighbors = [pos[0][0], pos[0][2], pos[1][0], pos[1][1], pos[1][2]]};
+      neighbors = [board[0][0], board[0][2], board[1][0], board[1][1], board[1][2]]};
     if (a === 0 && b=== 2){
-      neighbors = [pos[0][1], pos[1][1], pos[0][2]]};
+      neighbors = [board[0][1], board[1][1], board[0][2]]};
     if (a === 1 && b=== 0){
-      neighbors = [pos[0][0], pos[0][1], pos[1][1], pos[2][0], pos[2][1]]};
+      neighbors = [board[0][0], board[0][1], board[1][1], board[2][0], board[2][1]]};
     if (a === 1 && b=== 1){
-      neighbors = [pos[0][0], pos[0][1], pos[0][2], pos[1][0], pos[1][2], pos[2][0], pos[2][1], pos[2][2]]};
+      neighbors = [board[0][0], board[0][1], board[0][2], board[1][0], board[1][2], board[2][0], board[2][1], board[2][2]]};
     if (a === 1 && b=== 2){
-      neighbors = [pos[0][1], pos[0][2], pos[1][1], pos[2][1], pos[2][2]]};
+      neighbors = [board[0][1], board[0][2], board[1][1], board[2][1], board[2][2]]};
     if (a === 2 && b=== 0){
-      neighbors = [pos[1][0], pos[1][1], pos[2][1]]};
+      neighbors = [board[1][0], board[1][1], board[2][1]]};
     if (a === 2 && b=== 1){
-      neighbors = [pos[1][0], pos[1][1], pos[1][2], pos[2][1], pos[2][2]]};
+      neighbors = [board[1][0], board[1][1], board[1][2], board[2][1], board[2][2]]};
     if (a === 2 && b=== 2){
-      neighbors = [pos[1][1], pos[1][2], pos[2][1]]};
+      neighbors = [board[1][1], board[1][2], board[2][1]]};
 
     return neighbors;
 }
 
-test(neighborsOf(0,0)[0], board()[0][1])
-test(neighborsOf(0,0)[0], board()[1][0])
-test(neighborsOf(0,0)[0], board()[1][1])
+
 
 var cellNew;
 
@@ -191,7 +181,6 @@ function conway(cell, neighbors){
           }
     return cellNew;
 }
-
 
 
 
