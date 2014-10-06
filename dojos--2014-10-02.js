@@ -128,9 +128,9 @@ function test(actual, expected, success){
  */
 var board =
         [
+        [ true, false, true],
         [ false, false, false ],
-        [ true, true, true ],
-        [ false, false, false],
+        [ true, false, true],
         ];
 
 function tick(){}
@@ -144,7 +144,7 @@ function neighborsOf(board,a,b){
     if (a === 0 && b=== 1){
       neighbors = [board[0][0], board[0][2], board[1][0], board[1][1], board[1][2]]};
     if (a === 0 && b=== 2){
-      neighbors = [board[0][1], board[1][1], board[0][2]]};
+      neighbors = [board[0][1], board[1][1], board[1][2]]};
     if (a === 1 && b=== 0){
       neighbors = [board[0][0], board[0][1], board[1][1], board[2][0], board[2][1]]};
     if (a === 1 && b=== 1){
@@ -160,7 +160,7 @@ function neighborsOf(board,a,b){
 
     return neighbors;
 }
-//console.log(neighborsOf(board,2,2))
+
 
 var cellNew;
 
@@ -182,17 +182,28 @@ function conway(cell, neighbors){
 }
 
 function tick(board){
-  board[0][0] = conway(board[0][0], neighborsOf(board,0,0));
-  board[0][1] = conway(board[0][1], neighborsOf(board,0,1));
-  board[0][2] = conway(board[0][2], neighborsOf(board,0,2));
-  board[1][0] = conway(board[1][0], neighborsOf(board,1,0));
-  board[1][1] = conway(board[1][1], neighborsOf(board,1,1));
-  board[1][2] = conway(board[1][2], neighborsOf(board,1,2));
-  board[2][0] = conway(board[2][0], neighborsOf(board,2,0));
-  board[2][1] = conway(board[2][1], neighborsOf(board,2,1));
-  board[2][2] = conway(board[2][2], neighborsOf(board,2,2));
-  return board
+
+  var newRow0 = [];
+  var newRow1 = [];
+  var newRow2 = [];
+  var newBoard = [];
+
+  newRow0.push(conway(board[0][0], neighborsOf(board,0,0)));
+  newRow0.push(conway(board[0][1], neighborsOf(board,0,1)));
+  newRow0.push(conway(board[0][2], neighborsOf(board,0,2)));
+  newRow1.push(conway(board[1][0], neighborsOf(board,1,0)));
+  newRow1.push(conway(board[1][1], neighborsOf(board,1,1)));
+  newRow1.push(conway(board[1][2], neighborsOf(board,1,2)));
+  newRow2.push(conway(board[2][0], neighborsOf(board,2,0)));
+  newRow2.push(conway(board[2][1], neighborsOf(board,2,1)));
+  newRow2.push(conway(board[2][2], neighborsOf(board,2,2)));
+
+  newBoard.push(newRow0, newRow1, newRow2);
+
+  return newBoard
 }
+
+console.log(tick(board))
 
 console.log(conway(board[0][0], neighborsOf(board,0,0)));
 console.log(conway(board[0][1], neighborsOf(board,0,1)));
@@ -203,20 +214,3 @@ console.log(conway(board[1][2], neighborsOf(board,1,2)));
 console.log(conway(board[2][0], neighborsOf(board,2,0)));
 console.log(conway(board[2][1], neighborsOf(board,2,1)));
 console.log(conway(board[2][2], neighborsOf(board,2,2)));
-
-
-console.log(tick(board))
-
-//console.log(conway(board[2][2], neighborsOf(board,2,2)))
-
-
-//console.log("MY SANITY")
-//console.log(neighborsOf(0,0))
-//console.log(neighborsOf(0,1))
-//console.log(neighborsOf(0,2))
-//console.log(neighborsOf(1,0))
-//console.log(neighborsOf(1,1))
-//console.log(neighborsOf(1,2))
-//console.log(neighborsOf(2,0))
-//console.log(neighborsOf(2,1))
-//console.log(neighborsOf(2,2).length)
