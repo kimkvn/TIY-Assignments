@@ -177,7 +177,7 @@ var cellNew;
 
 function conway(cell, neighbors){
   var alive = 0;
-  for(var = i; i < neighbors.length; i++){
+  for(var i = 0; i < neighbors.length; i++){
     if (neighbors[i] === true){alive ++;}
   }
     if (cell === true){
@@ -192,7 +192,7 @@ function conway(cell, neighbors){
     return cellNew;
 }
 
-console.log(conway(board()[0][0]),neighborsOf(0,0))
+
 
 
 
