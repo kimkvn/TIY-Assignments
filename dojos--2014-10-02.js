@@ -114,7 +114,7 @@ var assert = require('assert');
  * @param String success
  */
 function test(actual, expected, success){
-    if (success === undefined) success = 'pass!';
+    if (success === undefined) success = 'You did it. Yay.';
 
     assert.strictEqual(actual, expected);
 
@@ -135,7 +135,7 @@ function board(){
 }
 
 
-console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the function board()
+//console.log(board()[2][2])  //REALLY FUCKING IMPORTANT// so how can I use the function board()
 //to tell whether the cell is true/false? board(), while a function, basically behaves as an
 //array. To call the identity of a thing in an array while knowing its location, input
 //<array[x] returns the thing @x. To get the T/F value of board() ::: board()[x][y]
@@ -168,36 +168,43 @@ function neighborsOf(a,b){
 
     return neighbors;
 }
+
+test(neighborsOf(0,0)[0], board()[0][1])
+test(neighborsOf(0,0)[0], board()[1][0])
+test(neighborsOf(0,0)[0], board()[1][1])
+
 var cellNew;
+
 function conway(cell, neighbors){
   var alive = 0;
   for(var = i; i < neighbors.length; i++){
     if (neighbors[i] === true){alive ++;}
-
+  }
     if (cell === true){
       if (alive < 2){cellNew = false};
       if (alive === 2 || alive === 3){cellNew = true};
       if (alive > 3){cellNew = false};
       }
-    else {if (cell === false && alive ===3){cellNew = true}
+  else {if (alive ===3)
+            {cellNew = true}
           else{cellNew = false}
           }
     return cellNew;
-  }
 }
 
+console.log(conway(board()[0][0]),neighborsOf(0,0))
 
 
 
 
 
-console.log("MY SANITY")
-console.log(neighborsOf(0,0))
-console.log(neighborsOf(0,1))
-console.log(neighborsOf(0,2))
-console.log(neighborsOf(1,0))
-console.log(neighborsOf(1,1))
-console.log(neighborsOf(1,2))
-console.log(neighborsOf(2,0))
-console.log(neighborsOf(2,1))
-console.log(neighborsOf(2,2).length)
+//console.log("MY SANITY")
+//console.log(neighborsOf(0,0))
+//console.log(neighborsOf(0,1))
+//console.log(neighborsOf(0,2))
+//console.log(neighborsOf(1,0))
+//console.log(neighborsOf(1,1))
+//console.log(neighborsOf(1,2))
+//console.log(neighborsOf(2,0))
+//console.log(neighborsOf(2,1))
+//console.log(neighborsOf(2,2).length)
