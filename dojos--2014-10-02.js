@@ -168,7 +168,10 @@ var cellNew; //declared because I want to differentiate between the two stages o
 console.log("ass")
 
 function conway (element index, array) {
-  neighbors[i] =
+  var alive = 0;
+  neighbors.forEach(function(value){
+    if value === true {alive }
+  })
   //forEach(function)
   //basic structure of the function(element, index, array) in forEach: array[index] = element <-- new elements = original elements
 
