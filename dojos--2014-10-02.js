@@ -138,7 +138,7 @@ function tick(){}
 var neighbors; //defined 'neighbors' to be later used in conway(). Also, less typing.
 
 function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (board "row") and b (board "column") will return a list of neighboring cells surrounding var board.
-  console.log("cell")
+
 //cells are returned in order of left to right, starting from top left working down each row
     if (a === 0 && b=== 0){
       neighbors = [board[0][1], board[1][0], board[1][1]]};
@@ -165,36 +165,29 @@ function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (boar
 
 var cellNew; //declared because I want to differentiate between the two stages of the starting cell, initial, then "tick"
 
-console.log("ass")
+console.log("hi")
 
-function conway (element index, array) {
+function conway (cell, neighbors) {
   var alive = 0;
-  neighbors.forEach(function(value){
-    if value === true {alive }
-  })
-  //forEach(function)
-  //basic structure of the function(element, index, array) in forEach: array[index] = element <-- new elements = original elements
+  neighbors.forEach(function(neighbors){  //implementing .forEach instead of for-loop to count number of alive neighboring cells
+    if(neighbors === true){alive++};
+  });
+
+      if (cell === true){
+        if (alive < 2){cellNew = false};
+        if (alive === 2 || alive === 3){cellNew = true};
+        if (alive > 3){cellNew = false};
+        }
+        else {if (alive ===3)
+                {cellNew = true}
+              else{cellNew = false}
+              }
+        return cellNew;
 
 }
 
+console.log(board[1][0], neighborsOf(board, 1, 0))
 
-//because in all the forEach examples I've seen, there are 3 inputs...and they're all based rather similarly. Hmm.
-
-
-/*function conway(cell){
-  var alive = 0;
-  if (cell === true){
-    if (alive < 2){cellNew = false};
-    if (alive === 2 || alive === 3){cellNew = true};
-    if (alive > 3){cellNew = false};
-    }
-    else {if (alive ===3)
-            {cellNew = true}
-          else{cellNew = false}
-          }
-    return cellNew;
-  }
-*/
 
 
 function tick(board){
@@ -219,7 +212,7 @@ function tick(board){
   return newBoard
 }
 
-//console.log(tick(board))
+console.log(tick(board))
 /*
 console.log(conway(board[0][0], neighborsOf(board,0,0)));
 console.log(conway(board[0][1], neighborsOf(board,0,1)));
