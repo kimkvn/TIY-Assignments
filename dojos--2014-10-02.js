@@ -138,7 +138,7 @@ function tick(){}
 var neighbors; //defined 'neighbors' to be later used in conway(). Also, less typing.
 
 function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (board "row") and b (board "column") will return a list of neighboring cells surrounding var board.
-
+  console.log("cell")
 //cells are returned in order of left to right, starting from top left working down each row
     if (a === 0 && b=== 0){
       neighbors = [board[0][1], board[1][0], board[1][1]]};
@@ -165,7 +165,20 @@ function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (boar
 
 var cellNew; //declared because I want to differentiate between the two stages of the starting cell, initial, then "tick"
 
-function conway(cell){
+console.log("ass")
+
+function conway (element index, array) {
+  neighbors[i] =
+  //forEach(function)
+  //basic structure of the function(element, index, array) in forEach: array[index] = element <-- new elements = original elements
+
+}
+
+
+//because in all the forEach examples I've seen, there are 3 inputs...and they're all based rather similarly. Hmm.
+
+
+/*function conway(cell){
   var alive = 0;
   if (cell === true){
     if (alive < 2){cellNew = false};
@@ -178,7 +191,8 @@ function conway(cell){
           }
     return cellNew;
   }
-neighbors.forEach(conway(board[0][0]))
+*/
+
 
 function tick(board){
 
@@ -203,7 +217,7 @@ function tick(board){
 }
 
 //console.log(tick(board))
-
+/*
 console.log(conway(board[0][0], neighborsOf(board,0,0)));
 console.log(conway(board[0][1], neighborsOf(board,0,1)));
 console.log(conway(board[0][2], neighborsOf(board,0,2)));
@@ -213,3 +227,4 @@ console.log(conway(board[1][2], neighborsOf(board,1,2)));
 console.log(conway(board[2][0], neighborsOf(board,2,0)));
 console.log(conway(board[2][1], neighborsOf(board,2,1)));
 console.log(conway(board[2][2], neighborsOf(board,2,2)));
+*/
