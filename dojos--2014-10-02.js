@@ -186,7 +186,7 @@ function conway (cell, neighbors) {
 
 }
 
-console.log(board[1][0], neighborsOf(board, 1, 0))
+console.log(conway(board[1][1], neighborsOf(board, 1, 1)))
 
 
 
