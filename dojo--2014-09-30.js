@@ -13,55 +13,39 @@
  * ping-pong pairing, and commit often using `@username & @username` as the
  * commit message.
  */
-function multiply(a,b) {
-  if(a==="zero" || b==="zero")
-    return 0;
-
- if(a=="one")
-   return 1;
-
-if(a==="two" && b==="two")
-  return 4;
 
 
-   if(a==="two")
-     return 2;
 
-     if(a==="three" && b==="three")
-       return 9;
-
-    if (a==="three")
-      return 6;
-
-    if(a==="four" && b==="four")
-      return 16;
-
-  if(a==="four")
-    return 12;
-
-    if(a==="five" && b==="five")
-      return 25;
-
-  if(a==="five")
-    return 20;
-
-  if(a==="six" && b==="seven")
-    return 42;
-
-    if(a==="six" && b==="six")
-      return 36;
-
-    if(a==="six")
-      return 30;
-
-  if (a==="seven" && b==="seven")
-    return 49;
-
-  if(a==="eight")
-    return 56;
- }
+//var numbers = ["zero", "one", "two", "three", "four",
+//  "five", "six", "seven", "eight", "nine", "ten"];
 
 
+
+function multiply (a,b){
+  if (a === "one"){a = 1};
+  if (b === "two"){b = 2};
+  return a*b;
+}
+
+console.log(multiply("one", "two"))
+
+var assert = require('assert');
+
+/**
+ * Log `success` if `actual` is STRICTLY equal to `expected`
+ *
+ * @param ANY actual
+ * @param ANY expected
+ * @param String success
+ */
+function test(actual, expected){
+    assert.strictEqual(actual, expected);
+    console.log("You are correct.")
+}
+
+//test(multiply("one", "zero"), 0)
+
+/*
 console.log('The product of "zero" and "zero"',
 multiply("zero" , "zero")===0)
 console.log('The product of "one" and "zero"',
@@ -94,3 +78,4 @@ console.log('The product of "seven" and "seven"',
 multiply("seven" , "seven")===49)
 console.log('The product of "eight" and "seven"',
 multiply("eight" , "seven")===56)
+*/
