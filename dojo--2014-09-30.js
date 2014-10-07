@@ -15,21 +15,56 @@
  */
 
 
+var integers = [0,1,2,3,4,5,6,7,8,9,10];
+var numbers = ["zero", "one", "two", "three", "four",
+  "five", "six", "seven", "eight", "nine", "ten"];
 
-//var numbers = ["zero", "one", "two", "three", "four",
-//  "five", "six", "seven", "eight", "nine", "ten"];
 
 
 
 function multiply (a,b){
+  //I give the robot an item. "two", "four", etc
+  //I need the robot to scan through array:Numbers to match that item.
+    //Then I need the robot to assign that item its corresponding number.
+
+  if (a === "zero"){a = 0};
   if (a === "one"){a = 1};
+  if (a === "two"){a = 2};
+  if (a === "three"){a = 3};
+  if (a === "four"){a = 4};
+  if (a === "five"){a = 5};
+  if (a === "six"){a = 6};
+  if (a === "seven"){a = 7};
+  if (a === "eight"){a = 8};
+  if (a === "nine"){a = 9};
+  if (a === "ten"){a = 10};
+
+  if (b === "zero"){b = 0};
+  if (b === "one"){b = 1};
   if (b === "two"){b = 2};
-  return a*b;
+  if (b === "three"){b = 3};
+  if (b === "four"){b = 4};
+  if (b === "five"){b = 5};
+  if (b === "six"){b = 6};
+  if (b === "seven"){b = 7};
+  if (b === "eight"){b = 8};
+  if (b === "nine"){b = 9};
+  if (b === "ten"){b = 10};
+
+  return a*b
 }
 
-console.log(multiply("one", "two"))
+// console.log(multiply("one", "two"))
 
+
+//////
 var assert = require('assert');
+
+function test(actual, expected, success){
+    success = success || 'YOU DID IT!';
+
+    assert(actual === expected) || console.log(success);
+}
 
 /**
  * Log `success` if `actual` is STRICTLY equal to `expected`
@@ -38,10 +73,31 @@ var assert = require('assert');
  * @param ANY expected
  * @param String success
  */
-function test(actual, expected){
-    assert.strictEqual(actual, expected);
+
+ var testCases = [
+ ["two", "three", 6],
+ ["seven", "nine", 63],
+ ["two", "five", 10],
+ ["six", "four", 24],
+ ["eight", "ten", 80],
+ ["zero", "nine", 0],
+ ["ten", "one", 10],
+ ["three", "six", 18]
+ ]
+
+
+// function test(actual, expected){
+
+testCases.forEach(function(testCase){
+    var actual = multiply(testCase[0], testCase[1])
+    expected = testCase[2]
     console.log("You are correct.")
-}
+
+    assert.strictEqual(actual, expected);
+});
+
+
+
 
 //test(multiply("one", "zero"), 0)
 
