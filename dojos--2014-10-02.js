@@ -163,7 +163,7 @@ function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (boar
 //Mocha test, TDD
 suite('neighborsOf: given starting cell, returns locations of neighboring cells', function(){
   test('Given (board,0,0), should return neighbors board[0][1], board[1][0], board[1][1]', function(){
-    
+    assert(neighborsOf(board,0,0), [board[0][1], board[1][0], board[1][1]]);
   })
 
 })
