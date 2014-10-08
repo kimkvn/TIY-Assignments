@@ -113,7 +113,7 @@ var assert = require('assert');
  * @param ANY expected
  * @param String success
  */
-function test(actual, expected, success){
+function test_initial(actual, expected, success){
     if (success === undefined) success = 'You did it. Yay.';
 
     assert.strictEqual(actual, expected);
@@ -132,8 +132,6 @@ var board =
         [ true, true, true ],
         [ false, false, false],
         ];
-
-function tick(){}
 
 var neighbors; //defined 'neighbors' to be later used in conway(). Also, less typing.
 
@@ -162,6 +160,14 @@ function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (boar
     return neighbors;
 }
 
+//Mocha test, TDD
+suite('neighborsOf: given starting cell, returns locations of neighboring cells', function(){
+  test('Given (board,0,0), should return neighbors board[0][1], board[1][0], board[1][1]', function(){
+    
+  })
+
+})
+//
 
 var cellNew; //declared because I want to differentiate between the two stages of the starting cell, initial, then "tick"
 
