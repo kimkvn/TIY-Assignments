@@ -56,9 +56,9 @@ var thousands = ["zero", "one thousand", "two thousand", "three thousand",
 
 function numChange(a){
 
-  var value = a.toString();
+  var value = a.toFixed(2);
   var dollars = value.slice(0,-3);
-  var dollarsSplit = value.slice(0,-3).split("");
+  var dollarsSplit = dollars.split("");
   var cents = a.toFixed(2).slice(-2);
 
 //////////0-19///////////////////////////////////////////////
@@ -66,8 +66,9 @@ function numChange(a){
 
 /////////20-99/////////////////////////////////////////////////
     if (a < 100){
-      if (a % 10 === 0){return(tens[value[0]])+ " and "+cents+"/100s";}
-    return(tens[value[0]] + ones[value[1]]+ " and "+cents+"/100s")
+      if (a % 10 === 0){return(tens[dollarsSplit[0]]+" and "+cents+"/100s")}
+      if (ones[dollarsSplit[1]] === "zero" && cents !== 00){return(tens[dollarsSplit[0]] + " and "+cents+"/100s")}
+    return(tens[dollarsSplit[0]] + ones[dollarsSplit[1]]+ " and "+cents+"/100s")
     }
 ///////////100-999/////////////////////////////////////////////////
     if (a < 1000){
@@ -95,18 +96,20 @@ while (balls<750){
  */
 
 //////////////////////TEST////////////////////
-console.log(numChange(3.00))
-console.log(numChange(0.00))
-console.log(numChange(11.43))
+// console.log(numChange(3.01))
+// console.log(numChange(3.00))
+// console.log(numChange(0.00))
+// console.log(numChange(11.43))
 // console.log(numChange(14))
 // console.log(numChange(1))
 // console.log(numChange(8))
-console.log(numChange(23.76))
-// console.log(numChange(42))
-console.log(numChange(50.1))
+// console.log(numChange(23.76))
+console.log(numChange(42))
+console.log(numChange(50.56))
 console.log(numChange(60.01))
-// console.log(numChange(79))
-// console.log(numChange(800))
+console.log(numChange(90))
+console.log(numChange(79.73))
+console.log(numChange(800))
 // console.log(numChange(300))
 // console.log(numChange(445))
 // console.log(numChange(520))
