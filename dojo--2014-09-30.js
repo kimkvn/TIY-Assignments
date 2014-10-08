@@ -52,6 +52,7 @@ function multiply (a,b){
   if (b === "ten"){b = 10};
 
   return a*b
+
 }
 
 // console.log(multiply("one", "two"))
@@ -101,10 +102,11 @@ function test(actual, expected, success){
 
 describe('multiply', function(){
   it('given two numbers in string format, returns product in integer format', function(){
-    assert(multiply)
+    assert.equal(multiply("two", "two"), 4);
+    assert.equal(multiply("six", "four"), 24);
+    assert.equal(multiply("five", "seven"), 34);
+    assert.equal(multiply("one", "three"), 7)
   });
-  assert.equal(multiply("two", "two"), 4);
-  assert.euqal(multiply("six", "four"), 24);
 })
 
 //test(multiply("one", "zero"), 0)
