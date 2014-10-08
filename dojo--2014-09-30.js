@@ -74,30 +74,34 @@ function test(actual, expected, success){
  * @param String success
  */
 
- var testCases = [
- ["two", "three", 6],
- ["seven", "nine", 63],
- ["two", "five", 10],
- ["six", "four", 24],
- ["eight", "ten", 80],
- ["zero", "nine", 0],
- ["ten", "one", 10],
- ["three", "six", 18]
- ]
+//  var testCases = [
+//  ["two", "three", 6],
+//  ["seven", "nine", 63],
+//  ["two", "five", 10],
+//  ["six", "four", 24],
+//  ["eight", "ten", 80],
+//  ["zero", "nine", 0],
+//  ["ten", "one", 10],
+//  ["three", "six", 18]
+//  ]
+//
+//
+// // function test(actual, expected){
+//
+// testCases.forEach(function(testCase){
+//     var actual = multiply(testCase[0], testCase[1])
+//     expected = testCase[2]
+//     console.log("You are correct.")
+//
+//     assert.strictEqual(actual, expected);
+// });
 
 
-// function test(actual, expected){
-
-testCases.forEach(function(testCase){
-    var actual = multiply(testCase[0], testCase[1])
-    expected = testCase[2]
-    console.log("You are correct.")
-
-    assert.strictEqual(actual, expected);
-});
-
-
-
+describe('multiply', function(){
+  it('should multiply numbers in string format numbers in integer format', function(){
+    assert(multiply)
+  })
+})
 
 //test(multiply("one", "zero"), 0)
 
