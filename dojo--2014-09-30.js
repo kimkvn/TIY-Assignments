@@ -100,13 +100,19 @@ function test(actual, expected, success){
 // });
 
 
-describe('multiply', function(){
-  it('given two numbers in string format, returns product in integer format', function(){
-    assert.equal(multiply("two", "two"), 4);
-    assert.equal(multiply("six", "four"), 24);
-    assert.equal(multiply("five", "seven"), 34);
-    assert.equal(multiply("one", "three"), 7)
-  });
+describe('multiply: given two numbers in string format, returns product in integer format', function(){
+  it('should multiply "one" and "one" and return 1', function(){
+    assert.equal(multiply("one", "one"), 1);
+  })
+  it('should multiply "two" and "three" and return 6', function(){
+    assert.equal(multiply("two", "three"), 6);
+  })
+  it('should multiply "four" and "five" and return 20', function(){
+    assert.equal(multiply("four", "five"), 20);
+  })
+  it('should multiply "six" and "seven" and return 42', function(){
+    assert.equal(multiply("six", "seven"), 42);
+  })
 })
 
 //test(multiply("one", "zero"), 0)
