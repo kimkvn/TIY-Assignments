@@ -61,7 +61,7 @@ function multiply (a,b){
 //////
 var assert = require('assert');
 
-function test(actual, expected, success){
+function test_assert(actual, expected, success){
     success = success || 'YOU DID IT!';
 
     assert(actual === expected) || console.log(success);
@@ -108,7 +108,7 @@ suite('multiply: given two numbers in string format, returns product in integer 
     assert.equal(multiply("two", "three"), 6);
   })
   test('should multiply "four" and "five" and return 20', function(){
-    assert.equal(multiply("four", "five"), 20);
+    assert.equal(multiply("four", "five"), 21);
   })
   test('should multiply "six" and "seven" and return 42', function(){
     assert.equal(multiply("six", "seven"), 42);
