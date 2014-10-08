@@ -66,6 +66,8 @@ function test(actual, expected, success){
     assert(actual === expected) || console.log(success);
 }
 
+
+
 /**
  * Log `success` if `actual` is STRICTLY equal to `expected`
  *
@@ -98,12 +100,17 @@ function test(actual, expected, success){
 
 
 describe('multiply', function(){
-  it('should multiply numbers in string format numbers in integer format', function(){
+  it('given two numbers in string format, returns product in integer format', function(){
     assert(multiply)
-  })
+  });
+  assert.equal(multiply("two", "two"), 4);
+  assert.euqal(multiply("six", "four"), 24);
 })
 
 //test(multiply("one", "zero"), 0)
+
+
+
 
 /*
 console.log('The product of "zero" and "zero"',
