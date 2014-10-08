@@ -58,33 +58,32 @@ function numChange(a){
 
   var value = a.toString();
   var dollars = value.slice(0,-3);
-  var cents = value.slice(-2);
-
-
+  var dollarsSplit = value.slice(0,-3).split("");
+  var cents = a.toFixed(2).slice(-2);
 
 //////////0-19///////////////////////////////////////////////
-    if (a < 20){return(ones[dollars])+cents+floor(0)+"/100s"}; //for numbers 0-19
+    if (a < 20){return(ones[dollars])+" and "+cents+"/100s"}; //for numbers 0-19
 
-///////////20-99/////////////////////////////////////////////////
-//     if (a < 100){
-//       if (a % 10 === 0){return(tens[value[0]]);}
-//     return(tens[value[0]] + ones[value[1]])
-//     }
-// ///////////100-999/////////////////////////////////////////////////
-//     if (a < 1000){
-//       if (a % 100 === 0){return(hundreds[value[0]]);}
-//         if (a % 10 === 0){return(hundreds[value[0]]+tens[value[1]]);}
-//           if (value[1] < 2) {return(hundreds[value[0]] + teens[value[2]]);}
-//     return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
-//     }
-// ///////////1000 - 9999//////////////////////////////
-//   if (a < 10000){
-//     if (a % 1000 === 0){return(thousands[value[0]]);}
-//       if (a % 100 === 0){return(thousands[value[0]] + hundreds[value[1]]);}
-//         if (a % 10 === 0){return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]]);}
-//           if (value[2] < 2) {return(thousands[value[0]] + hundreds[value[1]] + teens[value[3]]);}
-//     return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]] + ones[value[3]])
-//   }
+/////////20-99/////////////////////////////////////////////////
+    if (a < 100){
+      if (a % 10 === 0){return(tens[value[0]])+ " and "+cents+"/100s";}
+    return(tens[value[0]] + ones[value[1]]+ " and "+cents+"/100s")
+    }
+///////////100-999/////////////////////////////////////////////////
+    if (a < 1000){
+      if (a % 100 === 0){return(hundreds[value[0]]);}
+        if (a % 10 === 0){return(hundreds[value[0]]+tens[value[1]]);}
+          if (value[1] < 2) {return(hundreds[value[0]] + teens[value[2]]);}
+    return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
+    }
+///////////1000 - 9999//////////////////////////////
+  if (a < 10000){
+    if (a % 1000 === 0){return(thousands[value[0]]);}
+      if (a % 100 === 0){return(thousands[value[0]] + hundreds[value[1]]);}
+        if (a % 10 === 0){return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]]);}
+          if (value[2] < 2) {return(thousands[value[0]] + hundreds[value[1]] + teens[value[3]]);}
+    return(thousands[value[0]] + hundreds[value[1]] + tens[value[2]] + ones[value[3]])
+  }
 
 }
 
@@ -96,16 +95,16 @@ while (balls<750){
  */
 
 //////////////////////TEST////////////////////
-console.log(numChange(12.30))
-// console.log(numChange(0))
-// console.log(numChange(11))
+console.log(numChange(3.00))
+console.log(numChange(0.00))
+console.log(numChange(11.43))
 // console.log(numChange(14))
 // console.log(numChange(1))
 // console.log(numChange(8))
-// console.log(numChange(23))
+console.log(numChange(23.76))
 // console.log(numChange(42))
-// console.log(numChange(50))
-// console.log(numChange(60))
+console.log(numChange(50.1))
+console.log(numChange(60.01))
 // console.log(numChange(79))
 // console.log(numChange(800))
 // console.log(numChange(300))
