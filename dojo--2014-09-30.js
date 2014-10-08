@@ -100,17 +100,17 @@ function test(actual, expected, success){
 // });
 
 
-describe('multiply: given two numbers in string format, returns product in integer format', function(){
-  it('should multiply "one" and "one" and return 1', function(){
+suite('multiply: given two numbers in string format, returns product in integer format', function(){
+  test('should multiply "one" and "one" and return 1', function(){
     assert.equal(multiply("one", "one"), 1);
   })
-  it('should multiply "two" and "three" and return 6', function(){
+  test('should multiply "two" and "three" and return 6', function(){
     assert.equal(multiply("two", "three"), 6);
   })
-  it('should multiply "four" and "five" and return 20', function(){
+  test('should multiply "four" and "five" and return 20', function(){
     assert.equal(multiply("four", "five"), 20);
   })
-  it('should multiply "six" and "seven" and return 42', function(){
+  test('should multiply "six" and "seven" and return 42', function(){
     assert.equal(multiply("six", "seven"), 42);
   })
 })
