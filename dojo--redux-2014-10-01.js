@@ -68,7 +68,7 @@ function toEnglish(value){
   if (dollars <1000){
     if(dollars % 100===0){return (hundreds[dollarsSplit[0]]+" dollars and "+cents+"/100s")}
       if(dollars % 10===0){return (hundreds[dollarsSplit[0]]+tens[dollarsSplit[1]]+" dollars and "+cents+"/100s")}
-        if(dollarsSplit[2]<2)
+        if(dollarsSplit[1]<2){return (hundreds[dollarsSplit[0]]+teens[dollarsSplit[2]]+" dollars and "+cents+"/100s")}
   }
 
 }
@@ -102,11 +102,11 @@ describe('toEnglish(), when given a dollar amount, prints its spelling', functio
   it('should print "seventythree dollars and 55/100s"', function(){
     assert.equal(toEnglish(73.55), "seventythree dollars and 55/100s")
   })
-  it('should print "six hundred dollars and 00/100s"', function(){
-    assert.equal(toEnglish(600.00), "six hundred dollars and 00/100s")
+  it('should print "six hundred dollars and 01/100s"', function(){
+    assert.equal(toEnglish(600.01), "six hundred dollars and 01/100s")
   })
-  it('should print "fourhundred thirteen dollars and 77/100s"', function(){
-    assert.equal(toEnglish(413.77), "four hundred thirteen dollars and 77/100s")
+  it('should print "four hundred thirteen dollars and 77/100s"', function(){
+    assert.equal(toEnglish(404.77), "four hundredfour dollars and 77/100s")
   })
 
 })
