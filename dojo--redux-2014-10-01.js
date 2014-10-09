@@ -56,11 +56,16 @@ function toEnglish(value){
   var valueString = value.toString();
   var cents = valueString.slice(-2);
   var dollars = Math.floor(value);
-  var dollarsSplit = valueString.split("")
+  var dollarsSplit = valueString.split("");
+
+  if(dollars < 20){
+    return(ones[dollars]+" dollars and "+cents+"/100s")
+  }
 
 
 }
-console.log(toEnglish(3.56))
+
+
 // //////////0-19///////////////////////////////////////////////
 //     if (a < 20){return(ones[dollars])+" and "+cents+"/100s"}; //for numbers 0-19
 //
@@ -77,3 +82,10 @@ console.log(toEnglish(3.56))
 //           if (value[1] < 2) {return(hundreds[value[0]] + teens[value[2]]);}
 //     return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
 //     }
+var assert = require('chai').assert;
+
+describe('toEnglish(), when given a dollar amount, prints its spelling', function(){
+  it('should print "twelve dollars and 34/100s"', function(){
+    assert.equal(toEnglish(12.34), "twelve dollars and 34/100s")
+  })
+})
