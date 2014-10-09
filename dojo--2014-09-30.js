@@ -101,8 +101,11 @@ function test_assert(actual, expected, success){
 
 
 describe('multiply: takes two string numbers, spits out integer product', function(){
-  it('should multiply "one" and "one" and give me 1', function(){
+  it('should assert that 1 is a integer product of "one" and "one"', function(){
     assert.isNumber(multiply("one", "one"), 1);
+  })
+  it('should assert the product of "one" and "one" is a number', function(){
+    assert.typeOf(multiply("one", "one"), 'number')
   })
 
 })
