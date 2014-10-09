@@ -163,7 +163,7 @@ function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (boar
 //Mocha test, TDD
 suite('neighborsOf: given starting cell, returns locations of neighboring cells', function(){
   test('Given (board,0,0), should return neighbors board[0][1], board[1][0], board[1][1]', function(){
-    assert(neighborsOf(board,0,0), [board[0][1], board[1][0], board[1][1]]);
+    assert.deepEqual(neighborsOf(board,0,0), [board[0][1], board[1][0], board[1][1]]);
   })
 
 })
@@ -191,6 +191,12 @@ function conway (cell, neighbors) {
         return cellNew;
 
 }
+//Mocha test, TDD
+suite('conway: given a CELL and the cells NEIGHBORS, applies conways rules, returns cell status', function(){
+  test('Looking at the board, cell [1][1] will be false after applying Conways rules', function(){
+    assert(board[1][1], neighborsOf(board,1,1))
+  })
+})
 
 console.log(conway(board[1][1], neighborsOf(board, 1, 1)))
 
