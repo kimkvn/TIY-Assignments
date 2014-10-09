@@ -53,7 +53,7 @@ var hundreds = ["zero", "one hundred", "two hundred", "three hundred",
 
 function toEnglish(value){
 
-  var valueString = value.toString();
+  var valueString = value.toFixed(2);
   var cents = valueString.slice(-2);
   var dollars = Math.floor(value);
   var dollarsSplit = valueString.split("");
@@ -61,7 +61,15 @@ function toEnglish(value){
   if(dollars < 20){
     return(ones[dollars]+" dollars and "+cents+"/100s")
   }
-
+  if (dollars < 100){
+    if(dollars % 10 === 0){return (tens[dollarsSplit[0]]+" dollars and "+cents+"/100s")}
+      return(tens[dollarsSplit[0]] + ones[dollarsSplit[1]] + " dollars and "+cents+"/100s")
+  }
+  if (dollars <1000){
+    if(dollars % 100===0){return (hundreds[dollarsSplit[0]]+" dollars and "+cents+"/100s")}
+      if(dollars % 10===0){return (hundreds[dollarsSplit[0]]+tens[dollarsSplit[1]]+" dollars and "+cents+"/100s")}
+        if(dollarsSplit[2]<2)
+  }
 
 }
 
@@ -88,4 +96,17 @@ describe('toEnglish(), when given a dollar amount, prints its spelling', functio
   it('should print "twelve dollars and 34/100s"', function(){
     assert.equal(toEnglish(12.34), "twelve dollars and 34/100s")
   })
+  it('should print "forty dollars and 00/100s"', function(){
+    assert.equal(toEnglish(40.00), "forty dollars and 00/100s")
+  })
+  it('should print "seventythree dollars and 55/100s"', function(){
+    assert.equal(toEnglish(73.55), "seventythree dollars and 55/100s")
+  })
+  it('should print "six hundred dollars and 00/100s"', function(){
+    assert.equal(toEnglish(600.00), "six hundred dollars and 00/100s")
+  })
+  it('should print "fourhundred thirteen dollars and 77/100s"', function(){
+    assert.equal(toEnglish(413.77), "four hundred thirteen dollars and 77/100s")
+  })
+
 })
