@@ -107,6 +107,9 @@ describe('multiply: takes two string numbers, spits out integer product', functi
   it('should assert the product of "one" and "one" is a number', function(){
     assert.typeOf(multiply("one", "one"), 'number')
   })
+  it('should assert the product of "one" and "one" is strictly equal to 1', function(){
+    assert.strictEqual(multiply("one", "one"), 1)
+  })
 
 })
 
