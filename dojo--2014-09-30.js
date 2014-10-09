@@ -59,7 +59,7 @@ function multiply (a,b){
 
 
 //////
-var assert = require('assert');
+var assert = require('chai').assert;
 
 function test_assert(actual, expected, success){
     success = success || 'YOU DID IT!';
@@ -100,19 +100,11 @@ function test_assert(actual, expected, success){
 // });
 
 
-suite('multiply: given two numbers in string format, returns product in integer format', function(){
-  test('should multiply "one" and "one" and return 1', function(){
-    assert.equal(multiply("one", "one"), 1);
+describe('multiply: takes two string numbers, spits out integer product', function(){
+  it('should multiply "one" and "one" and give me 1', function(){
+    assert.isNumber(multiply("one", "one"), 1);
   })
-  test('should multiply "two" and "three" and return 6', function(){
-    assert.equal(multiply("two", "three"), 6);
-  })
-  test('should multiply "four" and "five" and return 20', function(){
-    assert.equal(multiply("four", "five"), 21);
-  })
-  test('should multiply "six" and "seven" and return 42', function(){
-    assert.equal(multiply("six", "seven"), 42);
-  })
+
 })
 
 //test(multiply("one", "zero"), 0)
