@@ -23,6 +23,8 @@ function toEnglish(a){
   var dollars = value.slice(0,-3).split("").reverse();
   var cents = a.toFixed(2).slice(-2);
 
+
+
 return thousands[dollars[3]]+ hundreds[dollars[2]] + tens[dollars[1]] + ones[dollars[0]] +" dollars and "+cents+"/100s cents"
 
 }//END toEnglish
