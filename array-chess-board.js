@@ -113,12 +113,12 @@ var boardW5 = [
 //Using arrays to visualize the Catalan Opening Closed Version
 
 //establishing test variabe
-var assert = require('chai').assert
+var assert = require('chai').assert;
 
 function moves(number, color){
   if (number === 1){
-    if(color === "white"){return boardW1};
-    if(color === "black")[return boardB1}]
+    if(color === "white"){return boardW1}
+    if(color === "black"){return boardB1}
   }//end if 1
 
   if(number === 2){
@@ -142,6 +142,36 @@ function moves(number, color){
 }// END numbers()
 
 
+// console.log(moves(1, "white"))
+describe('checks the board status after each move', function(){
+  it('should return boardW1', function(){
+    assert.equal(moves(1, "white"), boardW1)
+  })
+  it('should return boardB1', function(){
+    assert.equal(moves(1,"black"), boardB1)
+  })
+  it('should return boardW2', function(){
+    assert.equal(moves(2,"white"), boardW2)
+  })
+  it('should return boardB2', function(){
+    assert.equal(moves(2,"black"), boardB2)
+  })
+  it('should return boardW3', function(){
+    assert.equal(moves(3,"white"), boardW3)
+  })
+  it('should return boardB3', function(){
+    assert.equal(moves(3, "black"), boardB3)
+  })
+  it('should return boardW4', function(){
+    assert.equal(moves(4,"white"), boardW4)
+  })
+  it('should return boardB4', function(){
+    assert.equal(moves(4,"black"), boardB4)
+  })
+  it('should return boardW5', function(){
+    assert.equal(moves(5,"white"), boardW5)
+  })
+})//END describe
 
 
 
