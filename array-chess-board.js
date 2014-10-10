@@ -115,58 +115,79 @@ var boardW5 = [
 //establishing test variabe
 var assert = require('chai').assert
 
+function moves(number, color){
+  if (number === 1){
+    if(color === "white"){return boardW1};
+    if(color === "black")[return boardB1}]
+  }//end if 1
+
+  if(number === 2){
+    if(color === "white"){return boardW2}
+    if(color === "black"){return boardB2}
+  }//end if 2
+
+  if(number === 3){
+    if(color === "white"){return boardW3}
+    if(color === "black"){return boardB3}
+  }//end if 3
+
+  if(number === 4){
+    if(color === "white"){return boardW4}
+    if(color === "black"){return boardB4}
+  }//end if 4
+
+  if (number === 5){
+    if(color === "white"){return boardW5}
+  }//end if 5
+}// END numbers()
 
 
-//1 - White's move: Pawn to d4
-board[4][3] = board[6][3];
-board[6][3] = ' ';
+
+
+
+// //1 - White's move: Pawn to d4
+// board[4][3] = board[6][3];
+// board[6][3] = ' ';
 // console.log(board.join('\n') + '\n\n');
-// describe('White to move', function(){
-//   it('should move Pawn to d4', function(){
-//     assert.equal(console.log(board) ===  )
-//   })
 //
-// })
-
-
-//1 - Black's move: Knight to f6
-board[2][5] = board[0][6];
-board[0][6] = ' ';
-console.log(board.join('\n') + '\n\n');
-
-//2 - White's move: Pawn to c4
-board[4][2] = board[6][2];
-board[6][2] = ' ';
-console.log(board.join('\n') + '\n\n');
-
-//2 - Black's move: Pawn to e6
-board[2][4] = board[1][4];
-board[1][4] = ' ';
-console.log(board.join('\n') + '\n\n');
-
-//3 - White's move: Pawn to g3
-board[5][6] = board[6][6];
-board[6][6] = ' ';
-console.log(board.join('\n') + '\n\n');
-
-//3 - Black's move: Pawn to d5
-board[3][3] = board[1][3];
-board[1][3] = ' ';
-console.log(board.join('\n') + '\n\n');
-
-//4 - White's move: Bishop to g2
-board[6][6] = board[7][5];
-board[7][5] = ' ';
-console.log(board.join('\n') + '\n\n');
-
-//4 - Black's move: Bishop to e7
-board[1][4] = board[0][5];
-board[0][5] = ' ';
-console.log(board.join('\n') + '\n\n');
-
-//5 - White's move: Knight to f3
-board[5][5] = board[7][6];
-board[7][6] = ' ';
-console.log(board.join('\n') + '\n\n');
+// //1 - Black's move: Knight to f6
+// board[2][5] = board[0][6];
+// board[0][6] = ' ';
+// console.log(board.join('\n') + '\n\n');
+//
+// //2 - White's move: Pawn to c4
+// board[4][2] = board[6][2];
+// board[6][2] = ' ';
+// console.log(board.join('\n') + '\n\n');
+//
+// //2 - Black's move: Pawn to e6
+// board[2][4] = board[1][4];
+// board[1][4] = ' ';
+// console.log(board.join('\n') + '\n\n');
+//
+// //3 - White's move: Pawn to g3
+// board[5][6] = board[6][6];
+// board[6][6] = ' ';
+// console.log(board.join('\n') + '\n\n');
+//
+// //3 - Black's move: Pawn to d5
+// board[3][3] = board[1][3];
+// board[1][3] = ' ';
+// console.log(board.join('\n') + '\n\n');
+//
+// //4 - White's move: Bishop to g2
+// board[6][6] = board[7][5];
+// board[7][5] = ' ';
+// console.log(board.join('\n') + '\n\n');
+//
+// //4 - Black's move: Bishop to e7
+// board[1][4] = board[0][5];
+// board[0][5] = ' ';
+// console.log(board.join('\n') + '\n\n');
+//
+// //5 - White's move: Knight to f3
+// board[5][5] = board[7][6];
+// board[7][6] = ' ';
+// console.log(board.join('\n') + '\n\n');
 
 ///Testing///
