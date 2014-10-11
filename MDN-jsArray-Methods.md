@@ -63,3 +63,136 @@ arr.fil(value, start, end) - value: the thing you're inserting, start: the start
 end: the last established element you're replacing
 
   ```
+  //borrowing the var colors array from the previous example:
+  colors.fill(purple) // returns ["purple", "purple", "purple", "purple", "purple"]
+  colors.fill("purple", 3) // returns ["red", "blue", "yellow", "purple", "purple"]
+  colors.fill("purple", 2, 3) // returns ["red", "blue", "purple", "green", "pink"]
+  ```
+
+``Array.prototype.pop()`` -- removes the last element in an array. Pop! Sounds violent.
+  ```
+  colors.pop() // if you console.log'd this, it'd be 'pink'
+  ```
+
+``Array.prototype.push()`` - adds 1(+) elements to the end of an array
+  ```
+  colors.push("magenta") // returns ["red", "blue", "yellow", "green", "pink", "magenta"]
+  ```
+
+``Array.prototype.reverse`` - reverses the order of elements in an array. [0] gets pushed to last, and vice versa.
+
+  ```
+  colors.reverse() // would return ["pinkt", "green", "yellow", "blue", "red"]
+  ```
+
+
+``Array.prototype.shift()`` - kind of like the reverse of pop. array.shift will remove the first element
+in an array.
+
+  ```
+  colors.shift() // colors will now be ["blue", "yellow", "green", "pink"].
+  // .shift will return "red"
+  ```
+
+``Array.protoype.sort()`` - This one I don't quite understand. Apparently it arranges the elements in an array
+according to their unicode code point value. I guess I need to know what Unicode is to understand this.
+
+Examples from the MDN site:
+  ```
+  var fruit = ['apples', 'bananas', 'Cherries'];
+  fruit.sort(); //returns ['Cherries', 'apples', 'bananas']
+
+  var scores = [1,2,10,21]
+  scores.sort(); // returns [1, 10, 2, 21]
+  ```
+
+  Yeah...I don't know.
+
+
+``Array.prototype.splice()`` - changes the elements in an array by adding new ones and removing old ones.
+Needs 3 inputs: (starting place where you're splicing to, how many elements you're removing, new elements you're
+splicing in)
+
+  ```
+  //Good ole var colors!
+  var colors = ["red", "blue", "yellow", "green", "pink"];
+  colors.splice(1,0, "purple") // returns new colors: ["red", "purple", "yellow", "green", "pink"]
+  colors.splice(3,1) // returns ["red", "blue", "yellow", "pink"]
+  colors.splice(0,2, "purple", "burgundy") // returns ["puple", "magenta", "yellow", "green", "pink"]
+  ```
+
+``Array.prototype.unshift()`` - Ooh...this one is cool. So the opposite of array.push, which adds elements to
+the end of an array, array.unshift will add elements to the BEGINNING of an array. Neat!
+
+  ```
+  colors.unshift("robin's egg"); // returns ["robin's egg", "red", "blue", "yellow", "green", "pink"]
+  ```
+
+####Acessor Methods
+Will not modify the array, but will return some representation of the array.
+
+``Array.prototype.concat()`` - Hmm another interesting and possibly useful one. This command can merge multiple arrays together
+to form one super array.
+
+  ```
+  var colors = ['red', 'blue', 'green']
+  var browsers = ['chrome', 'firefox', 'safari']
+  var numbers = [1, 2, 3]
+
+  var superArray = colors.concat(browsers, numbers)// returns ['red', 'blue', 'green', 'chrome', 'firefox', 'safari', 1, 2, 3]
+  ```
+
+``Array.prototype.contains()`` - determines if an array contains a certain element, returns true or false
+  ```
+  var colors = ['red', 'blue', 'green']
+  colors.contains('red') // returns true
+  coolors.contains('yellow') // returns false
+  colors.contains('red', 2) // false - the second input is fromIndex, tells the robot to search for the given value starting at the index specified.
+                            // in this case, red is an element in colors, but the robot started searching from [2]. which is 'green'. So it's false.
+  ```
+
+``Array.prototype.join()`` - takes the elements in an array and turns them into a string.
+It is optional to include a separator like (',') which specifies how you want the values
+separated when they're in string format. Examples will help.
+
+    ```
+    var colors = ['red', 'blue', 'green']
+    colors.join(); // will return "red,blue,green"
+    colors.join(', '); // will return "red, blue, green" (because of the specified space after the comma)
+    colors.join(' + '); // returns "red + blue + green". Spaces count!
+    ```
+
+``Array.prototype.slice();`` - returns a copied portion of an array in a new variable, given a start and end index. It's important
+to note that .slice does not affect the original array, like .splice does. However, if the original array is altered,
+the changes do reflect in whatever .slice command you've written.
+
+  ```
+  var fruits = ['apples', 'peaches', 'mangoes', 'grapes', 'strawberries'];
+  var fruitPits = fruits.slice(1,3);
+  console.log(fruits) // returns the original fruits array
+  console.log(fruitPits) // returns ['peaches', 'mangoes'];
+  ```
+
+``Array.prototype.toString`` - returns a string that represents the array in question and its elements.
+
+  ```
+  var browsers = ['chrome', 'firefox', 'opera'];
+  browsers.toString(); // returns "chrome,firefox,opera"
+  ```
+
+``Array.prototype.indexOf();`` - use this to find the index/location of an element in an array!
+
+  ```
+  var browsers again. 
+  browsers.indexOf('opera') // returns 2
+  browsers.indexOf('safari') // returns -1. -1 is returned when the element you're searching for does not exist in the array.
+  ```
+
+``Array.prototype.lastIndexOf();`` - will give you the last index location of an element in an array.
+Could be useful for wanting to know what is the last location of a repeating element within an array.
+
+  ```
+  var numbers = [2,5,3,2,7]
+  numbers.LastIndexOf(2); // returns index of 3.
+  numbers.LastIndexOf(4); // returns -1, because like indexOf, if the element doesn't exist in the array, robot will return -1.
+  ```
