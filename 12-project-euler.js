@@ -23,7 +23,7 @@ function solution(){
       for(i=1; i<=100; i++){
         sum100 += i;
       }
-      var sqaureSum = Math.pow(sum100,2)
+      sum100 = Math.pow(sum100,2)
     }//END sumSquares
 
   }//END return
@@ -33,3 +33,10 @@ function solution(){
 
 /* === TEST CODE === */
 // You should probably write some...
+var assert = require('chai').assert
+
+describe('squareSum', function(){
+  it('squares the sum of natural numbers 1-100', function(){
+    assert.equal
+  })
+})
