@@ -20,7 +20,7 @@ function solution(){
   return {
     squareSum: function(){
       var sum100 = 0;
-      for(i=1; i<=10; i++){
+      for(i=1; i<=100; i++){
         sum100 += i;
       }
       sum100 = Math.pow(sum100,2);
@@ -28,25 +28,32 @@ function solution(){
     },//END sumSquares
     sumSquare: function(){
       var sq100 = 0;
-      for(i=1; i<=10; i++){
+      for(i=1; i<=100; i++){
         sq100 += Math.pow(i,2);
       }
       return sq100
-    }//END sumSquare
+    },//END sumSquare
+    diff: function(){
+      return this.squareSum() - this.sumSquare();
+    }
   }//END return
 
 }//END solution
 
+console.log(solution().diff()) // returns 25164150 yay
 
 /* === TEST CODE === */
 // You should probably write some...
 var assert = require('chai').assert
 
-describe('squareSum', function(){
-  it('squares the sum of natural numbers 1-10', function(){
-    assert.equal(solution().squareSum(), 3025)
-  })
-  it('sums the squares of natural numbers 1-10', function(){
-    assert.equal(solution().sumSquare(), 385)
-  })
-})
+// describe('squareSum', function(){
+//   it('squares the sum of natural numbers 1-10', function(){
+//     assert.equal(solution().squareSum(), 3025)
+//   })
+//   it('sums the squares of natural numbers 1-10', function(){
+//     assert.equal(solution().sumSquare(), 385)
+//   })
+//   it('finds difference of sum100 and sq100', function(){
+//     assert.equal(solution().diff(), 2640)
+//   })
+// })
