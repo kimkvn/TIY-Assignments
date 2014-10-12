@@ -20,12 +20,19 @@ function solution(){
   return {
     squareSum: function(){
       var sum100 = 0;
-      for(i=1; i<=100; i++){
+      for(i=1; i<=10; i++){
         sum100 += i;
       }
-      sum100 = Math.pow(sum100,2)
-    }//END sumSquares
-
+      sum100 = Math.pow(sum100,2);
+      return sum100
+    },//END sumSquares
+    sumSquare: function(){
+      var sq100 = 0;
+      for(i=1; i<=10; i++){
+        sq100 += Math.pow(i,2);
+      }
+      return sq100
+    }//END sumSquare
   }//END return
 
 }//END solution
@@ -36,7 +43,10 @@ function solution(){
 var assert = require('chai').assert
 
 describe('squareSum', function(){
-  it('squares the sum of natural numbers 1-100', function(){
-    assert.equal
+  it('squares the sum of natural numbers 1-10', function(){
+    assert.equal(solution().squareSum(), 3025)
+  })
+  it('sums the squares of natural numbers 1-10', function(){
+    assert.equal(solution().sumSquare(), 385)
   })
 })
