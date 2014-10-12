@@ -46,6 +46,11 @@ console.log(solution().diff()) // returns 25164150 yay
 // You should probably write some...
 var assert = require('chai').assert
 
+/* We started testing our functions with values we already knew, in this case,
+* where the limit is 10 (the sumSquare and squareSum were provided by the Proj
+* Euler site)
+/*
+
 // describe('squareSum', function(){
 //   it('squares the sum of natural numbers 1-10', function(){
 //     assert.equal(solution().squareSum(), 3025)
