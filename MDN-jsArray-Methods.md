@@ -205,3 +205,24 @@ Methods that will apply a function or action to each part of an array.
 * Element value
 * element index
 * the array in question
+Example using the Conway's Game of Life problem:
+  ```
+  function conway (cell, neighbors) {
+  var alive = 0;
+  neighbors.forEach(function(neighbors){ //The .forEach method. Applies a function (the next line) to each of the elements in 'neighbors'
+    if(neighbors === true){alive++};
+  });
+
+      if (cell === true){
+        if (alive < 2){cellNew = false};
+        if (alive === 2 || alive === 3){cellNew = true};
+        if (alive > 3){cellNew = false};
+        }
+        else {if (alive ===3)
+                {cellNew = true}
+              else{cellNew = false}
+              }
+        return cellNew;
+
+  } //END conway
+  ```
