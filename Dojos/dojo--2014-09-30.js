@@ -20,14 +20,25 @@
 */
 
 
-var toIntegers = {'zero': 0, 'one': 1, 'two': 2, 'three':3, 'four':4,
-'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10};
+var stringCalculator = {
 
-function fromEnglish(a, b){
+  toIntegers = {'zero': 0, 'one': 1, 'two': 2, 'three':3, 'four':4,
+  'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10};
 
-  return (toIntegers[a] * toIntegers[b]);
+  fromEnglish: function(){
+    return
+  }//END fromEnglish
 
-}//END fromEnglish
+} //END stringCalculator
+
+// var toIntegers = {'zero': 0, 'one': 1, 'two': 2, 'three':3, 'four':4,
+// 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10};
+//
+// function fromEnglish(a, b){
+//
+//   return (toIntegers[a] * toIntegers[b]);
+//
+// }//END fromEnglish
 
 
 
