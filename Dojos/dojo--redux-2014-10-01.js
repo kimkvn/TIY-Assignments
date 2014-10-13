@@ -51,43 +51,43 @@ var hundreds = ["zero", "one hundred", "two hundred", "three hundred",
 "eight hundred", "nine hundred"];
 
 
-function toEnglish(value){
+var checkWriting = {
+  toEnglish: function(value){
+    var valueString = value.toFixed(2);
+    var cents = valueString.slice(-2);
+    var dollars = Math.floor(value);
+    var digits = valueString.split(""); console.log(digits);
 
-  var valueString = value.toFixed(2);
-  var cents = valueString.slice(-2);
-  var dollars = Math.floor(value);
-  var dollarsSplit = valueString.split("");
+    var ending = " dollars and " + cents + "/100s"
 
-  if(dollars < 20){
-    return(ones[dollars]+" dollars and "+cents+"/100s")
-  }
-  if (dollars < 100){
-    if(dollars % 10 === 0){return (tens[dollarsSplit[0]]+" dollars and "+cents+"/100s")}
-      return(tens[dollarsSplit[0]] + ones[dollarsSplit[1]] + " dollars and "+cents+"/100s")
-  }
-  if (dollars <1000){
-    if(dollars % 100===0){return (hundreds[dollarsSplit[0]]+" dollars and "+cents+"/100s")}
-      if(dollars % 10===0){return (hundreds[dollarsSplit[0]]+tens[dollarsSplit[1]]+" dollars and "+cents+"/100s")}
-        if(dollarsSplit[1]<2){return (hundreds[dollarsSplit[0]]+teens[dollarsSplit[2]]+" dollars and "+cents+"/100s")}
-  }
+    if(dollars < 20){
+      return(ones[dollars]+ending)
+    }
+    if (dollars < 100){
+      if(dollars % 10 === 0){return (tens[digits[0]]+ ending)}
+      else {return(tens[digits[0]] + ones[digits[1]] + ending)}
+    }
+    if (dollars <1000){
+      if(dollars % 100===0){return (hundreds[digits[0]]+ending)}
+      if(dollars % 10===0){return (hundreds[digits[0]]+tens[digits[1]]+ending)}
+      if(digits[1] === 0){return (hundreds[digits[0]] + ending)}
+      if(digits[1]<2 && digits[1]>=1){return (hundreds[digits[0]] + teens[digits[2]] + ending)}
+      else{return(hundreds[digits[0]]+tens[digits[1]]+ones[digits[2]]+ending)}
+    }
+  }// END toEnglish
+} //END checkWriting
 
-}
 
 
-// //////////0-19///////////////////////////////////////////////
-//     if (a < 20){return(ones[dollars])+" and "+cents+"/100s"}; //for numbers 0-19
-//
-// /////////20-99/////////////////////////////////////////////////
-//     if (a < 100){
-//       if (a % 10 === 0){return(tens[dollarsSplit[0]]+" and "+cents+"/100s")}
-//       if (ones[dollarsSplit[1]] === "zero" && cents !== 00){return(tens[dollarsSplit[0]] + " and "+cents+"/100s")}
-//     return(tens[dollarsSplit[0]] + ones[dollarsSplit[1]]+ " and "+cents+"/100s")
-//     }
-// ///////////100-999/////////////////////////////////////////////////
-//     if (a < 1000){
-//       if (a % 100 === 0){return(hundreds[value[0]]);}
-//         if (a % 10 === 0){return(hundreds[value[0]]+tens[value[1]]);}
-//           if (value[1] < 2) {return(hundreds[value[0]] + teens[value[2]]);}
-//     return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
-//     }
-var assert = require('chai').assert;
+var assert = require('chai').assert
+
+describe('checkWriting', function(){
+  it('takes a number and returns it in words, like writing a check', function(){
+    // assert.equal(checkWriting.toEnglish(12.34), "twelve dollars and 34/100s")
+    // assert.equal(checkWriting.toEnglish(1.09), "one dollars and 09/100s")
+    // assert.equal(checkWriting.toEnglish(33.00), "thirtythree dollars and 00/100s")
+    // assert.equal(checkWriting.toEnglish(123.45), "one hundredtwentythree dollars and 45/100s")
+    // assert.equal(checkWriting.toEnglish(110.00), "one hundredten dollars and 00/100s")
+    assert.equal(checkWriting.toEnglish(108.98), "one hundredeight dollars and 98/100s")
+  })
+})
