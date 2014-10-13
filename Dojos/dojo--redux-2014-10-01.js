@@ -91,22 +91,3 @@ function toEnglish(value){
 //     return(hundreds[value[0]] + tens[value[1]] + ones[value[2]])
 //     }
 var assert = require('chai').assert;
-
-describe('toEnglish(), when given a dollar amount, prints its spelling', function(){
-  it('should print "twelve dollars and 34/100s"', function(){
-    assert.equal(toEnglish(12.34), "twelve dollars and 34/100s")
-  })
-  it('should print "forty dollars and 00/100s"', function(){
-    assert.equal(toEnglish(40.00), "forty dollars and 00/100s")
-  })
-  it('should print "seventythree dollars and 55/100s"', function(){
-    assert.equal(toEnglish(73.55), "seventythree dollars and 55/100s")
-  })
-  it('should print "six hundred dollars and 01/100s"', function(){
-    assert.equal(toEnglish(600.01), "six hundred dollars and 01/100s")
-  })
-  it('should print "four hundred thirteen dollars and 77/100s"', function(){
-    assert.equal(toEnglish(404.77), "four hundredfour dollars and 77/100s")
-  })
-
-})
