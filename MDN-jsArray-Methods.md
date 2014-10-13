@@ -272,4 +272,8 @@ array. Important to note that array.filter does not affect the original array in
   var filtered = [12,5,8,130,44].filter(isBigEnough); // returns [12,130,44]
   ```
 
-26) ``
+26) ``Array.prototype.find()`` - will return a value in an array provided it satisfies a given
+testing function. Else, it returns undefined.
+*Evidently this command is still being tested and is in an experimental phase*
+
+  ```
