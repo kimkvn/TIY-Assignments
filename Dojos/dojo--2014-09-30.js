@@ -20,13 +20,14 @@
 */
 
 
+
+var toIntegers = {'zero': 0, 'one': 1, 'two': 2, 'three':3, 'four':4,
+'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10}
+
 var stringCalculator = {
 
-  toIntegers = {'zero': 0, 'one': 1, 'two': 2, 'three':3, 'four':4,
-  'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10};
-
-  fromEnglish: function(){
-    return
+  fromEnglish: function(number){
+    return toIntegers[number];
   }//END fromEnglish
 
 } //END stringCalculator
@@ -46,17 +47,18 @@ var stringCalculator = {
 ///TESTING////
 var assert = require('chai').assert
 
-describe('toIntegers()', function(){
-  it('multiplies two numbers as strings, and returns the product as integer', function(){
-    assert.equal(fromEnglish('zero', 'one'), 0)
-    assert.equal(fromEnglish('two', 'three'), 6)
-    assert.equal(fromEnglish('four', 'three'), 12)
-    assert.equal(fromEnglish('four', 'five'), 20)
-    assert.equal(fromEnglish('six', 'five'), 30)
-    assert.equal(fromEnglish('six', 'seven'), 42)
-    assert.equal(fromEnglish('eight', 'seven'), 56)
-    assert.equal(fromEnglish('eight', 'nine'), 72)
-    assert.equal(fromEnglish('ten', 'nine'), 90)
-    assert.equal(fromEnglish('ten', 'ten'), 100)
+describe('stringCalculator', function(){
+  it('returns the integer form of a number in English form', function(){
+    assert.equal(stringCalculator.fromEnglish('zero'), 0)
+    assert.equal(stringCalculator.fromEnglish('one'), 1)
+    assert.equal(stringCalculator.fromEnglish('two'), 2)
+    assert.equal(stringCalculator.fromEnglish('three'), 3)
+    assert.equal(stringCalculator.fromEnglish('four'), 4)
+    assert.equal(stringCalculator.fromEnglish('five'), 5)
+    assert.equal(stringCalculator.fromEnglish('six'), 6)
+    assert.equal(stringCalculator.fromEnglish('seven'), 7)
+    assert.equal(stringCalculator.fromEnglish('eight'), 8)
+    assert.equal(stringCalculator.fromEnglish('nine'), 9)
+    assert.equal(stringCalculator.fromEnglish('ten'), 10)
   })
 })//END describe
