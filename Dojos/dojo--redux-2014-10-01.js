@@ -70,7 +70,7 @@ var checkWriting = {
     if (dollars <1000){
       if(dollars % 100===0){return (hundreds[digits[0]]+ending)}
       if(dollars % 10===0){return (hundreds[digits[0]]+tens[digits[1]]+ending)}
-      if(digits[1] === 0){return (hundreds[digits[0]] + ending)}
+      if(digits[1] === '0'){return (hundreds[digits[0]] + ones[digits[2]]+ ending)}
       if(digits[1]<2 && digits[1]>=1){return (hundreds[digits[0]] + teens[digits[2]] + ending)}
       else{return(hundreds[digits[0]]+tens[digits[1]]+ones[digits[2]]+ending)}
     }

@@ -245,3 +245,31 @@ pass a test implemented by the provided function.
 
   format: ``arrary.every(<function>(<element being process>, <element's index>, array))``
   ```
+  function isBigEnough(element, index, array) {
+  return element >= 10;
+  }
+  var passed = [12, 5, 8, 130, 44].every(isBigEnough); // passed is false
+  passed = [12, 54, 18, 130, 44].every(isBigEnough); // passed is true
+  ```
+24) ``Array.prototype.some()`` - like array.every, but more flexible when it comes to returning true.
+
+  ```
+  function isBigEnough(element, index, array){
+    return element >= 10;
+  }
+  var passed = [2,5,8,1,4].some(isBigEnough); // false, because none of the elements satisfy isBigEnough
+  passed = [12,5,8,1,4].some(isBigEnough); // true, because at least one element "12" satisfies isBigEnough
+
+25) ``Array.prototype.filter()`` - creates a new array based on whatever criteria the function establishes.
+Similar to array.every or array.some in terms of rule applying, but instead of a boolean, it spits out a new
+array. Important to note that array.filter does not affect the original array in terms of adding/removing elements.
+
+  ```
+  function isBigEnough(element, index, array){
+    return element >= 10;
+  }
+
+  var filtered = [12,5,8,130,44].filter(isBigEnough); // returns [12,130,44]
+  ```
+
+26) ``
