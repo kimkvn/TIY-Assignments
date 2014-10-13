@@ -226,3 +226,22 @@ Example using the Conway's Game of Life problem:
 
   } //END conway
   ```
+
+22) ``Array.prototype.entries()`` using this will return a key of sorts, each
+element and its corresponding index in the array. But apparently, to actually
+print the index and its element requires a couple of other commands...?
+
+  ```
+  var arr = ['a', 'b', 'c'];
+  var eArr = arr.entries();
+
+  console.log(eArr.next().value); // returns [0, 'a']
+  console.log(eArr.next().value); // returns [1, 'b']
+  console.log(eArr.next().value); // returns [2, 'c']
+  ```
+
+23) ``Array.prototype.every()`` - determines whether the elements in an array
+pass a test implemented by the provided function.
+
+  format: ``arrary.every(<function>(<element being process>, <element's index>, array))``
+  ```
