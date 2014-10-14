@@ -196,3 +196,79 @@ if (!iO || (!iO.type && !iO.url && !iO.serverURL)) {
 
 17
 ```javascript
+if (item.match(flashMIME)) {
+
+          sm2.flash[item] = true;
+          sm2.flash[lookup] = true;
+
+        } else {
+
+          sm2.flash[item] = false;
+          sm2.flash[lookup] = false; }
+```
+* Another if else conditional, but it's affect the array sm2.flash at index locations
+[item] and [lookup].
+
+18
+```javascript
+strings = {
+
+    // <d>
+    notReady: 'Unavailable - wait until onready() has fired.',
+    notOK: 'Audio support is not available.',
+    domError: sm + 'exception caught while appending SWF to DOM.',
+    spcWmode: 'Removing wmode, preventing known SWF loading issue(s)',
+    swf404: smc + 'Verify that %s is a valid path.',
+    tryDebug: 'Try ' + sm + '.debugFlash = true for more security details (output goes to SWF.)',
+    checkSWF: 'See SWF output for more debug info.',
+    localFail: smc + 'Non-HTTP page (' + doc.location.protocol + ' URL?) Review Flash player security settings for this special case:\nhttp://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html\nMay need to add/allow path, eg. c:/sm2/ or /users/me/sm2/',
+    waitFocus: smc + 'Special case: Waiting for SWF to load with window focus...',
+    waitForever: smc + 'Waiting indefinitely for Flash (will recover if unblocked)...',
+    .
+    .
+    .
+```
+* A string bank/dictionary. The list goes on longer and this is just a snippet. But it would
+appear whoever wrote this is going to call upon the keys to represent the various strings as messages
+in the final code.
+
+19)
+```javascript
+if (sm2.debugMode && !id(sm2.debugID) && (!hasConsole || !sm2.useConsole || !sm2.consoleOnly)) {
+
+      oD = doc.createElement('div');
+      oD.id = sm2.debugID + '-toggle';
+
+      oToggle = {
+        'position': 'fixed',
+        'bottom': '0px',
+        'right': '0px',
+        'width': '1.2em',
+        'height': '1.2em',
+        'lineHeight': '1.2em',
+        'margin': '2px',
+        'textAlign': 'center',
+        'border': '1px solid #999',
+        'cursor': 'pointer',
+        'background': '#fff',
+        'color': '#333',
+        'zIndex': 10001
+      };
+```
+* What appears to be...declaring some style parameters. Yet in javascript. huh.
+
+20
+```javascript
+if (window.sm2Debugger !== _undefined) {
+      try {
+        sm2Debugger.handleEvent(sEventType, bSuccess, sMessage);
+      } catch(e) {
+        // oh well
+        return false;
+      }
+    }
+```
+* If conditional, with an unfamiliar command "try", that runs provided
+that window.sm2Debugger is not equal to _undefined.
+* Then there's "catch" which is also unfamiliar and seems akin to "else." But
+I could be wrong.
