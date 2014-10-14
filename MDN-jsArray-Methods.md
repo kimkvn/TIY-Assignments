@@ -274,6 +274,105 @@ array. Important to note that array.filter does not affect the original array in
 
 26) ``Array.prototype.find()`` - will return a value in an array provided it satisfies a given
 testing function. Else, it returns undefined.
-*Evidently this command is still being tested and is in an experimental phase*
+*Experimental command, may be subject to change in the future*
 
+  ```
+  function isPrime(element, index, array) {
+  var start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+      }
+    }
+    return element > 1;
+  }
+
+  console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+  console.log([4, 5, 8, 12].find(isPrime)); // 5
+  ```
+
+27) ``Array.prototype.findIndex();`` - almost the same as array.find, except it will return the index
+location of the element that satisfies whatever function argument applied.
+*Experimental command, may be subject to change in the future*
+
+  ```
+  function isPrime(element, index, array) {
+  var start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+      }
+    }
+    return element > 1;
+  }
+
+  console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, because -1 is the response when none of the elements satisfies the function
+  console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
+  ```
+
+28) ``Array.prototype.keys();`` - returns a new array iterator that tells the index location
+for each element in an array.
+*Experimental command, may be subject to change in the future*
+  ```
+  var arr = ['a', 'b', 'c'];
+  var eArr = arr.keys();
+
+  console.log(eArr.next().value); // 0
+  console.log(eArr.next().value); // 1
+  console.log(eArr.next().value); // 2
+  ```
+
+29) ``Array.prototype.map();`` - creates a new array with the results from applying a function to
+each element in an established array. This sounds a lot like array.forEach, but the difference is
+that forEach will affect the original array, while .map will make a new copy.
+
+  ```
+  var numbers = [4,9,25];
+  console.log(numbers.map(Math.sqrt)); // returns [2,3,5]
+  console.log(numbers) // returns [4,9,25], original array is unaffected
+  ```
+
+30) ``Array.prototype.reduce();`` - This one is hella confusing. So this command will apply a function
+once to each element in the array, but operates specifically by applying previous and curent elements
+to said function, and aggregating the results as the robot moves along the array, returning one value/
+element at the end. Uh. Yeah. Examples?
+
+  ```
+  //formula/syntax:
+  array.reduce(function(prev, curr){
+    /**function stuff!**/
+    })
+
+  var numbers = [0,1,2,3,4];  
+  numbers.reduce(function(previousValue, currentValue, index, numbers) {
+  return previousValue + currentValue;
+  });
+      // in the first call, prev = 0, curr = 1, starting at numbers[0]. Returns 1.
+      // 2nd call, prev =1, curr =2, at numbers[1]. returns 3.
+      // 3rd call, prev = 3, curr = 3, at numbers[2]. returns 6.
+      // 4th call, prev = 6, curr = 4, at numbers[3]. returns 10.
+
+  //we can also asign a starting point/value on which .reduce can operate:
+
+  numbers.reduce(function(previousValue, currentValue, index, numbers) {
+  return previousValue + currentValue;
+  }, 10);  // 10 is the initial value
+      // 1st call, prev = 10 (initial), curr = 0, at numbers[0], returns 10.
+      // 2nd call, prev = 10 (result from 1st call), curr = 1, at numbers[1], returns 11
+      // 3rd call, prev = 11 (result from 2nd call), curr = 2, at numbers[2], returns 13
+      // 4th call, prev = 13 (result from 3rd call), curr = 3, at numbers[3], returns 16
+      // 5th call, prev = 16 (result from 4th call), curr = 4, at numbers[4], returns 20
+  ```
+
+31)``Array.prototype.reduceRight();`` - does the same thing as array.reduce, but starts
+at the right side of the array instead of the left.
+
+  ```
+  [0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+  return previousValue + currentValue;
+  });
+    // 1st call, prev = 4, curr = 3, index[3], returns 7
+    // 2nd call, prev = 7, curr = 2, index[2], returns 9
+    // 3rd call, prev = 9, curr = 1, index[1], returns 10
+    // 4th call, prev = 10, curr = 0, index[0], returns 10
   ```
