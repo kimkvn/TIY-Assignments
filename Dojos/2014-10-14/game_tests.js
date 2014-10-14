@@ -40,25 +40,28 @@ describe('game.isAlive', function(){
   it('should return the cell status as true', function(){
     assert.isTrue(game.isAlive(0,1));
     assert.isTrue(game.isAlive(1,1));
-    assert.isTrue(game.isAlive(2,1))
+    assert.isTrue(game.isAlive(2,1));
   });
+})
+
+describe('game.display()', function(){
+  it('should return the appropriate board', function(){
+    assert.equal(game.display(),
+      "+---+---+---+\n" +
+      "|   | X |   |\n" +
+      "+---+---+---+\n" +
+      "|   | X |   |\n" +
+      "+---+---+---+\n" +
+      "|   | X |   |\n" +
+      "+---+---+---+\n"
+    );
+  })
 })
 
 /*
 
-  assert.isTrue(game.isAlive(0, 1));
-  assert.isTrue(game.isAlive(1, 1));
-  assert.isTrue(game.isAlive(2, 1));
 
-  assert.equal(game.display(),
-    "+---+---+---+\n" +
-    "|   | X |   |\n" +
-    "+---+---+---+\n" +
-    "|   | X |   |\n" +
-    "+---+---+---+\n" +
-    "|   | X |   |\n" +
-    "+---+---+---+\n"
-  );
+
 
   game.tick();
 
