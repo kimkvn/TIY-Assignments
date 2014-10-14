@@ -25,16 +25,20 @@ describe('the functions existence', function(){
   });
 })
 
-describe('Game.prototype.isAlive', function(){
-  it('should return a boolean if cell @ (x,y) is alive', function(){
-    assert.isBoolean(Game.prototype.isAlive(0,0))
+
+
+
+describe('game.setAlive', function(){
+  it('should make these cells alive', function(){
+    assert.isUndefined(game.setAlive(0,1));
+    assert.isUndefined(game.setAlive(1,1));
+    assert.isUndefined(game.setAlive(2,1));
   })
 })
 
-/*Uncomment me to kill tests...
-  game.setAlive(0,1);
-  game.setAlive(1,1);
-  game.setAlive(2,1);
+
+
+/*  
 
   assert.isTrue(game.isAlive(0, 1));
   assert.isTrue(game.isAlive(1, 1));

@@ -2,9 +2,9 @@
  * Refactoring Conway...using objects. Egads.
  */
 
- module.exports = Game;
+module.exports = Game;
 
- function board(){
+function board(){
    return [
    [false, false, false],
    [false, false, false],
@@ -12,7 +12,7 @@
    ];
  }
 
- function Game(){
+function Game(){
    this.board = board();
  }
 
@@ -22,6 +22,8 @@
   * @return Boolean if cell at {x,y} is alive
   */
 Game.prototype.isAlive = function(x,y){
+
+
 
 }
 
@@ -33,6 +35,8 @@ Game.prototype.isAlive = function(x,y){
  * @return undefined
  */
 Game.prototype.setAlive = function(x,y){
+
+  this.board[x][y] = true;
 
 }
 
