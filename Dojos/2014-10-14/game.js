@@ -53,9 +53,7 @@ Game.prototype.rules = function(){
 
 }
 
-Game.prototype.rules = function(){
 
-}
 
 /**
  * WARNING: This is VOODOO MAGIC...

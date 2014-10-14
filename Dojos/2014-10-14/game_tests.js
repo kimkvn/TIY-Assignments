@@ -15,6 +15,22 @@ it('should play the game', function(){
     [false, false, false],
     ]);
 
+
+describe('the functions existence', function(){
+  it('should be a function', function(){
+    assert.isFunction(Game.prototype.isAlive);
+    assert.isFunction(Game.prototype.setAlive);
+    assert.isFunction(Game.prototype.tick);
+    assert.isFunction(Game.prototype.rules);
+  });
+})
+
+describe('Game.prototype.isAlive', function(){
+  it('should return a boolean if cell @ (x,y) is alive', function(){
+    assert.isBoolean(Game.prototype.isAlive(0,0))
+  })
+})
+
 /*Uncomment me to kill tests...
   game.setAlive(0,1);
   game.setAlive(1,1);
