@@ -36,9 +36,15 @@ describe('game.setAlive', function(){
   })
 })
 
+describe('game.isAlive', function(){
+  it('should return the cell status as true', function(){
+    assert.isTrue(game.isAlive(0,1));
+    assert.isTrue(game.isAlive(1,1));
+    assert.isTrue(game.isAlive(2,1))
+  });
+})
 
-
-/*  
+/*
 
   assert.isTrue(game.isAlive(0, 1));
   assert.isTrue(game.isAlive(1, 1));
