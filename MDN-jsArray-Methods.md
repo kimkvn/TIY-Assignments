@@ -376,3 +376,20 @@ at the right side of the array instead of the left.
     // 3rd call, prev = 9, curr = 1, index[1], returns 10
     // 4th call, prev = 10, curr = 0, index[0], returns 10
   ```
+####Array Generic Methods
+
+Basically, you can apply array.//command// to strings, which would turn the string into
+an array of characters.
+
+```
+function isLetter(character) {
+  return character >= 'a' && character <= 'z';
+}
+
+if (Array.prototype.every.call(str, isLetter)) {
+  console.log("The string '" + str + "' contains only letters!");
+}
+```
+
+Or, I'm thinking of the Check Writing assignment. We took a number, turned it
+into a string before slicing it up to compare it against our array values. 
