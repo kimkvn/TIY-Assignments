@@ -268,7 +268,11 @@ if (window.sm2Debugger !== _undefined) {
       }
     }
 ```
-* If conditional, with an unfamiliar command "try", that runs provided
+```
+* I
+f conditional, with an unfamiliar command "try", that runs provided
 that window.sm2Debugger is not equal to _undefined.
-* Then there's "catch" which is also unfamiliar and seems akin to "else." But
+Then there's "catch" which is also unfamiliar and seems akin to "else." But
 I could be wrong.
+
+``` 
