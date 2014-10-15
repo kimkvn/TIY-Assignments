@@ -58,11 +58,7 @@ describe('game.display()', function(){
   })
 })
 
-describe('game.neighborsOf', function(){
-  it('should return neighboring cells and their boolean', function(){
-    assert.equal(game.neighborsOf(this.board[0][0]), [this.board[0][1],this.board[1][0], this.board[1][1]])
-  });
-})
+
 
 
 // describe('game.tick()', function(){

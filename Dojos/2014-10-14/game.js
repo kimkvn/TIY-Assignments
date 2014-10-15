@@ -50,14 +50,19 @@ Game.prototype.tick = function(){
     var newBoard = board();
     //Apply 'rules' to each cell in the current board...
     this.board.forEach(function(row, x){  //refer to board. We apply .forEach to the rows of the board array first as it's the first part of the array. X = row index
-      row.forEach(function(item, y){ //refer to board, now we're applying .forEach to individual cells, the columnIndex (which = Y)
+      row.forEach(function(cell, y){ //refer to board, now we're applying .forEach to individual cells, the columnIndex (which = Y)
+            //console.log(self); return
+          var newCell = self.rules(cell, self.neighborsOf(x,y));
 
-      }) // END row.forEach
+
+        //Record the result of 'rules' in the new board...
+        newBoard[x][y] = newCell; //since .forEach is running, it will run through each cell and assign them the newCell value
+
+      }); // END row.forEach
     }); //END this.board.forEach
 
-    //Record the result of 'rules' in the new board...
     //Update the current board to match the new board.
-
+    this.board = newBoard;
 
 }
 
@@ -137,6 +142,11 @@ Game.prototype.neighborsOf = function(x,y){
 } //END neighborsOf
 
 
+/**
+ * @param cell (a boolean)
+ * @param neighbors Array of neighbors(more booleans) of 'cell'
+ * @Return Boolean (status of cell)
+ */
 Game.prototype.rules = function(){
   //If cell in question is alive:
     //if cell has 2 or 3 alive neighbors --> lives
