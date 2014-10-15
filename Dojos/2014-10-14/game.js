@@ -74,19 +74,20 @@ Game.prototype.tick = function(){
 
 Game.prototype.neighborsOf = function(x,y){
   var neighbors = [ ],
-      diffs = [-1, 0 +1]; 
+      diffs = [-1, 0 +1];
 
   diffs.forEach(function(dX){
     diffs.forEach(function(dY){
-      if ( dX === 0 && dY === 0 ) return;
+      if ( dX === 0 && dY === 0 ) return; // dX === 0 and dY === 0 means there's no difference and you're looking at where you're starting
 
-      if (this.board[x+dX][y+dY]) {
+      if (this.board[x+dX] && this.board[x+dX][y+dY]) {
         neighbors.push(true);
       }
-
     });
   });
 
+  return neighbors;
+}
 /*
   var neighbors;
   var alive = 0;
@@ -169,7 +170,24 @@ Game.prototype.neighborsOf = function(x,y){
  * @param neighbors Array of neighbors(more booleans) of 'cell'
  * @Return Boolean (status of cell)
  */
-Game.prototype.rules = function(){
+Game.prototype.rules = function(cell, neighbors){
+  if (cell){
+    if ( neighbors.length >= 2 ){
+      if (neighbors.length > 3 ){
+        return false; // overpopulated, dies
+      }
+      return true; // has 2 || 3 neighbors, lives
+    }
+
+    return false; //under populated, dies
+  }
+
+  if (neighbors.length === 3){
+      return true;
+  }
+
+  return false;
+
   //If cell in question is alive:
     //if cell has 2 or 3 alive neighbors --> lives
       //if cell has <2 alive neighbors --> dies
