@@ -66,7 +66,28 @@ Game.prototype.tick = function(){
 
 }
 
+/*
+ * @param Number x coordinate of 'cell'
+ * @param Number y coordinate of 'cell'
+ * @return Array of Boolean representing LIVE neighbors
+ */
+
 Game.prototype.neighborsOf = function(x,y){
+  var neighbors = [ ],
+      diffs = [-1, 0 +1]; 
+
+  diffs.forEach(function(dX){
+    diffs.forEach(function(dY){
+      if ( dX === 0 && dY === 0 ) return;
+
+      if (this.board[x+dX][y+dY]) {
+        neighbors.push(true);
+      }
+
+    });
+  });
+
+/*
   var neighbors;
   var alive = 0;
 
@@ -140,6 +161,7 @@ Game.prototype.neighborsOf = function(x,y){
 
 
 } //END neighborsOf
+*/
 
 
 /**
