@@ -171,9 +171,16 @@ Game.prototype.neighborsOf = function(x,y){
  * @Return Boolean (status of cell)
  */
 Game.prototype.rules = function(cell, neighbors){
-  if (cell && (1 < neighbors < 4 ){
+  if (cell && (1 < neighbors < 4 ){    //if cell is alive (cell) and has 2 or 3 neighbors, lives
     return true;
   }
+  if (!cell && neighbors == 3){    //if cell is dead (!cell) and has 3 neighbors, lives
+    return true;
+  }
+
+  return false
+
+/*
   if (cell){
     if (neighbors.length >= 2){
       if (neighbors.length > 3){
@@ -190,13 +197,10 @@ Game.prototype.rules = function(cell, neighbors){
   }
 
   return false;
+*/
 
-  //If cell in question is alive:
-    //if cell has 2 or 3 alive neighbors --> lives
-      //if cell has <2 alive neighbors --> dies
-      //if cell has >3 alive neighbors -->dies
-  //if dead cell has 3 alive neighbors --> lives
-}
+}//END Game.rules
+
 
 
 
