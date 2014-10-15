@@ -48,16 +48,30 @@ Game.prototype.setAlive = function(x,y){
 Game.prototype.tick = function(){
     //Start with a fresh board...
     var newBoard = board();
+
+    //this bit can replace lines 60-64...
+    this.board = newBoard.map(function(row, x){
+      return row.map(function(cell, y){
+        return self.rules(cell, self.neighborsOf(x,y));
+      });
+    })
+
+    //this can replace 69 to 82
+    newBoard.forEach(function(row, x){
+      newBoard.forEach(function(cell, y){
+        newBoard[x][y] = self.rules(self.board[x][y], self.neighborsOf(x,y));
+      });
+    });
+
+
+
     //Apply 'rules' to each cell in the current board...
     this.board.forEach(function(row, x){  //refer to board. We apply .forEach to the rows of the board array first as it's the first part of the array. X = row index
       row.forEach(function(cell, y){ //refer to board, now we're applying .forEach to individual cells, the columnIndex (which = Y)
             //console.log(self); return
           var newCell = self.rules(cell, self.neighborsOf(x,y));
-
-
         //Record the result of 'rules' in the new board...
         newBoard[x][y] = newCell; //since .forEach is running, it will run through each cell and assign them the newCell value
-
       }); // END row.forEach
     }); //END this.board.forEach
 
@@ -88,82 +102,6 @@ Game.prototype.neighborsOf = function(x,y){
 
   return neighbors;
 }
-/*
-  var neighbors;
-  var alive = 0;
-
-  if(x === 0 && y === 0){
-    neighbors = [this.board[0][1], this.board[1][0], this.board[1][1]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 0 && y === 1){
-    neighbors = [this.board[0][0], this.board[1][2], this.board[1][0],
-    this.board[1][1], this.board[1][2]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 0 && y === 2){
-    neighbors = [this.board[0][1], this.board[1][1], this.board[1][2]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 1 && y === 0){
-    neighbors = [this.board[0][0], this.board[0][1], this.board[1][1]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 1 && y === 1){
-    neighbors = [this.board[0][0], this.board[0][1], this.board[0][2],
-    this.board[1][0], this.board[1][2], this.board[2][0], this.board[2][1],
-    this.board[2][2]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 1 && y === 2){
-    neighbors = [this.board[0][1], this.board[0][2], this.board[1][1],
-    this.board[2][1], this.board[2][2]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 2 && y === 0){
-    neighbors = [this.board[1][0], this.board[1][1], this.board[2][1]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 2 && y === 1){
-    neighbors = [this.board[1][0], this.board[1][1], this.board[1][2],
-    this.board[2][0], this.board[2][2]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  };
-
-  if(x === 2 && y === 2){
-    neighbors = [this.board[1][1], this.board[1][2], this.board[2][1]];
-    for(var i = 0; i < neighbors.length; i++){
-      if(neighbors[i] === true){alive+=1}
-      }
-  }
-
-
-} //END neighborsOf
-*/
-
 
 /**
  * @param cell (a boolean)
