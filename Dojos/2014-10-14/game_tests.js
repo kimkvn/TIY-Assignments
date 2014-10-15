@@ -58,10 +58,19 @@ describe('game.display()', function(){
   })
 })
 
+
+
+describe('game.tick()', function(){
+  it('should update the board by applying Conways rules to each cell', function(){
+    assert.isFalse(game.tick(game.isAlive(0,0)))
+  })
+})
+
+
+
+
+
 /*
-
-
-
 
   game.tick();
 

@@ -48,7 +48,7 @@ Game.prototype.setAlive = function(x,y){
 Game.prototype.tick = function(){
     //Start with a fresh board...
     //Apply 'rules' to each cell in the current board...
-    //Record dthe result of 'rules' in the new board...
+    //Record the result of 'rules' in the new board...
     //Update the current board to match the new board.
 }
 
@@ -56,7 +56,11 @@ Game.prototype.tick = function(){
  * What goes here?
  */
 Game.prototype.rules = function(){
-
+  //If cell in question is alive:
+    //if cell has 2 or 3 alive neighbors --> lives
+      //if cell has <2 alive neighbors --> dies
+      //if cell has >3 alive neighbors -->dies
+  //if dead cell has 3 alive neighbors --> lives
 }
 
 
