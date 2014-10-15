@@ -58,13 +58,18 @@ describe('game.display()', function(){
   })
 })
 
-
-
-describe('game.tick()', function(){
-  it('should update the board by applying Conways rules to each cell', function(){
-    assert.isFalse(game.tick(game.isAlive(0,0)))
-  })
+describe('game.neighborsOf', function(){
+  it('should return neighboring cells and their boolean', function(){
+    assert.equal(game.neighborsOf(this.board[0][0]), [this.board[0][1],this.board[1][0], this.board[1][1]])
+  });
 })
+
+
+// describe('game.tick()', function(){
+// //   it('should update the board by applying Conways rules to each cell', function(){
+// //     assert.isFalse(game.tick(game.isAlive(0,0)))
+// //   })
+// // })
 
 
 

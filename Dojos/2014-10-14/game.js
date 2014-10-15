@@ -52,9 +52,54 @@ Game.prototype.tick = function(){
     //Update the current board to match the new board.
 }
 
-/**
- * What goes here?
- */
+Game.prototype.neighborsOf = function(x,y){
+  var neighbors;
+  if(x === 0 && y === 0){
+    neighbors = [this.board[0][1], this.board[1][0], this.board[1][1]]
+  };
+
+  if(x === 0 && y === 1){
+    neighbors = [this.board[0][0], this.board[1][2], this.board[1][0],
+    this.board[1][1], this.board[1][2]];
+    for(var i = 0; i < neighbors.length; i++)
+  };
+
+  if(x === 0 && y === 2){
+    neighbors = [this.board[0][1], this.board[1][1], this.board[1][2]]
+  };
+  
+  if(x === 1 && y === 0){
+    neighbors = [this.board[0][0], this.board[0][1], this.board[1][1]]
+  };
+
+  if(x === 1 && y === 1){
+    neighbors = [this.board[0][0], this.board[0][1], this.board[0][2],
+    this.board[1][0], this.board[1][2], this.board[2][0], this.board[2][1],
+    this.board[2][2]]
+  };
+
+  if(x === 1 && y === 2){
+    neighbors = [this.board[0][1], this.board[0][2], this.board[1][1],
+    this.board[2][1], this.board[2][2]]
+  };
+
+  if(x === 2 && y === 0){
+    neighbors = [this.board[1][0], this.board[1][1], this.board[2][1]]
+  };
+
+  if(x === 2 && y === 1){
+    neighbors = [this.board[1][0], this.board[1][1], this.board[1][2],
+    this.board[2][0], this.board[2][2]]
+  };
+
+  if(x === 2 && y === 2){
+    neighbors = [this.board[1][1], this.board[1][2], this.board[2][1]]
+  }
+
+
+} //END neighborsOf
+
+
 Game.prototype.rules = function(){
   //If cell in question is alive:
     //if cell has 2 or 3 alive neighbors --> lives
