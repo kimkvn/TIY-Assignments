@@ -171,9 +171,12 @@ Game.prototype.neighborsOf = function(x,y){
  * @Return Boolean (status of cell)
  */
 Game.prototype.rules = function(cell, neighbors){
+  if (cell && (1 < neighbors < 4 ){
+    return true;
+  }
   if (cell){
-    if ( neighbors.length >= 2 ){
-      if (neighbors.length > 3 ){
+    if (neighbors.length >= 2){
+      if (neighbors.length > 3){
         return false; // overpopulated, dies
       }
       return true; // has 2 || 3 neighbors, lives
