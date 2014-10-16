@@ -234,4 +234,3 @@ describe('Conway()', function(){
     assert.equal(tick9, false);
   });
 })
-//
