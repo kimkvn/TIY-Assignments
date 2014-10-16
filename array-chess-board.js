@@ -8,7 +8,7 @@ var board = [
 ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
 ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r']
 ];
-console.log(board.join('\n') + '\n\n'); // '\n' creates a new line, like a new paragraph
+//console.log(board.join('\n') + '\n\n'); // '\n' creates a new line, like a new paragraph
 
 
 var boardW1= [
@@ -114,7 +114,8 @@ var boardW5 = [
 
 //establishing test variabe
 var assert = require('chai').assert;
-
+var expect = require('chai').expect;
+/*
 function moves(number, color){
   if (number === 1){
     if(color === "white"){return boardW1}
@@ -140,14 +141,14 @@ function moves(number, color){
     if(color === "white"){return boardW5}
   }//end if 5
 }// END numbers()
-
+*/
 
 var catalanOpening = {
   move1 : function(){
     // //1 - White's move: Pawn to d4
     board[4][3] = board[6][3];
     board[6][3] = ' ';
-    // console.log(board.join('\n') + '\n\n');
+    //console.log(board.join('\n') + '\n\n');
   },
 
   move2 : function(){
@@ -167,7 +168,7 @@ var catalanOpening = {
   move4: function(){
     // //2 - Black's move: Pawn to e6
     board[2][4] = board[1][4];
-     oard[1][4] = ' ';
+    board[1][4] = ' ';
     // console.log(board.join('\n') + '\n\n');
   },
 
@@ -208,55 +209,51 @@ var catalanOpening = {
 }//END moves
 
 
-
-//
-
-//
-
-//
-
-//
-
-//
-
-//
-
-//
-
-
 // console.log(moves(1, "white"))
 describe('checks the board status after each move', function(){
   it('should return boardW1', function(){
-    assert.equal(moves(1, "white"), boardW1)
-  })
+    catalanOpening.move1();
+    assert.deepEqual(board, boardW1)
+  });
+
   it('should return boardB1', function(){
-    assert.equal(moves(1,"black"), boardB1)
-  })
+    catalanOpening.move2();
+    assert.deepEqual(board, boardB1)
+  });
+
   it('should return boardW2', function(){
-    assert.equal(moves(2,"white"), boardW2)
-  })
+    catalanOpening.move3();
+    assert.deepEqual(board, boardW2)
+  });
+
   it('should return boardB2', function(){
-    assert.equal(moves(2,"black"), boardB2)
-  })
+    catalanOpening.move4();
+    assert.deepEqual(board, boardB2)
+  });
+
   it('should return boardW3', function(){
-    assert.equal(moves(3,"white"), boardW3)
-  })
+    catalanOpening.move5();
+    assert.deepEqual(board, boardW3)
+  });
+
   it('should return boardB3', function(){
-    assert.equal(moves(3, "black"), boardB3)
-  })
+    catalanOpening.move6();
+    assert.deepEqual(board, boardB3)
+  });
+
   it('should return boardW4', function(){
-    assert.equal(moves(4,"white"), boardW4)
-  })
+    catalanOpening.move7();
+    assert.deepEqual(board, boardW4)
+  });
+
   it('should return boardB4', function(){
-    assert.equal(moves(4,"black"), boardB4)
-  })
+    catalanOpening.move8();
+    assert.deepEqual(board, boardB4)
+  });
+
   it('should return boardW5', function(){
-    assert.equal(moves(5,"white"), boardW5)
-  })
+    catalanOpening.move9();
+    assert.deepEqual(board, boardW5)
+  });
+
 })//END describe
-
-
-
-
-
-///Testing///
