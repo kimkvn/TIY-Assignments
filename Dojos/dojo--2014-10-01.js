@@ -1,4 +1,9 @@
-
+/**
+ * THIS IS THE INITIAL ATTEMPT AT CHECK-WRITING
+ * IT WAS TERRIBLE AND IS REPLACED BY
+ * dojo--redux-2014-10-01.js
+ * kthxbye.
+ */
 
  function changeNum(a){
 
