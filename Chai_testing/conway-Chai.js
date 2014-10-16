@@ -190,11 +190,24 @@ function tick(board){
   return newBoard;
 }
 
-console.log(tick(board))
+//For test writing
+var tick1 =conway(board[0][0], neighborsOf(board,0,0)),
+    tick2 =conway(board[0][1], neighborsOf(board,0,1)),
+    tick3 =conway(board[0][2], neighborsOf(board,0,2)),
+    tick4 =conway(board[1][0], neighborsOf(board,1,0)),
+    tick5 =conway(board[1][1], neighborsOf(board,1,1)),
+    tick6 =conway(board[1][2], neighborsOf(board,1,2)),
+    tick7 =conway(board[2][0], neighborsOf(board,2,0)),
+    tick8 =conway(board[2][1], neighborsOf(board,2,1)),
+    tick9 =conway(board[2][2], neighborsOf(board,2,2));
+
+//checking my sanity
+console.log(tick(board));
+console.log(tick2)
 
 
 //Mocha Chai test, BDD
-describe('neighborsOf: given starting cell, returns locations of neighboring cells', function(){
+describe('neighborsOf', function(){
   it('should return list of neighboring cells status when given a starting cell', function(){
     assert.deepEqual(neighborsOf(board,0,0), [board[0][1], board[1][0], board[1][1]]);
     assert.deepEqual(neighborsOf(board,0,1), [board[0][0], board[0][2], board[1][0], board[1][1], board[1][2]]);
@@ -205,7 +218,20 @@ describe('neighborsOf: given starting cell, returns locations of neighboring cel
     assert.deepEqual(neighborsOf(board,2,0), [board[1][0], board[1][1], board[2][1]]);
     assert.deepEqual(neighborsOf(board,2,1), [board[1][0], board[1][1], board[1][2], board[2][0], board[2][2]]);
     assert.deepEqual(neighborsOf(board,2,2), [board[1][1], board[1][2], board[2][1]]);
-  })
+  });
+})
 
+describe('Conway()', function(){
+  it('should return the status of a cell after applying rules', function(){
+    assert.equal(tick1, false);
+    assert.equal(tick2, true);
+    assert.equal(tick3, false);
+    assert.equal(tick4, false);
+    assert.equal(tick5, true);
+    assert.equal(tick6, false);
+    assert.equal(tick7, false);
+    assert.equal(tick8, true);
+    assert.equal(tick9, false);
+  });
 })
 //
