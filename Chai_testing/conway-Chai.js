@@ -104,7 +104,7 @@
  * You may test more starting boardition, if you like, of course.
  */
 
-var assert = require('chai')assert;
+var assert = require('chai').assert;
 
 /**
  * Return a nested array representing an initially empty 3x3 board.
@@ -145,18 +145,9 @@ function neighborsOf(board,a,b){ //This function, given 3 inputs: board, a (boar
     return neighbors;
 }
 
-//Mocha test, TDD
-suite('neighborsOf: given starting cell, returns locations of neighboring cells', function(){
-  test('Given (board,0,0), should return neighbors board[0][1], board[1][0], board[1][1]', function(){
-    assert.deepEqual(neighborsOf(board,0,0), [board[0][1], board[1][0], board[1][1]]);
-  })
-
-})
-//
 
 var cellNew; //declared because I want to differentiate between the two stages of the starting cell, initial, then "tick"
 
-console.log("hi")
 
 function conway (cell, neighbors) {
   var alive = 0;
@@ -200,3 +191,21 @@ function tick(board){
 }
 
 console.log(tick(board))
+
+
+//Mocha Chai test, BDD
+describe('neighborsOf: given starting cell, returns locations of neighboring cells', function(){
+  it('should return list of neighboring cells status when given a starting cell', function(){
+    assert.deepEqual(neighborsOf(board,0,0), [board[0][1], board[1][0], board[1][1]]);
+    assert.deepEqual(neighborsOf(board,0,1), [board[0][0], board[0][2], board[1][0], board[1][1], board[1][2]]);
+    assert.deepEqual(neighborsOf(board,0,2), [board[0][1], board[1][1], board[1][2]]);
+    assert.deepEqual(neighborsOf(board,1,0), [board[0][0], board[0][1], board[1][1], board[2][0], board[2][1]]);
+    assert.deepEqual(neighborsOf(board,1,1), [board[0][0], board[0][1], board[0][2], board[1][0], board[1][2], board[2][0], board[2][1], board[2][2]]);
+    assert.deepEqual(neighborsOf(board,1,2), [board[0][1], board[0][2], board[1][1], board[2][1], board[2][2]]);
+    assert.deepEqual(neighborsOf(board,2,0), [board[1][0], board[1][1], board[2][1]]);
+    assert.deepEqual(neighborsOf(board,2,1), [board[1][0], board[1][1], board[1][2], board[2][0], board[2][2]]);
+    assert.deepEqual(neighborsOf(board,2,2), [board[1][1], board[1][2], board[2][1]]);
+  })
+
+})
+//
