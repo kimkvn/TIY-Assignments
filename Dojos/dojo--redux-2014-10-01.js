@@ -83,11 +83,11 @@ var assert = require('chai').assert
 
 describe('checkWriting', function(){
   it('takes a number and returns it in words, like writing a check', function(){
-    // assert.equal(checkWriting.toEnglish(12.34), "twelve dollars and 34/100s")
-    // assert.equal(checkWriting.toEnglish(1.09), "one dollars and 09/100s")
-    // assert.equal(checkWriting.toEnglish(33.00), "thirtythree dollars and 00/100s")
-    // assert.equal(checkWriting.toEnglish(123.45), "one hundredtwentythree dollars and 45/100s")
-    // assert.equal(checkWriting.toEnglish(110.00), "one hundredten dollars and 00/100s")
+    assert.equal(checkWriting.toEnglish(12.34), "twelve dollars and 34/100s")
+    assert.equal(checkWriting.toEnglish(1.09), "one dollars and 09/100s")
+    assert.equal(checkWriting.toEnglish(33.00), "thirtythree dollars and 00/100s")
+    assert.equal(checkWriting.toEnglish(123.45), "one hundredtwentythree dollars and 45/100s")
+    assert.equal(checkWriting.toEnglish(110.00), "one hundredten dollars and 00/100s")
     assert.equal(checkWriting.toEnglish(108.98), "one hundredeight dollars and 98/100s")
   })
 })
