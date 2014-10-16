@@ -433,4 +433,15 @@ of nq, which is an array.
 ```
 
 * If palette is strictly equal to undefined, OR palette is null, then this part of the code will
-'throw' this...message. Not sure what throw does, but it sounds pretty neat. 
+'throw' this...message. Not sure what throw does, but it sounds pretty neat.
+
+
+31
+```javascript
+if( headerEnd >= sections[ix].start && headerStart <= sections[ix].end){
+
+}
+```
+* If conditional statement, two parts: headerEnd must be greater than or equal to the array sections,
+element location dictinoary, key= start. AND, headerStart must be lesser than or equal to array dictinoary
+sections element index ix, key = end..
