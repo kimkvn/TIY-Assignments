@@ -268,11 +268,104 @@ if (window.sm2Debugger !== _undefined) {
       }
     }
 ```
+
 ```
-* I
-f conditional, with an unfamiliar command "try", that runs provided
+* If conditional, with an unfamiliar command "try", that runs provided
 that window.sm2Debugger is not equal to _undefined.
 Then there's "catch" which is also unfamiliar and seems akin to "else." But
 I could be wrong.
 
-``` 
+21
+```
+```javascript
+while (i < l) {
+          chr1 = input.charCodeAt(i++);
+          chr2 = input.charCodeAt(i++);
+          chr3 = input.charCodeAt(i++);
+          enc1 = chr1 >> 2;
+          enc2 = (chr1 & 3) << 4 | chr2 >> 4;
+          enc3 = (chr2 & 15) << 2 | chr3 >> 6;
+          enc4 = chr3 & 63;
+          if (isNaN(chr2))
+            enc3 = enc4 = 64;
+          else if (isNaN(chr3))
+            enc4 = 64;
+          output = output + key.charAt(enc1) + key.charAt(enc2) + key.charAt(enc3) + key.charAt(enc4);
+        }
+        return output;
+      };
+```
+* A while loop, that assigns lots of things to a number of variables as long
+as it keeps looping. Note that isNaN is a function and is part of the condition
+for the if and else if statements.
+
+22
+```javascript
+for (i = 0; i < netsize; i++) {
+        network[i] = new Array(4);
+        p = network[i];
+        p[0] = p[1] = p[2] = (i << netbiasshift + 8) / netsize | 0;
+        freq[i] = intbias / netsize | 0;
+        bias[i] = 0;
+      }
+```
+* For loop. Network is an array. It loops through that array as long as i is less
+than netsize. Several things happen: a new Array is formed, p is assigned the elements
+of the array network, the first 3 elements of p are equivalent, and...I'm not sure what
+single pipe means. Also all elements in array bias are assigned 0.
+
+23
+```javascript
+ for (i = 0; i < rad; i++) {
+        radpower[i] = alpha * ((rad * rad - i * i) * radbias / (rad * rad));
+      }
+```
+* For loop, with interesting group of operators. If I'm reading this correctly via order
+of operations: rad is squared, i is squared, and their difference is calculated. Rad is
+squared a second time at the right end of this equation. Then from left to right, alpha is
+multiplied by the rad^2 i^2 difference, that result is multiplied by radbias, and that
+result is divided by rad squared.
+
+24
+```javascript
+if (i % delta === 0) {
+          alpha -= alpha / alphadec;
+          radius -= radius / radiusdec;
+          rad = radius >> radiusbiasshift;
+```
+* if conditional statement with a modulus. If delta can be divided into i evenly, alpha is
+decremented, radius is decremented, and rad is assigned radius shifted to radiusbias.
+
+25
+```javascript
+ for (i = 0; i < netsize; i++) {
+        network[i][0] >>= netbiasshift;
+        network[i][1] >>= netbiasshift;
+        network[i][2] >>= netbiasshift;
+        network[i][3] = i;
+      }
+```
+* A for loop, but it operates on network which judging by this snippet, is an array of
+arrays. I'm not entirely sure what >>= is... >> means shift, >= is greater than or equal
+to....but combined. Hum. In any case, the first element in the first array is changed,
+the second element in the second array is changed, third element in third array, and fourth
+element in the fourth array is changed, all of this occuring within network.
+
+26
+```javascript
+if (j < hi) {
+          p = network[j++];
+          try {
+            p[0] -= a * (p[0] - b) / alpharadbias | 0;
+            p[1] -= a * (p[1] - g) / alpharadbias | 0;
+            p[2] -= a * (p[2] - r) / alpharadbias | 0;
+          } catch (e) {
+          }
+```
+* If conditional. There are a couple of commands I haven't encountered yet, try, and catch.
+My guess is try does what it does, try to run the sequence it's describing. And cath...maybe
+it's similar to array.push somehow.
+p is a variable for the network array so whoever wrote this would have less typing to do.
+
+27
+```javascript
