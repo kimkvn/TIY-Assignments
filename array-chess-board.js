@@ -142,6 +142,10 @@ function moves(number, color){
 }// END numbers()
 
 
+var moves = {
+
+}//END moves
+
 // console.log(moves(1, "white"))
 describe('checks the board status after each move', function(){
   it('should return boardW1', function(){
