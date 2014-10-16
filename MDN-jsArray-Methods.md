@@ -378,7 +378,7 @@ at the right side of the array instead of the left.
   ```
 ####Array Generic Methods
 
-Basically, you can apply array.//command// to strings, which would turn the string into
+Basically, you can apply certain array.//command// to strings, which would turn the string into
 an array of characters.
 
 ```
@@ -391,5 +391,44 @@ if (Array.prototype.every.call(str, isLetter)) {
 }
 ```
 
-Or, I'm thinking of the Check Writing assignment. We took a number, turned it
-into a string before slicing it up to compare it against our array values. 
+List of generics:
+.join
+.reverse
+.sort
+.push
+.pop
+.shift
+.unshift
+.splice
+.concat
+.slice
+.indexOf
+.lastIndexOf
+.forEach
+.map
+.reduce
+.reduceRight
+.filter
+.some
+.every
+
+Some examples:
+```javascript
+var map = Array.prototype.map;
+
+// and call it for a string
+
+var hello = map.call("hello world", function (char) {
+	return char + "*";
+});
+console.log(hello.join("")); // returns "h*e*l*l*o* *w*o*r*l*d*"
+```
+
+
+```javascript
+var toUpperCase = String.prototype.toUpperCase;
+
+var upper = toUpperCase.apply(["foo", "bar"]).split(",");
+
+console.log(upper); // returns ["FOO", "BAR"]
+```
