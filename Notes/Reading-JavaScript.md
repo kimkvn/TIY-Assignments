@@ -369,3 +369,68 @@ p is a variable for the network array so whoever wrote this would have less typi
 
 27
 ```javascript
+    function altersingle(alpha, i, b, g, r) {
+      var n = network[i];
+      var alphaMult = alpha / initalpha;
+      n[0] -= alphaMult * (n[0] - b) | 0;
+      n[1] -= alphaMult * (n[1] - g) | 0;
+      n[2] -= alphaMult * (n[2] - r) | 0;
+    }
+```
+* A function altersingle() which has inputs alpha, i, b, g, r. Which could mean anything.
+The function declares two variables, n which is assigned the network array, and alphaMult,
+which is assigned alpha divided by initalpha. The network array's elements are decremented
+as this function runs.
+
+28
+```javascript
+ 'componentizedPaletteToArray': function (paletteRGB) {
+        var paletteArray = [], i, r, g, b;
+        for (i = 0; i < paletteRGB.length; i += 3) {
+          r = paletteRGB[i];
+          g = paletteRGB[i + 1];
+          b = paletteRGB[i + 2];
+          paletteArray.push(r << 16 | g << 8 | b);
+        }
+        return paletteArray;
+      },
+```
+
+* Declared a key, 'componentizedPaletteToArray' which has been defined as a function accepting
+input palletteRGB. It declares a variable paletteArray which is assigned an empty array, and
+i, r, g, b. R, g, and b are assigned new values depending on the where the loop is, those results
+are pushed into the new array under paletteArray.
+
+29
+```javascript
+      'processFrameWithQuantizer': function (imageData, width, height, sampleInterval) {
+        var rgbComponents = this.dataToRGB(imageData, width, height), nq = new NeuQuant(rgbComponents, rgbComponents.length, sampleInterval), paletteRGB = nq.process(), paletteArray = new Uint32Array(this.componentizedPaletteToArray(paletteRGB)), numberPixels = width * height, indexedPixels = new Uint8Array(numberPixels), k = 0, i;
+        for (i = 0; i < numberPixels; i++) {
+          r = rgbComponents[k++];
+          g = rgbComponents[k++];
+          b = rgbComponents[k++];
+          indexedPixels[i] = nq.map(r, g, b);
+        }
+        return {
+          pixels: indexedPixels,
+          palette: paletteArray
+        };
+      },
+```
+
+* Declared 'processFrameWithQuantizer' which is defined as a function that has inputs imageData,
+width, height, sampleInterval. Variable rgbComponents is assigned this.dataToRGB - oh hey, that this-dot
+thing we've been learning! - it also declares another variable np, which is....really fucking long.
+* Goes into a for loop that reassigns new values to rgbComponents.
+* Then there's an nq.map(r, g, b) which is totally an array method. It applies r, g, b to each element
+of nq, which is an array.
+* The function returns the keys pixels and palette.
+
+30
+```javascript
+ if (palette === undefined || palette === null)
+      throw 'Must supply either a local or global palette.';
+```
+
+* If palette is strictly equal to undefined, OR palette is null, then this part of the code will
+'throw' this...message. Not sure what throw does, but it sounds pretty neat. 
