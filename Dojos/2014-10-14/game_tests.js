@@ -42,9 +42,10 @@ it('should play the game', function(){
 
   game.tick();
 
-/*
+
 
   assert.isTrue(game.isAlive(1,0));
+/*
   assert.isTrue(game.isAlive(1,1));
   assert.isTrue(game.isAlive(1,2));
 
@@ -76,3 +77,9 @@ it('should play the game', function(){
   // */ // Don't uncomment this line!
 
 })
+//
+// describe('neighborsOf()', function(){
+//   it('should return the neighbors I wrote out, damnit.', function(){
+//     assert.equal(game.prototype.neighbors(0,0), [false, false, false])
+//   })
+// })
