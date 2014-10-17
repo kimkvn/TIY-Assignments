@@ -34,6 +34,8 @@ function Chess(){
 
 }; //END Chess
 
+
+
 function Position(x,y){
   /*
    * usage: new Position(1,1)
@@ -57,17 +59,22 @@ function Piece(name, color){
    },
 
 
+
+
    /*
     *@return String player 'black' or 'white'
+    * is a command, NO RETURNS
     */
    getColor: function(){
 
    },
 
 
+
    /*
     * Set piece to position on board
     * @param Position, position.
+    * is a command, NO RETURNS
     */
    setPosition: function(){
    },
