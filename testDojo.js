@@ -1,87 +1,55 @@
-var assert = require('assert');
+var assert = require('chai').assert
+var expect = require('chai').expect
 
-/**
-* The conway function determines if a cell in
-* Conway's Game of Life is alive or dead for a single tick, given
-* the neighbors of that cell.
-*/
+// // /* === PRODUCTION CODE === */
+// function solution(){
+//     // change input to suit the solution, e.g. `limit`
+//     return {
+//         // I wanna see this one...
+//         solveFor: function(limit){ /* perform magic... */ },
+//
+//         // For Problem 2, for example... However you solve it.
+//         fibonacci: function(limit){ /* . . . */ },
+//         filterEvens: function(list){ /* . . . */ },
+//         sum: function(list){ /* . . . */ }
+//     }
+// }
+//
+// /* === TEST CODE === */
+// // You should probably write some...
 
-function conway(cell, neighbors){
-  var liveNeighbors = numberOfLiveNeighbors(neighbors);
-  if (liveNeighbors >= 2){
-    return true;
-  }
-  return false;
-}
+// Find the largest palindrome made from the product of two 3-digit numbers.
 
-function numberOfLiveNeighbors(neighbors){
-
-  var liveCells = 0;
-  var index = 0;
-  while ( index < neighbors.length ){
-    if (neighbors[index] === true){
-      liveCells++;
+function solution(){
+  return {
+    mult: function() {
+      var results = [];
+      for(var x = 999; x > 100; x--) {
+        for(var y = 999; y > 100; y--) {
+          var prod = x * y;
+          if(prod.toString() == prod.toString().split("").reverse().join("")){
+            results.push(x * y);
+          }
+        }
+      }
+      return Math.max.apply(Math, results)
     }
-    index++;
   }
-  return liveCells;
-
-function test_numberOfLiveNeighbors(neighbors , expected,
-message){
-  var actual = numberOfLiveNeighbors(neighbors);
-
-  assert(actual === expected) || console.log(message);
-
 }
 
+describe('mult()', function(){
+  it('should be at least over 10000', function(){
+    expect(solution().mult()).to.be.above(10000);
+  })
+  it('should be under 998001', function(){
+    expect(solution().mult()).to.be.below(998001)
+  })
+  it('should give a 3 digit number', function(){
+    assert.equal(solution().mult(), 906609);
+  })
+  it('should return a number', function(){
+    expect(solution().mult()).to.be.a('number');
+  })
+})
 
-test_numberOfLiveNeighbors([
-    false, false, false,
-    false,        false,
-    false, false, false,
-  ]), 0, 'no live neighbors');
-
-test_numberOfLiveNeighbors([
-  true, false, false,
-  false,        false,
-  false, false, false,
-  ]) 1, '1 live neighbors');
-
-test_numberOfLiveNeighbors([
-  false, true, false,
-  false,        false,
-  false, false, false,
-  ]) 1, '1 live neighbors (not [0])');
-
-var cell = false,
-    neighbors = [
-      false, false, false,
-      false,        false,
-      false, false, false
-    ];
-
-assert.equal(conway(cell, neighbors), false,
-'an empty board should remain empty') || console.log('pass!');
-
-assert.equal(conway(true, neighbors), false,
-  'a cell with no neighbors dies') || console.log('pass!');
-
-neighbors = [
-  false, true, false,
-  false,       false,
-  false, false, false,
-];
-
-assert.equal(conway(true, neighbors), false,
-  'a cell with only 1 neighbor dies') || console.log('pass!');
-
-neighbors = [
-  true, true, false,
-  false,       false,
-  false, true, false,
-];
-
-
-assert.equal(conway(true, neighbors), true,
-  'a cell with 2 neightbors survives'
-);
+console.log(solution().mult()); // returns 906609

@@ -21,11 +21,11 @@
 function solution(){
   return {
     mult : function(){
-      var results = [];
-        for(var x = 999; y > 100; x--){
+      var results = [ ];
+        for(var x = 999; x > 100; x--){
           for(var y = 999; y > 100; y--){
             var product = x * y;
-            if(prod.toString() == prod.toString().split("").reverse().join("")){
+            if(product.toString() == product.toString().split("").reverse().join('')){
               results.push(x*y);
             }
           } //END var y condition
@@ -34,6 +34,8 @@ function solution(){
     } //END mult
   } //END return
 } //END solution
+
+console.log(solution().mult())
 
 var assert = require('chai').assert;
 var expect = require('chai').expect;
@@ -47,9 +49,9 @@ describe('mult()', function(){
     expect(solution().mult()).to.be.below(998001);
   });
 
-  // it('should return a 3 digit number', function(){
-  //   assert.equal(solution().mult(), 906609);
-  // });
+  it('should return a 3 digit number', function(){
+    assert.equal(solution().mult(), 906609);
+  });
 
   it('should return a number', function(){
     expect(solution().mult()).to.be.a('number');
