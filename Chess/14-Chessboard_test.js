@@ -1,3 +1,2 @@
-var Chess = require('./chess.js').Chess;
-var newPosition = require('./chess.js').newPosition;
-var Piece = require('./chess.js').Piece
+var Chess = require('./14-Chessboard-Interface.js').Chess;
+var newPosition = require('./14-Chessboard-Interface.js').Chess;
