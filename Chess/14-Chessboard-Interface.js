@@ -1,5 +1,28 @@
 module.exports.Chess = Chess;
 module.exports.newPosition = newPosition;
+module.exports.Piece = Piece;
+
+
+
+
+
+function newPosition(x,y){
+  /*
+   * usage: new Position(1,1)
+   * @property Number x coordinate
+   * @property Number y coordinate
+   */
+
+   return {'x': x, 'y': y}
+
+
+}; //END Position
+
+
+
+function Piece(){
+
+}; //END Piece
 
 
 
@@ -38,17 +61,3 @@ function Chess(){
   // },//END display
 
 }; //END Chess
-
-
-
-function newPosition(x,y){
-  /*
-   * usage: new Position(1,1)
-   * @property Number x coordinate
-   * @property Number y coordinate
-   */
-
-   return {'x': x, 'y': y}
-
-
-}; //END Position
