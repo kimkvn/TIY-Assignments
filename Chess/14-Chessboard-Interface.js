@@ -13,11 +13,12 @@ function newPosition(x,y){
    * @property Number y coordinate
    */
 
-   return {'x': x, 'y': y}
+   return {'x': 2, 'y': 3};
+   console.log('ass')
 
 
-}; //END Position
 
+}; //END newPosition
 
 
 function Piece(){
