@@ -1,3 +1,8 @@
+module.exports.Chess = Chess;
+module.exports.newPosition = newPosition;
+module.exports.Piece = Piece;
+
+
 function Chess(){
 
     /*
