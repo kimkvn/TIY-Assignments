@@ -25,4 +25,15 @@ this tag will organize the list with bullets typically.
 7) <form> -- represents a section with interactive buttons and stuff users
 can control to submit information to a web server.
 
-8)
+8) <header> -- kind of an organizing attribute, this block usually contains
+items pertaining to the head of a website, logos, banners, nav bar, and
+the like.
+
+9) <footer> -- another organizing attribute, this block might have stuff
+about the author of the site, contact info, links to related data, copyright
+info, etc.
+
+10) <aside> -- represents a section of the page that could be considered
+separate from the brunt of the webpage content. Might contain nav bar(s),
+related advertisements, author bio, other web apps, profile info, links
+to other related pages, etc.
