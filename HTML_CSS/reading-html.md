@@ -20,6 +20,17 @@ there will not be a line break. Because paragraphs.
 2) ``<h1>, <h2>, <h3>, <h4>, <h5>, <h6>`` -- varying levels of headers. h1 is
 the largest, h6 the smallest. You can use them to make title-looking things.
 
+  Examples:
+
+  [1] ``<h2>Search</h2>`` (view-source:http://orlando.theironyard.com/)
+
+  [2] ``<h1>
+        <a href="/">The Iron Yard | Orlando</a>
+      </h1>`` (view-source:http://orlando.theironyard.com/)
+
+  [3] ``<h2>Elsewhere</h2>`` (view-source:http://orlando.theironyard.com/)
+
+
 3) <div> -- Separates and contains content. Super generic and is evidently
 only used when no other element/tag is appropriate.
 
