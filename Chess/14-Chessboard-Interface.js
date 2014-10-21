@@ -6,19 +6,15 @@ module.exports.Piece = Piece;
 
 
 
-function newPosition(x,y){
-  /*
-   * usage: new Position(1,1)
-   * @property Number x coordinate
-   * @property Number y coordinate
-   */
+/*
+ * usage: new Position(1,1)
+ * @property Number x coordinate
+ * @property Number y coordinate
+ */
+function newPosition(x, y){
+    return { "x" : x , "y" : y };
+} //END newPosition
 
-   return {'x': 2, 'y': 3};
-   console.log('ass')
-
-
-
-}; //END newPosition
 
 
 function Piece(){

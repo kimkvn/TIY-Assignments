@@ -10,9 +10,15 @@ describe('newPosition', function(){
   });
 
   it('should have x and y coordinates', function(){
-    var aPosition;
-    aPosition = newPosition(2,3);
-    assert.strictEqual(aPosition.x, 2);
+        var aPosition;
+
+        aPosition: newPosition(2,3);
+        assert.strictEqual(aPosition.x, 2);
+        assert.strictEqual(aPosition.y, 3);
+
+        aPosition = newPosition(1,5);
+        assert.strictEqual(aPosition.x, 1);
+        assert.strictEqual(aPosition.y, 5);
   });
 });
 
