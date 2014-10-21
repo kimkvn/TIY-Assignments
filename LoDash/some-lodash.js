@@ -9,9 +9,8 @@
 
 
 var some = function(collection, property){
-  var truthys = [ ];
-  collection.forEach(function(element, index, array){
-    if(callback(element) == true){
+  collection.forEach(function(element, index){
+    if(callback(collection(element) == true){
     return true
     }
   })
@@ -27,8 +26,7 @@ var some = function(collection, property){
 
      var collection = [4, 12, 7, 9, 16];
      var callback = function(n){
-        if n > 5{
-          return true
+          return n > 5
         }
      }
      expect(some(collection, callback)).to.be.true
