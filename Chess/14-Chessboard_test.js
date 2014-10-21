@@ -22,11 +22,19 @@ describe('newPosition', function(){
   });
 });
 
+
+
 describe('Piece', function(){
   it('should be a function', function(){
     assert.isFunction(Piece);
   });
+  //
+  // it('should recognize the name of a piece', function(){
+  //   assert.equal(Piece.prototype.getName(King), 'King')
+  // });
 });
+
+
 
 describe('Chess', function(){
   it('should be a function', function(){

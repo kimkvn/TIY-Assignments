@@ -13,14 +13,36 @@ module.exports.Piece = Piece;
  */
 function newPosition(x, y){
     return { "x" : x , "y" : y };
+
 } //END newPosition
 
 
 
-function Piece(){
+
+/**
+ * @constructor Piece
+ *
+ * @param String name
+ * @param String color
+ *
+ * @method getName
+ * @method getColor
+ * @method setPosition
+ * @method toString
+ */
+function Piece(name, color){
+
+  Piece.prototype.getName = function(name){
+    return {'King': King}
+  },
+
+  Piece.prototype.getColor = function(color){
+
+  },
 
 }; //END Piece
 
+console.log(Piece('King'))
 
 
 function Chess(){
