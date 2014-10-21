@@ -54,9 +54,9 @@ Visually, it renders with some slight indentation (which can be changed...).
 
   Examples:
 
-  [1]``<blockquote>
+  [1]```<blockquote>
 <p><em>See? Super excited. And it’s an official picture, because David is in it too (albeit without his actual knowledge)</em></p>
-</blockquote>`` (view-source:http://orlando.theironyard.com/)
+</blockquote>``` (view-source:http://orlando.theironyard.com/)
 
   [2]``<blockquote>
 <p><span>Together, The Iron Yard and Code School are preparing the next generation of developers, filling the already overwhelming demand for tech talent in the Orlando market and beyond. This is a tremendous opportunity to make a potentially life-changing career move.</span></p>
