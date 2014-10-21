@@ -3,10 +3,21 @@
 
 ###Block Level Elements
 
-1) <p> -- represents a paragraph of text. Until you start a new <p> tag,
+1) ``<p>`` -- represents a paragraph of text. Until you start a new <p> tag,
 there will not be a line break. Because paragraphs.
 
-2) <h1>, <h2>, <h3>, <h4>, <h5>, <h6> -- varying levels of headers. h1 is
+  Examples:
+
+  [1] ``<p>You can find more information on our Meetup page: </p>``   (view-source:http://orlando.theironyard.com/)
+
+  [2] ``<p>At 6pm tomorrow, The Iron Yard Orlando will be hosting Matt Wallaert, Behavioral Scientist @ Bing, as he speaks
+  at an Orlando Tech Meetup in our space here at 101&#160;S. Garland Ave. This is a great opportunity to meet him and
+  ask questions, and I hope you&#8217;ll join us! </p>``     (view-source:http://orlando.theironyard.com/)
+
+  [3] ``<p>Hi everyone! This is my first official communication as the Campus Director at The Iron Yard Orlando, and I’m
+  excited to let everyone know that I’m transitioning onto the team here over the next week. </p>`` (view-source:http://orlando.theironyard.com/)
+
+2) ``<h1>, <h2>, <h3>, <h4>, <h5>, <h6>`` -- varying levels of headers. h1 is
 the largest, h6 the smallest. You can use them to make title-looking things.
 
 3) <div> -- Separates and contains content. Super generic and is evidently
