@@ -445,3 +445,63 @@ if( headerEnd >= sections[ix].start && headerStart <= sections[ix].end){
 * If conditional statement, two parts: headerEnd must be greater than or equal to the array sections,
 element location dictinoary, key= start. AND, headerStart must be lesser than or equal to array dictinoary
 sections element index ix, key = end..
+
+32
+```javascript
+  this.audioFormats = {
+    'mp3': {
+      'type': ['audio/mpeg; codecs="mp3"', 'audio/mpeg', 'audio/mp3', 'audio/MPA', 'audio/mpa-robust'],
+      'required': true
+    },
+```
+* this.audioFormats is an object in a larger function (not copied here). It has a key, 'mp3', which is
+further defined by 'type', which has an array of more string values. A second key under mp3 is mapped to
+the boolean true.
+
+33
+```javascript
+this.unload = function(sID) {
+    if (!idCheck(sID)) {
+      return false;
+    }
+    return sm2.sounds[sID].unload();
+  };
+```
+* this.unload is an object defined as a function, taking the input sID. sID is run through an if conditional,
+which returns false if the condition is true, otherwise returns sm2.sounds[sID].unload();
+
+34
+```javascript
+this.resumeAll = function() {
+    var i;
+    for (i = sm2.soundIDs.length-1; i >= 0; i--) {
+      sm2.sounds[sm2.soundIDs[i]].resume();
+    }
+  };
+```
+* this.resumeAll is an object defined as a function which runs a for loop. sm2.soundsIDs appears to be
+an array, and as long as the loop continues, sm2sounds[sm2.soundsIDs[i]] will run .resume(), which might
+be another object-function under sm2.sounds.
+
+35
+```javascript
+this.togglePause = function(sID) {
+    if (!idCheck(sID)) {
+      return false;
+    }
+    return sm2.sounds[sID].togglePause();
+  };
+```
+* this.togglePause is an object defined as a function that accepts an input, sID. idCheck(sID) is evaluated
+and if true will return false (wut). Otherwise if true, it returns sm2.sounds[siD].togglePause(), which appears
+to be as togglepause is a function-key of sounds[], which in turn is defined under sm2.
+
+36
+```javascript
+   this.setPosition = function(nMsecOffset) {
+      if (nMsecOffset === _undefined) {
+        nMsecOffset = 0;
+      }
+```
+* this.setPosition is an object defined as a function that accepts an input, nMsecOffset. If nMsecOffset
+is strictly equal to _undefined, nMsecOffset is assigned 0.
