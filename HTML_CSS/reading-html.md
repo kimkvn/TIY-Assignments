@@ -3,7 +3,8 @@
 
 ###Block Level Elements
 
-1) ``<p>`` -- represents a paragraph of text. Until you start a new <p> tag,
+####1) ``<p>``
+* represents a paragraph of text. Until you start a new <p> tag,
 there will not be a line break. Because paragraphs.
 
   Examples:
@@ -17,7 +18,8 @@ there will not be a line break. Because paragraphs.
   [3] ``<p>Hi everyone! This is my first official communication as the Campus Director at The Iron Yard Orlando, and I’m
   excited to let everyone know that I’m transitioning onto the team here over the next week. </p>`` (view-source:http://orlando.theironyard.com/)
 
-2) ``<h1>, <h2>, <h3>, <h4>, <h5>, <h6>`` -- varying levels of headers. h1 is
+####2) ``<h1>, <h2>, <h3>, <h4>, <h5>, <h6>``
+* varying levels of headers. h1 is
 the largest, h6 the smallest. You can use them to make title-looking things.
 
   Examples:
