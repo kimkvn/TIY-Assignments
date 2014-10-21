@@ -33,7 +33,7 @@ the largest, h6 the smallest. You can use them to make title-looking things.
   [3] ``<h2>Elsewhere</h2>`` (view-source:http://orlando.theironyard.com/)
 
 
-####3) <div>
+####3) ``<div>``
 * Separates and contains content. Super generic and is evidently
 only used when no other element/tag is appropriate.
 
@@ -48,7 +48,7 @@ only used when no other element/tag is appropriate.
     [3] ``<div class="blog-description">Happenings and updates from The Iron Yard in Orlando, FL.</div>``
                 (view-source:http://orlando.theironyard.com/)  
 
-####4) <blockquote>
+####4) ``<blockquote>``
 * Indicates the text within these tags is a quotation.
 Visually, it renders with some slight indentation (which can be changed...).
 
@@ -69,7 +69,7 @@ Is Iron Yard Academy Worth The Investment?
 
 
 
-####5) <article>
+####5) ``<article>``
 * represents a self-contained block of text in a document, page, app, or site, which is intended
 to be distributable or reusable outside the realm of the web page. Oftentimes the tag literally refers
 to an article, but it can be a blog entry, a widget, or any other independent item of content.
@@ -207,21 +207,26 @@ to an article, but it can be a blog entry, a widget, or any other independent it
 
 
 
-6) <ul> --- represents an unordered list of items. Listing things within
+####6) ``<ul>``
+* Represents an unordered list of items. Listing things within
 this tag will organize the list with bullets typically.
 
-7) <form> -- represents a section with interactive buttons and stuff users
+####7)``<form>``
+* Represents a section with interactive buttons and stuff users
 can control to submit information to a web server.
 
-8) <header> -- kind of an organizing attribute, this block usually contains
+####8)``<header>``
+* Kind of an organizing attribute, this block usually contains
 items pertaining to the head of a website, logos, banners, nav bar, and
 the like.
 
-9) <footer> -- another organizing attribute, this block might have stuff
+####9)``<footer>``
+* Another organizing attribute, this block might have stuff
 about the author of the site, contact info, links to related data, copyright
 info, etc.
 
-10) <aside> -- represents a section of the page that could be considered
+####10)``<aside>``
+* Represents a section of the page that could be considered
 separate from the brunt of the webpage content. Might contain nav bar(s),
 related advertisements, author bio, other web apps, profile info, links
 to other related pages, etc.
