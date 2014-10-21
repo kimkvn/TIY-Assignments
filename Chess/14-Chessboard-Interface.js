@@ -32,12 +32,13 @@ function newPosition(x, y){
  */
 function Piece(name, color){
 
-  Piece.prototype.getName = function(name){
-    return {'King': King}
+  Piece.prototype.getName = function(){
+    // return {'King': King}
+    return this.name;
   },
 
-  Piece.prototype.getColor = function(color){
-
+  Piece.prototype.getColor = function(){
+    return this.color;
   },
 
 }; //END Piece
