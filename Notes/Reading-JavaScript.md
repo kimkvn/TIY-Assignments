@@ -445,3 +445,119 @@ if( headerEnd >= sections[ix].start && headerStart <= sections[ix].end){
 * If conditional statement, two parts: headerEnd must be greater than or equal to the array sections,
 element location dictinoary, key= start. AND, headerStart must be lesser than or equal to array dictinoary
 sections element index ix, key = end..
+
+32
+```javascript
+  this.audioFormats = {
+    'mp3': {
+      'type': ['audio/mpeg; codecs="mp3"', 'audio/mpeg', 'audio/mp3', 'audio/MPA', 'audio/mpa-robust'],
+      'required': true
+    },
+```
+* this.audioFormats is an object in a larger function (not copied here). It has a key, 'mp3', which is
+further defined by 'type', which has an array of more string values. A second key under mp3 is mapped to
+the boolean true.
+
+33
+```javascript
+this.unload = function(sID) {
+    if (!idCheck(sID)) {
+      return false;
+    }
+    return sm2.sounds[sID].unload();
+  };
+```
+* this.unload is an object defined as a function, taking the input sID. sID is run through an if conditional,
+which returns false if the condition is true, otherwise returns sm2.sounds[sID].unload();
+
+34go
+```javascript
+this.resumeAll = function() {
+    var i;
+    for (i = sm2.soundIDs.length-1; i >= 0; i--) {
+      sm2.sounds[sm2.soundIDs[i]].resume();
+    }
+  };
+```
+* this.resumeAll is an object defined as a function which runs a for loop. sm2.soundsIDs appears to be
+an array, and as long as the loop continues, sm2sounds[sm2.soundsIDs[i]] will run .resume(), which might
+be another object-function under sm2.sounds.
+
+35
+```javascript
+this.togglePause = function(sID) {
+    if (!idCheck(sID)) {
+      return false;
+    }
+    return sm2.sounds[sID].togglePause();
+  };
+```
+* this.togglePause is an object defined as a function that accepts an input, sID. idCheck(sID) is evaluated
+and if true will return false (wut). Otherwise if true, it returns sm2.sounds[siD].togglePause(), which appears
+to be as togglepause is a function-key of sounds[], which in turn is defined under sm2.
+
+36
+```javascript
+   this.setPosition = function(nMsecOffset) {
+      if (nMsecOffset === _undefined) {
+        nMsecOffset = 0;
+      }
+```
+* this.setPosition is an object defined as a function that accepts an input, nMsecOffset. If nMsecOffset
+is strictly equal to undefined, nMsecOffset is assigned 0.
+
+37
+```javascript
+wrapCallback = function(oSound, callback) {
+    if (!oSound.isHTML5 && fV === 8) {
+      window.setTimeout(callback, 0);
+    } else {
+      callback();
+    }
+  };
+```
+* wrapCallback is an object defined as a function that accepts inputs oSound, and callback.
+If oSound.isHTML5 evaluates true AND fv is strictly equal to 8, window.setTimeout is a function that
+will run inputs callback, and 0. Else, callback will run.
+
+38
+```javascript
+ event = (function() {
+    var old = (window.attachEvent),
+    evt = {
+      add: (old?'attachEvent':'addEventListener'),
+      remove: (old?'detachEvent':'removeEventListener')
+    };
+```
+* event is an object defined as a function. In this first part of event, variables old and evt are
+declared. Old is assigned window.attachEvent. evt is assigned a dictionary with keys add and remove.
+
+39
+```javascript
+ html5_events = {
+    abort: html5_event(function() {
+    }),
+    canplay: html5_event(function() {
+      var s = this._s,
+          position1K;
+      if (s._html5_canplay) {
+        return true;
+      }
+```
+* html5_events is assigned a dictionary. It has the keys abort, which is mapped to html5_event(function()),
+and canplay, which is mapped html5_event(function()) which runs an if conditional statement.
+
+40
+```javascript
+  this.flash9Options = {
+    'isMovieStar': null,
+    'usePeakData': false,
+    'useWaveformData': false,
+    'useEQData': false,
+    'onbufferchange': null,
+    'ondataerror': null
+  };
+```
+* this.flash90Options is an object defined as a dictionary, which has the keys 'isMOveStar', 'usePeakData',
+'useWaveformData', useEQData', 'onbufferchange', 'ondataerror', all of which are assigned to either null or
+false values.
