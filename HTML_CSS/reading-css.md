@@ -5,13 +5,13 @@
 ####1) ``background-color``
 * sets the background color of an element
 
-
+```html
   1) background-color: red;
 
   2) background-color: CD6090;
 
   3) background-color: green;
-
+```
 
 ####2) ``blend-mode``
 * a catalog of different methods that will affect how two layers mix together
@@ -105,3 +105,101 @@ stand out.
 ####20) ``rgb()``
 * a mode to define colors, 2 ways: Hexadecimal notation (#RGB, or #RRGGBB), and Functional notation ("rgb" followed
 by 3 integers or 3 percentage values).
+
+
+###Font/Text-affecting rules
+
+####21) ``text-align``
+* describes how text should be aligned in its parent block element. Does not affect block alignment.
+Examples:
+```html
+ text-align: right
+ text-align: center
+ text-align: justify
+```
+
+####22)``text-decoration-color``
+* sets the color for underlines, overlines, strike
+-throughs. This is preferable to trying to combo other html elements
+
+Examples
+```html
+  text-decoration-color: blue
+  text-decoration-color: #90EE90
+  text-decoration-color: transparent
+```
+####23) ``text-decoration``
+* allows one to format text, using things like underline, overline, line-through, or blink.
+
+Examples
+```html
+  text-decoration: underline
+  text-decoration: none
+  text-decoration: line-through
+```
+####24) ``text-shadow``
+* adds shadow(s) to text. Will accept a list of shadows to be applied to the text and text-decorations
+
+Examples:
+```html
+  text-shadow: red 0 -2px
+  text-shadow: 1px 1px, 0 0 1em
+  text-shadow: rgba(0,0,0,0.1) -1px 0
+```
+####25)``text-indent``
+* specifies how much space should be left before the beginning of the first line of text.
+Basically, how far do you want to indent a particular line of text.
+
+Examples:
+```html
+  text-indent: 2mm
+  text-indent: 10px
+  text-indent:25%
+```
+####26)``font-family``
+* allows you to give your site a list of fonts to use in case particular browsers don't recognize some
+of the fonts you want to use because the browser war is annoying.
+
+Examples:
+```html
+  font-family: serif, verdana
+  font-family: Courier, Times, Georgia
+  font-family: Sans-serif, cursive, Courier
+```
+####27)``font-size``
+* specifies a size for your font
+
+Examples:
+```html
+  font-size: large <!-- an absolute -->
+  font-size: 35px
+  font-size: 100%
+```
+####28)``font-style``
+* allows you to use italics or oblique faces in conjunction with font-family.
+
+Examples:
+```html
+  font-style: italic
+  font-style: oblique
+  font-style: normal
+```
+####29)``font-weight``
+* specifies how fat your font is. That is, the weight or boldness of your font. Does not apply to all
+font types.
+
+Examples
+```html
+  font-weight: bolder
+  font-weight: 300
+  font-weight: normal
+```
+####30)``font-stretch``
+* adjusts the font by selecting normal, condensed, or expanded face.
+
+Examples:
+```html
+  font-stretch: ultra-condensed
+  font-strecth: expanded
+  font-stretch: extra-expanded
+```
