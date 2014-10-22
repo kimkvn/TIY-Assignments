@@ -50,7 +50,7 @@ like shining a diffused spotlight on the backdrop.
 ####8) color
 * sets the foreground color of an element's text content and its decorations.
 
-####9) <color>
+####9) ``<color>``
 * denotes a color in the sRGB color space. A color can be described by: a keyword, using the RGB cubic coordinate
 system, or using the HSL cylindrical-coordinate
 
