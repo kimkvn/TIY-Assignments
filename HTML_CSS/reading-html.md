@@ -207,25 +207,102 @@ to an article, but it can be a blog entry, a widget, or any other independent it
 
 ```
 
-####6) <ul>
+####6) ``<ul>``
 * Represents an unordered list of items. Listing things within
 this tag will organize the list with bullets typically.
 
-####7)<form>
+  Examples:
+```html
+  [1] <ul class="share-items">
+                                    <li class="share-item twitter">
+                                      <a href="https://twitter.com/intent/tweet?url=http://orlando.theironyard.com/post/100189034319/matt-wallaert-behavioral-scientist-bing-will-be" target="_blank">Twitter<span class="icon">t</span></a>
+                                    </li>
+                                    <li class="share-item facebook">
+                                      <a href="https://www.facebook.com/sharer.php?u=http://orlando.theironyard.com/post/100189034319/matt-wallaert-behavioral-scientist-bing-will-be" target="_blank">Facebook<span class="icon">f</span></a>
+                                    </li>
+                                    <li class="share-item pinterest">
+                                      <a href="#" target="_blank">Pinterest<span class="icon">p</span></a>
+                                    </li>
+                                    <li class="share-item google">
+                                      <a href="https://plus.google.com/share?url=http://orlando.theironyard.com/post/100189034319/matt-wallaert-behavioral-scientist-bing-will-be" target="_blank">Google<span class="icon">g</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="copy-link-wrap">
+                                    <a data-clipboard-text="http://tmblr.co/ZRA0zm1TJkrTF"><span class="icon">5</span><span class="label">Copy short URL</span></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+
+  (view-source:http://orlando.theironyard.com/)
+
+
+  [2] <ul><li><span>What did you do yesterday?</span></li>
+<li><span>What are you doing today?</span></li>
+<li><span>What, if anything, is in your way?</span></li>
+</ul>
+
+  (view-source:http://orlando.theironyard.com/)
+
+
+  [3]
+  	                   <ul>
+                        <li><a href="http://tsbmen.com/category/features">Editorials</a></li><br>
+                        <li><a href="http://tsbmen.com/category/ask-dan">Tips &amp; Guides</a></li><br>
+                        <li><a href="http://tsbmen.com/category/street-style">Street Style</a></li><br>
+                        <li><a href="http://tsbmen.com/category/what-i-wore-today">WIWT</a></li><br>
+                        <li><a href="http://tsbmen.com/category/behind-the-scenes">Behind the Scenes</a></li><br>
+                        <li><a href="http://tsbmen.com/category/videos">Videos</a></li><br>
+                        <li class="last"><a href="http://tsbmen.com/category/giveaways">Giveaways</a></li><br>
+                       </ul>
+        (view-source:http://tsbmen.com/)
+
+```
+
+####7)``<form>``
 * Represents a section with interactive buttons and stuff users
 can control to submit information to a web server.
 
-####8)<header>
+```html
+
+  [1]
+  <form role="search" method="get" id="searchform" action="http://tsbmen.com/">
+    <div class="searchbox">
+        <input type="text" name="s" id="s" placeholder="Search" />
+    </div>
+</form>
+          (view-source:http://tsbmen.com/)
+
+  [2]
+  <form action="http://TSBmen.us3.list-manage.com/subscribe/post?u=e33ac0aa81ee210a53a5b039b&amp;id=19c10d6e94" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" style="border: 1px solid #E5892A;float: none;height: 29px;margin: 148px 12.3% 0;text-align: center;width: 75%;" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_e33ac0aa81ee210a53a5b039b_19c10d6e94" value=""></div>
+	<div style="float:left; margin:15px 0 0; font:helvetica"><input type="submit" value="submit" name="subscribe" class="button"></div>
+</form>
+        (view-source:http://tsbmen.com/)
+
+
+  [3]
+            <form>
+              <input type="text" id="st-search-input" class="search-field" />
+            </form>
+                      (view-source:http://orlando.theironyard.com/)
+
+```
+
+####8)``<header>``
 * Kind of an organizing attribute, this block usually contains
 items pertaining to the head of a website, logos, banners, nav bar, and
 the like.
 
-####9)<footer>
+####9)``<footer>``
 * Another organizing attribute, this block might have stuff
 about the author of the site, contact info, links to related data, copyright
 info, etc.
 
-####10)<aside>
+####10)``<aside>``
 * Represents a section of the page that could be considered
 separate from the brunt of the webpage content. Might contain nav bar(s),
 related advertisements, author bio, other web apps, profile info, links
