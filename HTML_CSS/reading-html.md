@@ -433,3 +433,190 @@ Level Up: <a href="http://theironyard.com/academy">The Iron Yard</a></div>
 		</aside>
             (view-source:http://john.do/)
 ```
+
+###More HTML Tags and examples
+
+####11)``<span>``
+* Represents text with no specific meaning, like tagging a section of the code to be referenced to later.
+
+  Examples
+  ```html
+  [1]  <span class="icon">2</span>
+      (view-source:http://orlando.theironyard.com/)
+
+  [2]  <span>(the good, the bad, the ugly, and the &#8220;Ah ha!&#8221; moments)</span>
+      (view-source:http://orlando.theironyard.com/)
+
+  [3] <span>Code School</span>
+      (view-source:http://orlando.theironyard.com/)
+      ```
+
+####12)``<img>``
+* Represents an image. I don't think this gets a closing tag, that is, ``</img>``.
+It's all one tag ``<img...stuff stuff stuff.../>``.
+
+  Examples:
+```html
+  [1]
+    <img alt="The Iron Yard | Orlando" src="http://static.tumblr.com/37ca133c1a84d5b7856c51a7682df3e9/w5gxxfv/6j4n8vkw8/tumblr_static_20mtuue2w17o0sksogs0c44cw.png" />
+(view-source:http://orlando.theironyard.com/)
+
+  [2]
+  <img alt="image" src="http://media.tumblr.com/c5b6fcd73c1e6a076269eb477b09c379/tumblr_inline_ndk4rsMem41t311sy.jpg"/>
+  (view-source:http://orlando.theironyard.com/)
+
+  [3]
+  <img alt="The Iron Yard | Orlando" src="http://33.media.tumblr.com/avatar_31b8d8bf579d_64.png" />
+  (view-source:http://orlando.theironyard.com/)
+```
+
+####13)``<script>``
+* defines an internal script or a link to a script to run on the site. Usually, script written in javascript.
+
+Examples:
+```html
+  [1]
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  (view-source:xkcd.com)
+
+  [2]
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25700708-7', 'auto');
+ga('send', 'pageview');
+</script>
+    (view-source:xkcd.com)
+
+  [3]
+  <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=0fe6931f685c5a29060675a836044a62"></script>
+  (view-source:orlando.theironyard.com)
+
+```
+
+####14)``<nav>``
+* Defines a section of the page that only has navigational links
+
+Examples
+```html
+  [1]
+          <nav id="navnav">
+        	<ul class="navnav">
+					<li><a href="http://tsbmen.com" class="selected"><img src="/images/tsb-home-icon.png" /></a></li>
+					<li><a href="#">CATEGORIES</a>
+                    	<ul>
+                        <li><a href="http://tsbmen.com/category/features">Editorials</a></li><br>
+                        <li><a href="http://tsbmen.com/category/ask-dan">Tips &amp; Guides</a></li><br>
+                        <li><a href="http://tsbmen.com/category/street-style">Street Style</a></li><br>
+                        <li><a href="http://tsbmen.com/category/what-i-wore-today">WIWT</a></li><br>
+                        <li><a href="http://tsbmen.com/category/behind-the-scenes">Behind the Scenes</a></li><br>
+                        <li><a href="http://tsbmen.com/category/videos">Videos</a></li><br>
+                        <li class="last"><a href="http://tsbmen.com/category/giveaways">Giveaways</a></li><br>
+                       </ul>
+                       </li>
+					<li><a href="about">ABOUT</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+					<li class="last"><a href="styleguide">LOOKBOOK</a></li>
+				</ul>
+          </ul>
+        </nav>
+
+        (view-source:tsbmen.com)
+
+  [2]
+      <nav class="pagehead-nav" role="navigation">
+  <a href="/" class="selected js-selected-navigation-item pagehead-nav-item" data-selected-links=" /"><span class="octicon octicon-rss"></span> News Feed</a>
+  <a href="/pulls" class="js-selected-navigation-item pagehead-nav-item" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls"><span class="octicon octicon-git-pull-request"></span> Pull Requests</a>
+  <a href="/issues" class="js-selected-navigation-item pagehead-nav-item" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues"><span class="octicon octicon-issue-opened"></span> Issues</a>
+</nav>
+        (view-source:github.com)
+
+  [3]
+            <nav>
+            <ul><li><a href="http://stompology.com/teachers.aspx">Teachers</a></li><li><a href="http://stompology.com/music.aspx">Music</a></li><li><a href="http://stompology.com/schedule.aspx">Schedule</a></li><li><a href="http://stompology.com/competitions.aspx">Competitions</a></li><li><a href="http://stompology.com/registration-pricing.aspx">Registration &amp; Pricing</a></li><li><a href="http://stompology.com/housing.aspx">Housing</a></li><li><a href="http://stompology.com/join-the-crew.aspx">Join the Crew</a></li><li><a href="http://stompology.com/policies.aspx">Policies</a></li></ul>
+        </nav>
+
+        (view-source:www.stompology.com)
+
+```
+####15)``<section>``
+* Defines a section in a document. Blogs probably use this one a lot, as it will group all the ``<article>``s together.
+
+Examples:
+```html
+  [1]
+  <section class="home">
+
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="/media/20347/stompology_2013_jun08_4812.jpg" alt="Laura Glaess Teaches at Stompology XIII. Photo by Devon Rowland." />
+                <p class="flex-caption">Laura Glaess Teaches at Stompology XIII. Photo by Devon Rowland.</p>
+            </li>
+            .
+            .<!-- lots more info that I'm skipping over -->
+            .
+            </section>
+
+            (view-source:www.stompology.com)
+
+  [2]
+  <section id="footer">
+        <div class="branding">
+          <h3 class="fancy"><a href="#">Chai Assertion Library</a></h3>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="/guide/installation/">Installation</a></li>
+            <li><a href="/guide/styles/">Interface Styles</a></li>
+            <li><a href="/guide/plugins/">Developing Plugins</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="/api/bdd/">Expect / Should API</a></li>
+            <li><a href="/api/assert/">Assert API</a></li>
+            <li><a href="/api/plugins/">Plugin Utility API</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="/guide/resources/">Getting Help</a></li>
+            <li><a href="/api/test/">Test Suite</a></li>
+            <li><a href="https://github.com/chaijs/chai/blob/master/History.md" target="_blank">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="https://github.com/chaijs/chai/issues" target="_blank">Issues</a></li>
+            <li><a href="http://groups.google.com/group/chaijs" target="_blank">Google Group</a></li>
+            <li><a href="http://travis-ci.org/#!/chaijs/chai" target="_blank">Build Status</a></li>
+          </ul>
+        </div>
+      </section>
+
+      (view-source:chaijs.com)
+
+  [3]
+  <section class="gallery-content gallery-content-ipad-air" id="gallery-content-ipad-air">
+	<a href="/ipad-air-2/" class="hero-click-target block hero-image" data-analytics-click="prop3:ipad air,prefix:h"></a>
+	<div class="hero-content">
+		<div class="copy">
+			<div id="headings-wrapper">
+				<h1 class="imagereplace">iPad Air 2</h1>
+				<h2>Change is in the Air.</h2>
+			</div>
+
+			<ul class="links">
+				<li data-analytics-region="learn more"><a class="icon icon-more" href="/ipad-air-2/" data-analytics-click="prop3:ipad air - learn more">Learn more</a></li>
+				<li><a class="icon icon-play" href="/apple-events/2014-oct-event/">Watch the keynote</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+  (view-source:apple.com)
+```
