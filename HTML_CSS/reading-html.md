@@ -620,3 +620,174 @@ Examples:
 
   (view-source:apple.com)
 ```
+
+####16)``<body>``
+* represents the content of an html document. There will be only one ``<body>`` tag per web page.
+
+Examples:
+```html
+  [1]
+  <body>
+    <div class="container-fluid gray-dark-bg">
+      <div class="header-dimmer gray-dark-bg">
+        <div class="container">
+        .
+        .
+        .
+        .
+
+    </script>
+    <!--clicky analytics-->
+    <script src="//static.getclicky.com/js"></script>
+    <script type="text/javascript">try{ clicky.init(100714900); }catch(e){}</script>
+  </body>
+
+  (view-source:theironyard.com)
+
+  [2]
+  <body class="page-home">
+
+
+<nav id="globalheader" class="globalheader" role="navigation" aria-label="Global Navigation" data-hires="false" data-analytics-region="global nav" lang="en-US">
+	<div id="gh-content" class="gh-content">
+  .
+  .
+  .
+  .
+  	<script src="http://images.apple.com/v/home/bg/scripts/home.built.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+  (view-source:apple.com)
+
+  [3]
+  <body>
+<script type="text/javascript" src="http://files.markerly.com/markerly-cdn.js#pub_id=ma-52f14f168a5ba"></script><script type="text/javascript">var markerly_settings = {"services":"facebook,twitter,googleplus","image_services":"facebook,twitter,pinterest","text_sharing":0}</script>
+<div style="width:100%; margin:0 auto; background: url('http://www.tsbmen.com/images/fabric_plaid.png') repeat scroll 0 0 rgba(0, 0, 0, 0);">
+<div style="width:415px; margin:10px auto; position:relative; text-align:center; height:120px">
+.
+.
+.
+<script type='text/javascript' src='http://tsbmen.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://tsbmen.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://tsbmen.com/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+
+</body>
+        (view-source:tsbmen.com)
+```
+
+####17)``<title>``
+* Defines the title of the webpage, and will display in either the browser window or browser tab. Can
+only accept text, no scripts or images etc.
+
+Examples:
+
+```html
+  [1]
+  <title>The Iron Yard | Orlando</title>
+  (view-source:orlando.theironyard.com)
+
+  [2]
+  <title>Apple</title>
+  (view-source:apple.com)
+
+  [3]
+  <title>TSBmen - The Style Blogger</title>
+  (view-source:tsbmen.com)
+```
+
+####18)``<style>``
+* Used to write inline CSS inside of the html file.
+```html
+  [1]
+  <style type="text/css">body {
+  font-size: 17px;
+}
+
+p a {
+  color: #158cbd;
+}
+
+p a:hover {
+  text-decoration: underline;
+} </style>
+        (view-source:orlando.theironyard.com)
+
+  [2]
+  <style>
+.fixed {
+    position: fixed;
+    margin-left: 800px;
+}
+</style>
+        (view-source:tsbmen.com)
+
+  [3]
+      <style type="text/css">a {
+      color: #262f34;
+    }
+    .load-more-wrap:hover .load-more {
+      background-color: #262f34;
+    }
+    .load-more,
+    .load-more-wrap.loading .load-more,
+    .load-more-wrap.loading:hover .load-more {
+      background-color: #262f34;
+    }
+    footer a:hover,
+    .rte a.tumblr_blog:hover {
+      color: #262f34;
+    }
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+      color: #39474e;
+    }
+    h1 a:hover,
+    h2 a:hover,
+    h3 a:hover,
+    h4 a:hover,
+    h5 a:hover,
+    h6 a:hover,
+    .type-link h1 a:hover .icon {
+      color: #262f34;
+    }</style>
+
+    (view-source:orlando.theironyard.com)
+
+```
+
+####19)``<figure>``
+* represents a figure illustrated in the html document
+
+Examples
+```html
+  [1]
+  <figure class="hero-image scaled-image no-translate no-vertically-center"></figure>
+  (view-source:apple.com)
+
+  [2]
+  <figure class="logo"></figure>
+  (view-source:apple.com)
+
+  [3]
+  	<figure class="hero-image no-translate"></figure>
+    (view-source:apple.com)
+```
+####20)``<em>``
+* applies bold styling to text
+
+examples:
+```html
+  [1]
+  <em>By Susanna Miller, Campus Director</em>
+  (view-source:orlando.theironyard.com)
+  [2]
+  <em>See? Super excited. And it’s an official picture, because David is in it too (albeit without his actual knowledge)</em>
+  (view-source:orlando.theironyard.com)
+  [3]
+  <em>By <a href="http://theironyard.com/about/team/#tim" target="_blank">Tim Whitacre</a>, Front End Engineering Instructor</em>
+  (view-source:atlanta.theironyard.com)
+```
