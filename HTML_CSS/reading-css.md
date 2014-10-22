@@ -2,10 +2,10 @@
 
 ###First round: all methods that will affect the color of things
 
-####1) background-color
+####1) ``background-color``
 * sets the background color of an element
 
-####2) blend-mode
+####2) ``blend-mode``
 * a catalog of different methods that will affect how two layers mix together
 
 They include:
@@ -32,51 +32,51 @@ like shining a diffused spotlight on the backdrop.
 * *color* - keeps the saturation and hue of the front color while using the luminosity of the background
 * *luminosity* - keeps the luminosity of the front color while using the saturation and hue of the background
 
-####3) border-bottom-color
+####3) ``border-bottom-color``
 * sets the color of the bottom border of an element
 
-####4) border-left-color
+####4) ``border-left-color``
 * sets the color of the left border of an element
 
-####5) border-color
+####5) ``border-color``
 * sets the color for the four sides of an element's border
 
-####6) border-right-color
+####6) ``border-right-color``
 * sets the color for the right side border of an element
 
-####7) border-top-color
+####7) ``border-top-color``
 * sets the color for the top side border of an element
 
-####8) color
+####8) ``color``
 * sets the foreground color of an element's text content and its decorations.
 
 ####9) ``<color>``
 * denotes a color in the sRGB color space. A color can be described by: a keyword, using the RGB cubic coordinate
 system, or using the HSL cylindrical-coordinate
 
-####10) column-rule-color
+####10) ``column-rule-color``
 * sets the color of the rule drawn between columns in multi-column layouts
 
-####11) filter
+####11) ``filter``
 * provides effects like blurring or color shifting on an element's rendering before said element is
 displayed. Commonly used to adjust the rendering of an image, background, or border.
 
-####12) grayscale()
+####12) ``grayscale()``
 * converts the input image to grayscale. Input 'amount' is a percentage which determines how much gray-ing
 is done to the image.
 
-###13) hue-rotate()
+###13) ``hue-rotate()``
 * applies hue rotation to the input image. Input 'angle' ('x'deg) determines how much of the image's
 hue is altered
 
-####14) invert()
+####14) ``invert()``
 * inverts the samples in the input image. Input 'amount' is a percentage and a value of 100% completely
 inverts the image's colors.
 
-####15) saturate()
+####15) ``saturate()``
 * saturates the input image...input 'amount' is a percentage that determines how much of the image will
 be saturated. 0% is unsaturated, 100% is original, anything beyond that leads to super-saturated results
 
-####16) sepia()
+####16) ``sepia()``
 * converts the input image to sepia. Input 'amount' is a percentage, 100% value returns an image that is
 completely sepia.
