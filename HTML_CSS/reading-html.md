@@ -69,13 +69,13 @@ Is Iron Yard Academy Worth The Investment?
 ```
 
 
-####5) <article>
+####5) ``<article>``
 * represents a self-contained block of text in a document, page, app, or site, which is intended
 to be distributable or reusable outside the realm of the web page. Oftentimes the tag literally refers
 to an article, but it can be a blog entry, a widget, or any other independent item of content.
 
   Examples:
-
+```html
   [1]        <article class="post type-text" id="100079465824"><div class="clearfix rte">
                             <h1 class="title">
                                   <a href="http://orlando.theironyard.com/post/100079465824/new-face-at-the-iron-yard-orlando">New Face at The Iron Yard Orlando!</a></h1>
@@ -205,7 +205,7 @@ to an article, but it can be a blog entry, a widget, or any other independent it
 
                         (view-source:http://orlando.theironyard.com/)
 
-
+```
 
 ####6) <ul>
 * Represents an unordered list of items. Listing things within
