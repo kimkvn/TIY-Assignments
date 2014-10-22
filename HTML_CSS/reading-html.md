@@ -297,13 +297,139 @@ can control to submit information to a web server.
 items pertaining to the head of a website, logos, banners, nav bar, and
 the like.
 
+  Examples:
+```html
+  [1]
+  <header style="background-image:url(http://static.tumblr.com/3c7cd96cde56779343d2e9a22afec085/w5gxxfv/oCrn8vkw8/tumblr_static_9cxjqqnfamsccsg4ow84sg8kg.jpg);"></header>
+    (view-source:http://orlando.theironyard.com/)
+
+  [2]
+  <header class="entry-header">
+						<h1 class="entry-title">
+			<a href="http://john.do/bravo-inside/" title="Permalink to Chrome Bravo Backpack (What&#8217;s Inside)" rel="bookmark">Chrome Bravo Backpack (What&#8217;s Inside)</a>
+		</h1>
+	</header>
+        (view-source:http://john.do/page/2/)
+
+  [3]
+  <header class="entry-header">
+						<h1 class="entry-title">
+			<a href="http://john.do/got-boring/" title="Permalink to I Got Boring" rel="bookmark">I Got Boring</a>
+		</h1>
+	</header>
+        (view-source:http://john.do/page/2/)
+```
+
+
 ####9)``<footer>``
 * Another organizing attribute, this block might have stuff
 about the author of the site, contact info, links to related data, copyright
 info, etc.
+
+  Examples:
+
+```html
+  [1]
+    <footer>
+    <div class="footer-wrap content-wrap clearfix">
+      <aside class="sidebar">
+        <div class="avatar-wrap">
+          <a href="/"><img alt="The Iron Yard | Orlando" src="http://33.media.tumblr.com/avatar_31b8d8bf579d_64.png" /></a>
+        </div>
+      </aside>
+      <div class="content">
+        <h2 class="secondary-title">The Iron Yard | Orlando</h2>
+        <div class="blog-description">Happenings and updates from The Iron Yard in Orlando, FL.</div><div class="social-icons module clearfix">
+          <h2>Elsewhere</h2>
+          <div class="wrap"></div>
+        </div><div class="attribution">
+          <a href="http://www.pixelunion.net/themes/longform">Longform Theme</a>&nbsp;by&nbsp;<a href="http://www.pixelunion.net">Pixel Union</a>. Powered by&nbsp;<a href="http://www.tumblr.com">Tumblr</a>.</div>
+      </div>
+    </div>
+  </footer>
+              (view-source:http://orlando.theironyard.com/)
+
+  [2]
+    <footer class="entry-meta">
+
+							<span class="cat-links">in <a href="http://john.do/category/start/" rel="category tag">Start</a></span> <span class="sep"> |</span>
+
+							<span>312 Words</span>
+
+
+	</footer>
+            (view-source:http://john.do/page/2/)
+
+
+
+  [3]
+          <footer class="row">
+			<div class="row">
+
+										<h4>Hey! You!</h4>
+					<p>You should like, so test out this dynamic footer sidebar. Check it out in Appearance > Widgets!</p>
+
+			</div>
+
+	</footer>  
+              (view-source:http://tsbmen.com/)
+```
 
 ####10)``<aside>``
 * Represents a section of the page that could be considered
 separate from the brunt of the webpage content. Might contain nav bar(s),
 related advertisements, author bio, other web apps, profile info, links
 to other related pages, etc.
+
+Examples:
+
+```html
+  [1]
+     <aside class="sidebar"><div class="avatar-wrap">
+        <a href="http://theironyard.com"><img alt="The Iron Yard | Orlando" src="http://static.tumblr.com/37ca133c1a84d5b7856c51a7682df3e9/w5gxxfv/6j4n8vkw8/tumblr_static_20mtuue2w17o0sksogs0c44cw.png" /></a>
+      </div><h1>
+        <a href="/">The Iron Yard | Orlando</a>
+      </h1>
+      <div class="blog-description">Happenings and updates from The Iron Yard in Orlando, FL.</div>
+      <ul class="links module"></ul><div class="social-icons module clearfix">
+        <h2>Elsewhere</h2>
+        <div class="wrap"></div>
+      </div><form action="/search" class="module search-form" method="get">
+        <h2>Search</h2>
+        <div class="input-wrap">
+            <form>
+              <input type="text" id="st-search-input" class="search-field" />
+            </form>
+            <script type="text/javascript">
+            var Swiftype = window.Swiftype || {};
+              (function() {
+                Swiftype.key = '3We_K2q15Ja1xx25zEqE';
+
+                /** DO NOT EDIT BELOW THIS LINE **/
+                var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+                script.src = "//s.swiftypecdn.com/embed.js";
+                var entry = document.getElementsByTagName('script')[0];
+                entry.parentNode.insertBefore(script, entry);
+              }());
+            </script>
+        </div>
+      </form></aside>
+
+      (view-source:http://orlando.theironyard.com/)
+
+
+  [2]
+    <aside id="text-29" class="widget widget_text">			<div class="textwidget"><a href="http://desk.pm" target="_blank"><img src="http://john.do/wp-content/uploads/2014/09/desk.png"></img></a>
+<center>My app, <a href="http://desk.pm">Desk</a>.</center></div>
+		</aside>
+          (view-source:http://john.do)
+
+  [3]
+  <aside id="text-25" class="widget widget_text">			<div class="textwidget">Twitter: <a href="http://twitter.com/saddington">@Saddington</a><br />
+Feedburner: <a href="http://feedburner.google.com/fb/a/mailverify?uri=johnsaddington">Email</a><br />
+Feedburner: <a href="http://feeds.feedburner.com/johnsaddington">RSS</a><br />
+OS X App: <a href="http://desk.pm">Desk</a><br />
+Level Up: <a href="http://theironyard.com/academy">The Iron Yard</a></div>
+		</aside>
+            (view-source:http://john.do/)
+```
