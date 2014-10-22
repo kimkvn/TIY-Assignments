@@ -80,3 +80,20 @@ be saturated. 0% is unsaturated, 100% is original, anything beyond that leads to
 ####16) ``sepia()``
 * converts the input image to sepia. Input 'amount' is a percentage, 100% value returns an image that is
 completely sepia.
+
+####17) ``hsl()``
+* Color values based on the Hue-saturation-lightness model. Hue is represented as an angle of the color circle.
+Saturation and lightness are represented as percentages.
+Ex: red = hsl(0, 100%, 50%), green = hsl(120, 100%, 50%), blue = hsl(240, 100%, 50%)
+
+####18) ``hsla()``
+* another model to defined colors, hue-saturation-lightness-alpha model. Like an extension of hsl() by adding
+the alpha channel, allows to specify the opacity of a color.
+
+####19) ``outline color``
+* Sets the color of the outline of an element. It's drawn outside of the border edge and helps make the element
+stand out.
+
+####20) ``rgb()``
+* a mode to define colors, 2 ways: Hexadecimal notation (#RGB, or #RRGGBB), and Functional notation ("rgb" followed
+by 3 integers or 3 percentage values). 
