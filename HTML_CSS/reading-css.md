@@ -5,6 +5,14 @@
 ####1) ``background-color``
 * sets the background color of an element
 
+
+  1) background-color: red;
+
+  2) background-color: CD6090;
+
+  3) background-color: green;
+
+
 ####2) ``blend-mode``
 * a catalog of different methods that will affect how two layers mix together
 
@@ -96,4 +104,4 @@ stand out.
 
 ####20) ``rgb()``
 * a mode to define colors, 2 ways: Hexadecimal notation (#RGB, or #RRGGBB), and Functional notation ("rgb" followed
-by 3 integers or 3 percentage values). 
+by 3 integers or 3 percentage values).
