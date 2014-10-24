@@ -791,3 +791,19 @@ examples:
   <em>By <a href="http://theironyard.com/about/team/#tim" target="_blank">Tim Whitacre</a>, Front End Engineering Instructor</em>
   (view-source:atlanta.theironyard.com)
 ```
+
+
+####21)``<input>``
+* creates interactive controls for forms so users can enter data. 
+
+####22)``<select>``
+* represents a control that presents an options menu
+
+####23)``<time>``
+* represents either a time (24hr format) or a date
+
+####24)``<a>``
+* a tag for hyperlinks, sometimes called an achor element
+
+####25)``<br>``
+* use this to represent a line break (that isn't a ``<p>`` tag). 

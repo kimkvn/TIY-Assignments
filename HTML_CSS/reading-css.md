@@ -203,3 +203,45 @@ Examples:
   font-strecth: expanded
   font-stretch: extra-expanded
 ```
+
+####31)``float``
+* takes an element from default positioning and places it along the left or right side of its container, and text
+and other inline elements will wraparound it. 
+
+```html
+  float: right
+  float: left
+  float: none
+```
+####32)``clear``
+* determines whether an element can be next to a floating element, or be moved down below it (cleared)
+
+```html
+  clear: none
+  clear: right
+  clear: both
+```
+
+####33)``background-position``
+* sets initial position relative to background layer (which is defined by background-origin) for each
+defined background image. 
+```html
+  background-position: 0px 0px, center;
+  background-position: 10mm, 10mm, right
+  background-position: 5px, 2px, left
+```
+####34)``position``
+* chooses different rules for positioning designated elements, mostly useful for scripted animation effects
+```html
+  position: relative
+  position: absolute
+  position: static
+```
+
+####35)``list-style-position``
+* specifies position of the marker box in the pincipal block box
+```html
+  list-style-position: outisde
+  list-style-position: inside
+  list-style-position: inherit
+```
