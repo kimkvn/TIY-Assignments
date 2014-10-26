@@ -29,9 +29,9 @@
   }
 
   #header{
-    border: solid 2px green;
+    /*border: solid 2px green;*/
     padding: 20px 20px 0 20px;
-    margin: 30px 40px 0 40px;
+    margin: 30px 40px 30px 40px;
     font-family: 'Asap', sans-serif;
     line-height: 20px;
     color: #5E9DC8;
@@ -54,9 +54,9 @@
   }
 
   .post{
-    border: solid 1px purple;
-    margin: 50px 50px 50px 50px;
-    padding: 30px 40px 40px 40px;
+    /*border: solid 1px purple;*/
+    margin: 0 50px 0 50px;
+    padding: 0 40px 0 40px;
     border-radius: 8px;
     /*background-color: #69BCE6;*/
     color: #9EAEB3;
@@ -66,10 +66,9 @@
   .post h1{
     border-bottom: 2px #9EAEB3 solid;
     padding: 10px 0 10px 0;
-    margin-bottom: 10px;
+    margin: 5px 0 10px 0;
     font-family: 'Merriweather-Sans', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     color: #69BCE6;
   }
 
