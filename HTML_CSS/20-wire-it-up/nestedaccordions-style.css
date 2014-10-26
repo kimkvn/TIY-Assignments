@@ -1,0 +1,88 @@
+<style>
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      }
+
+  #header{
+    border: solid 2px green;
+    padding: 20px 20px 0 20px;
+    margin: 30px 40px 0 40px;
+    font-family: 'Asap', sans-serif;
+    line-height: 20px;
+    color: #5E9DC8;
+  }
+
+  #header h1{
+    font-size: 30px;
+    /*border: 1px solid red;*/
+    margin-bottom: 20px;
+  }
+
+  #header nav a{
+    display: inline;
+    border: solid 1px blue;
+    text-align: right;
+    margin: 5px;
+    text-decoration: none;
+    color: #5E9DC8;
+  }
+
+  .post{
+    border: solid 1px purple;
+    margin: 50px 50px 50px 50px;
+    padding: 30px 40px 40px 40px;
+    border-radius: 8px;
+    /*background-color: #69BCE6;*/
+    color: #9EAEB3;
+    font-family: 'Asap', sans-serif;
+  }
+
+  .post h1{
+    border-bottom: 2px #9EAEB3 solid;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    font-family: 'Merriweather-Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #69BCE6;
+  }
+
+  .post p{
+    margin-right: 0;
+    line-height: 25px;
+  }
+
+  .sub-post h3{
+    border: 1px solid red;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+    color: #69BCE6;
+  }
+
+  .sub-post{
+    border: 1px orange solid;
+    margin: 20px;
+    margin-left: 40px;
+    margin-right: 0;
+    padding-right: 10px;
+  }
+
+</style>
