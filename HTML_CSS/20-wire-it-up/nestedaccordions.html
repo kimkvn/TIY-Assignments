@@ -2,15 +2,28 @@
 <html>
 
 <head>
-
+  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="nestedaccordions-style.css">
-
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Asap: 700, 400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather-Sans: 700, 400' rel='stylesheet' type='text/css'>
 
+  <script type='text/javascript'>
+
+  function onOff(id){
+    var thisPost = document.getElementById(id);
+      if(thisPost.style.display==''){
+        thisPost.style.display='none';
+      }
+      else{
+        thisPost.style.display='';
+      }
+  }
+
+  </script>
 
 </head>
+
 
 <body>
 
@@ -30,17 +43,18 @@
 </section>
 
 <article class="post">
-  <h1>Oat Cake tootsie roll</h1>
-    <p>Jelly sweet roll dragée gummies. Jelly-o cotton candy gingerbread. Dessert tart bear claw gummi bears I love
+  <h1><a href="#" onclick="onOff('oatcake');">Oat Cake tootsie roll</a></h1>
+    <p id="oatcake" style="display:none;">Jelly sweet roll dragée gummies. Jelly-o cotton candy gingerbread. Dessert tart bear claw gummi bears I love
       oat cake cotton candy sesame snaps carrot cake. Croissant marshmallow tiramisu icing soufflé chocolate cake.
       I love pie icing. Sweet I love sweet roll cheesecake dessert. Tiramisu gingerbread I love. Muffin chocolate
       cake powder cheesecake oat cake tootsie roll candy soufflé. Brownie toffee powder tiramisu. Wafer I love
       jujubes croissant. Chocolate cake candy jujubes tootsie roll bonbon toffee I love. Topping candy jelly-o. Halvah
       faworki I love I love toffee pastry icing chupa chups. Pie gingerbread candy canes oat cake.
     </p>
+    
     <section class="sub-post">
-      <h3>DONUT PASTRY</h3>
-        <p>Gingerbread cotton candy halvah gingerbread. Apple pie wypas liquorice I love chocolate cake I love. Jelly cotton
+      <h3><a href="#" onclick="onOff('donutpastry');">DONUT PASTRY</a></h3>
+        <p id="donutpastry" style="display: none;">Gingerbread cotton candy halvah gingerbread. Apple pie wypas liquorice I love chocolate cake I love. Jelly cotton
           candy wypas lemon drops. Dragée tiramisu cheesecake biscuit sesame snaps carrot cake jelly beans pastry apple pie.
           Chocolate cake cotton candy candy canes brownie ice cream. Muffin chocolate cake jelly-o cake pudding. Jujubes I
           love cookie. I love cupcake I love bear claw sweet croissant. Wypas bonbon chocolate cake bonbon bear claw gummies.
@@ -49,16 +63,16 @@
           </p>
     </section>
     <section class="sub-post">
-      <h3>CARROT CAKE</h3>
-        <p>Wafer muffin cupcake apple pie tootsie roll I love. Carrot cake apple pie I love dessert. I love carrot cake
+      <h3><a href="#" onclick="onOff('carrotcake');">CARROT CAKE</a></h3>
+        <p id="carrotcake" style="display: none;">Wafer muffin cupcake apple pie tootsie roll I love. Carrot cake apple pie I love dessert. I love carrot cake
           lollipop jelly jelly-o brownie cake. Croissant brownie donut gingerbread dessert icing. Sugar plum jelly candy pudding
           liquorice liquorice cotton candy pie. Powder sesame snaps I love chocolate bar bonbon. Pudding gummi bears donut
           applicake carrot cake I love I love icing cake.
           </p>
     </section>
     <section class="sub-post">
-      <h3>TOOTSIE ROLL MARSHMALLOW</h3>
-        <p>I love tootsie roll marshmallow. Halvah jelly bear claw lemon drops lollipop. Brownie tiramisu I love I love halvah wafer.
+      <h3><a href="#" onclick="onOff('trm');">TOOTSIE ROLL MARSHMALLOW</a></h3>
+        <p id="trm" style="display:none;">I love tootsie roll marshmallow. Halvah jelly bear claw lemon drops lollipop. Brownie tiramisu I love I love halvah wafer.
           Powder jelly beans sesame snaps. Powder biscuit I love wypas soufflé apple pie marzipan. Cheesecake apple pie halvah
           croissant jelly I love.
        </p>
