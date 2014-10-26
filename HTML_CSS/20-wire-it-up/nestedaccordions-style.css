@@ -68,21 +68,25 @@
     line-height: 25px;
   }
 
+  .sub-post{
+    /*border: 1px orange solid;*/
+    margin: 25px 0 20px 40px;
+    padding-right: 10px;
+  }
+
   .sub-post h3{
-    border: 1px solid red;
-    padding: 10px 0 10px 0;
-    margin-bottom: 10px;
+    /*border: 1px solid red;*/
+    padding: 0 0 5px 0;
+    margin-bottom: 0px;
     font-family: 'Asap', sans-serif;
     font-size: 18px;
     color: #69BCE6;
   }
 
-  .sub-post{
-    border: 1px orange solid;
-    margin: 20px;
-    margin-left: 40px;
-    margin-right: 0;
-    padding-right: 10px;
+  .sub-post p{
+    margin-top: 0px;
   }
+
+
 
 </style>
