@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Asap: 700, 400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather-Sans: 700, 400' rel='stylesheet' type='text/css'>
   <style>
@@ -28,16 +29,32 @@
 
   #header{
     border: solid 2px green;
+    padding: 20px 20px 0 20px;
+    margin: 30px 40px 0 40px;
+    font-family: 'Asap', sans-serif;
+    line-height: 20px;
+    color: #5E9DC8;
   }
 
-  nav ul li{
+  #header h1{
+    font-size: 30px;
+    /*border: 1px solid red;*/
+    margin-bottom: 20px;
+  }
+
+  #header nav a{
     display: inline;
     border: solid 1px blue;
+    text-align: right;
+    margin: 5px;
+    text-decoration: none;
+    color: #5E9DC8;
   }
 
-  nav ul{
+  /*nav ul{
     text-align: right;
-  }
+    margin-top: 10px;
+  }*/
 
   aside{
     float: left;
@@ -59,7 +76,7 @@
   }
 
   .post{
-    border: solid 1px purple;
+    /*border: solid 1px purple;*/
     margin: 25px 175px 25px 175px;
     padding: 30px 40px 40px 40px;
     border-radius: 8px;
@@ -91,16 +108,15 @@
 
    <section id="header">
     <header>
-      <p>BLUEPRINT</p><???unicode ? icon WITH HOVER that displays info about Blueprints<???>
+      <p>B L U E P R I N T</p><???unicode ? icon WITH HOVER that displays info about Blueprints<???>
+      <br>
       <h1>Vertical Timeline</h1>
 
       <nav>
-        <ul>
-          <li>previous Blueprint</li>
-          <li>next Blueprint</li>
-          <li>back to the Codrops article</li>
-          <li>Blueprints archive</li>
-        </ul>
+        <a class="fa fa-arrow-circle-o-right" href="http://tympanus.net/Blueprints/ScrollingLayout/">previous Blueprint</a>
+        <a href="http://tympanus.net/Blueprints/HorizontalSlideOutMenu/">next Blueprint</a>
+        <a href="http://tympanus.net/codrops/?p=14941">back to the Codrops article</a>
+        <a href="http://tympanus.net/codrops/category/blueprints/">Blueprints archive</a>
       </nav>
     </header>
   </section>
