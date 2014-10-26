@@ -19,6 +19,15 @@
       vertical-align: baseline;
       }
 
+  a{
+    text-decoration: none;
+    color: #69BCE6;
+  }
+
+  a:visited{
+    color: #69BCE6;
+  }
+
   #header{
     border: solid 2px green;
     padding: 20px 20px 0 20px;
@@ -32,6 +41,7 @@
     font-size: 30px;
     /*border: 1px solid red;*/
     margin-bottom: 20px;
+    margin-top: 5px;
   }
 
   #header nav a{
