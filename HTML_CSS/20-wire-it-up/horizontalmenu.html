@@ -16,29 +16,25 @@
 <html
 <head>
 
-<style>
-
-
-
-
-section {
-  background-color: yellow;
-}
-section h1{
-  margin: 0;
-}
-.tabs li{
-  display: inline;
-  background-color: blue;
-  padding: 10px;
-  /*margin: 0 5px 0 5px;*/
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="horizontalmenu-style.css">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Asap: 700, 400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather-Sans: 700, 400' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
+  <header>
+    <p>B L U E P R I N T</p><???unicode ? icon WITH HOVER that displays info about Blueprints<???>
+    <h1>Horizontal Drop-down Menu</h1>
+
+    <nav>
+      <a class="fa fa-arrow-circle-o-left fa-2x" href="http://tympanus.net/Blueprints/ScrollingLayout/"></a><? hover text: previous Blueprint>
+      <a class="fa fa-arrow-circle-o-right fa-2x" href="http://tympanus.net/Blueprints/HorizontalSlideOutMenu/"></a><? hovertext: next Blueprint>
+      <a class="fa fa-tint fa-2x" href="http://tympanus.net/codrops/?p=14941"></a><? hovertext: back to the Codrops article>
+      <a class="fa fa-inbox fa-2x" href="http://tympanus.net/codrops/category/blueprints/"></a><? hovertext: Blueprints archive>
+    </nav>
+  </header>
   <nav class="tabs">
     <ul>
       <li>Products</li>
@@ -50,37 +46,40 @@ section h1{
   </nav>
 
   <section id="products">
-    <h1>Learning & Games</h1>
-      <ul>
-        <li>Cath the Bullet</li>
-        <li>Snoopydoo</li>
-        <li>Fallen Angel</li>
-        <li>Sui Maker</li>
-        <li>Wave Master</li>
-        <li>Golf Pro</li>
-      </ul>
-
-      <h1>Utilities</h1>
+    <div id="products1" class="clearfix">
+      <h1>Learning & Games</h1>
         <ul>
-          <li>Gadget Finder</li>
-          <li>Green Tree Express</i>
-          <li>Gree Treen Pro</li>
-          <li>Wobbler 3.0</li>
-          <li>Coolkid</li>
+          <li>Cath the Bullet</li>
+          <li>Snoopydoo</li>
+          <li>Fallen Angel</li>
+          <li>Sui Maker</li>
+          <li>Wave Master</li>
+          <li>Golf Pro</li>
         </ul>
-
-      <h1>Education</h1>
-        <ul>
-          <li>Learn Thai</li>
-          <li>Math Genius</li>
-          <li>Chemokid</li>
-        </ul>
-
-      <h1>Professionals</h1>
-        <ul>
-          <li>Success 1.0</li>
-          <li>Moneymaker</li>
-        </ul>
+    </div>
+    <div id="products2" class="clearfix">
+        <h1>Utilities</h1>
+          <ul>
+            <li>Gadget Finder</li>
+            <li>Green Tree Express</i>
+            <li>Gree Treen Pro</li>
+            <li>Wobbler 3.0</li>
+            <li>Coolkid</li>
+          </ul>
+    </div>
+    <div id="products3" class="clearfix">
+        <h1>Education</h1>
+          <ul>
+            <li>Learn Thai</li>
+            <li>Math Genius</li>
+            <li>Chemokid</li>
+          </ul>
+        <h1>Professionals</h1>
+          <ul>
+            <li>Success 1.0</li>
+            <li>Moneymaker</li>
+          </ul>
+    </div>
   </section>
 
   <section id="downloads">
@@ -118,7 +117,7 @@ section h1{
       </ul>
   </section>
 
-  <section id="applications">
+<!--  <section id="applications">
     <h1>Learning & Games</h1>
       <ul>
         <li>Snoopydoo</li>
@@ -200,7 +199,7 @@ section h1{
         <li>Catch The Bullet</li>
         <li>Golf Pro</li>
       </ul>
-  </section>
+  </section> -->
 
 
 

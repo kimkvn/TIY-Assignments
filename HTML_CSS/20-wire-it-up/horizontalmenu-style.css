@@ -1,0 +1,110 @@
+<style>
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    }
+
+  header{
+    border: solid 2px green;
+    padding: 20px 20px 0 20px;
+    margin: 30px 40px 30px 40px;
+    font-family: 'Asap', sans-serif;
+    line-height: 20px;
+    color: #5E9DC8;
+  }
+
+  header h1{
+    font-size: 30px;
+    /*border: 1px solid red;*/
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+
+  /*#header nav{
+    border: 1px orange solid;
+  }*/
+
+  header nav a{
+    align: right;
+    display: ;
+    /*border: solid 1px blue;*/
+    margin: 5px;
+    text-decoration: none;
+    color: #5E9DC8;
+  }
+
+
+  section {
+    background-color: #69BCE6;
+    margin: 15px 0 10px 0;
+  }
+
+  section h1{
+    margin: 0;
+  }
+
+  .tabs ul{
+    /*border: 1px solid red;*/
+    text-align: center;
+  }
+
+  .tabs li{
+    border: 1px solid purple;
+    display: inline;
+    background-color: #69BCE6;
+    padding: 10px;
+    float: center;
+    margin-right:0;
+    margin-left:0;
+  }
+
+  #products{
+    border: 2px solid orange;
+    padding: 20px 40px 80px 40px;
+  }
+  #products1{
+    float: left;
+    width: 33%;
+    border: 1px solid red;
+  }
+  #products2{
+    display: inline-block;
+    width: 33%;
+    border: 1px solid red;
+  }
+  #products3{
+    float: right;
+    width: 33%;
+    border: 1px solid red;
+  }
+
+
+/*
+  .clearfix{
+    zoom: 1;
+  }
+  .clearfix:before .clearfix:after{
+    content: "\0020";
+    display: block;
+    height:0
+  }
+  .clearfix:after{
+    clear: both;
+  }*/
+
+</style>
