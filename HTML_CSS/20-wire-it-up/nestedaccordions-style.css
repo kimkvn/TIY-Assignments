@@ -44,10 +44,14 @@
     margin-top: 5px;
   }
 
+  /*#header nav{
+    border: 1px orange solid;
+  }*/
+
   #header nav a{
-    display: inline;
-    border: solid 1px blue;
-    text-align: right;
+    align: right;
+    display: ;
+    /*border: solid 1px blue;*/
     margin: 5px;
     text-decoration: none;
     color: #5E9DC8;
