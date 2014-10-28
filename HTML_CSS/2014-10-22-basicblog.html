@@ -1,4 +1,4 @@
-<!-- placeholder text for initial commit --> 
+<!-- placeholder text for initial commit -->
 
 <!-- use maxwidth to limit the browser resizing to be smaller than a block :: http://learnlayout.com/max-width.html -->
 
@@ -14,6 +14,24 @@ also this example is helpful:   http://learnlayout.com/position-example.html  --
 <html>
   <head>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script type="text/javascript">
+
+      window.onload=function(){
+        var start = new Date(2014, 10, 28);
+        var end = new Date();
+        var change = (end.getTime() - start.getTime())/3600000;
+        var units = ' hours ago';
+        change = Math.floor(change);
+        if(change > 23){
+          change = Math.floor(change/24);
+          units = ' days ago'
+        }
+        document.getElementById('change').innerHTML=change + units;
+      }
+
+    </script>
+
   </head>
 
   <body>
@@ -40,7 +58,7 @@ header {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    
+
 }
 
 aside {
@@ -65,7 +83,7 @@ section {
 a {
     text-decoration: none;
     font-style: Serif;
-    
+
 }
 
 a:visited: {
@@ -82,7 +100,7 @@ h1 a{
 }
 
 p{
-   font-family: Serif;  
+   font-family: Serif;
    color: #5a5a5a;
 }
 
@@ -119,6 +137,7 @@ footer{
     float: left;
 }
     </style>
+
     <header>
         <nav><a href="#">Edit Theme</a> <a href="#">Follow</a> <a href="#">Dashboard</a></nav>
     </header>
@@ -137,9 +156,9 @@ footer{
 
         <p class="author"><???>By Susanna Miller, Campus Director</???></p>
 
-        <p>A great turnout on Friday at The Iron Yard Orlando to hear Matt Wallaert - 
-        kudos to the Orlando Tech Association for putting the event together! There were 
-        65 attendees, and a fantastics Q&A afterwards. Looking forward to future events 
+        <p>A great turnout on Friday at The Iron Yard Orlando to hear Matt Wallaert -
+        kudos to the Orlando Tech Association for putting the event together! There were
+        65 attendees, and a fantastics Q&A afterwards. Looking forward to future events
         and collaboration with the Orlando Tech Association!</p>
 
         <p><img src="http://media.tumblr.com/e2250665076068f4f6a856187e14a00e/tumblr_inline_nduqyizSQT1t311sy.jpg"></p>
@@ -150,24 +169,24 @@ footer{
           <a href="#" class="fa fa-share-square-o">share this</a>
         </nav>
 
-        <nav><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">2 hours ago</a></nav>
+        <nav><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard"><span id="change"></span></a></nav>
       </article>
-      
+
       <!-- blog entry -->
       <article>
         <h1><a href="http://http://orlando.theironyard.com/post/100189034319/matt-wallaert-behavioral-scientist-bing-will-be">Matt Wallaert, Behavioral Scientist @ Bing, Will be Here Tomorrow!</a></h1>
 
         <p class="author"><???>By Susanna Miller, Campus Director</???></p>
 
-        <p>At 6pm tomorrow, The Iron Yard Orlando will be hosting Matt Wallaert, 
-        Behavioral Scientist @ Bing, as he speaks at an Orlando Tech Meetup in our 
-        space here at 101 S. Garland Ave. This is a great opportunity to meet him 
+        <p>At 6pm tomorrow, The Iron Yard Orlando will be hosting Matt Wallaert,
+        Behavioral Scientist @ Bing, as he speaks at an Orlando Tech Meetup in our
+        space here at 101 S. Garland Ave. This is a great opportunity to meet him
         and ask questions, and I hope you’ll join us! </p>
-        
+
         <p>You can find more information on our Meetup page: </p>
-        
+
         <a href="http://www.meetup.com/The-Iron-Yard-Orlando/"><span class="post-links">http://www.meetup.com/The-Iron-Yard-Orlando/</span></a>
-        
+
         <p>See you then!</p>
 
         <p><img src="http://media.tumblr.com/c5b6fcd73c1e6a076269eb477b09c379/tumblr_inline_ndk4rsMem41t311sy.jpg"></p>
@@ -182,135 +201,135 @@ footer{
       </article>
          <!-- blog entry -->
       <article>
-        <h1><a href="http://orlando.theironyard.com/post/100079465824/new-face-at-the-iron-yard-orlando">New Face at The Iron Yard Orlando!</a></h1>      
-        
+        <h1><a href="http://orlando.theironyard.com/post/100079465824/new-face-at-the-iron-yard-orlando">New Face at The Iron Yard Orlando!</a></h1>
+
         <p class="author"><???>By Susanna Miller, Campus Director</???></p>
-        
+
         <p>Hi everyone! This is my first official communication as the Campus Director
-        at The Iron Yard Orlando, and I’m excited to let everyone know that I’m 
+        at The Iron Yard Orlando, and I’m excited to let everyone know that I’m
         transitioning onto the team here over the next week.</p>
-        
+
         <img src="https://31.media.tumblr.com/d3d0f8f992dc15b685f6677202a45c6e/tumblr_inline_ndhpy816T71t311sy.jpg"/>
-        
+
         <blockquote>
             <???>
-            See? Super excited. And it’s an official picture, because David is 
+            See? Super excited. And it’s an official picture, because David is
             in it too (albeit without his actual knowledge)
         </blockquote>
-        
+
         <span class="post-links"><a href="http://orlando.theironyard.com/post/100079465824/new-face-at-the-iron-yard-orlando"><???>Read more<???></a></span>
-        
+
         <nav class="post-actions">
           <a href="#" class="fa fa-heart">favorite this</a>
           <a href="#" class="fa fa-retweet">reblog this</a>
           <a href="#" class="fa fa-share-square-o">share this</a>
         </nav>
-        
+
         <nav><a href="http://orlando.theironyard.com/post/100079465824/new-face-at-the-iron-yard-orlando">1 week ago</a></nav>
       </article>
-    
+
      <!-- blog entry -->
       <article>
        <h1><a href="http://orlando.theironyard.com/post/98822138374/welcome-to-week-2">Welcome to Week 2</a></h1>
-       
+
        <p class="author"><???>By Sarah Elbadri, Campus Director</p>
-       
+
        <p>We are officially in Week 2 at The Iron Yard! Very quickly, our students have demonstrated how much they can absorb and create in such a short time. So far they’ve been heavily exposed to Git and Github, Jekyll, and Cloud 9, and over the weekend built their blogs on Github Pages. As a campus they’ve also been using tools like Basecamp and HipChat, as well as practicing agile methodologies to communicate progress on their projects.</p>
-       
+
        <p>On Friday, we kicked off our guest lecture series with <a href="http://olivierlacan.com/about/">Olivier Lacan</a> from Code School, who showed our students how Code School uses Github internally and demonstrated a couple neat <a href="http://olivierlacan.com/tools/">tools</a> that he uses to improve his workflow. </p>
-       
+
        <img src="http://media.tumblr.com/805cd883f4122aaaaaab2589c11d66d5/tumblr_inline_ncpzt8sS1E1t0hk69.png"/>
-       
+
        <p>This week our students are jumping into JavaScript! As a primer our students watched a great talk by Gary Bernhardt called the <a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript">The Birth and Death of JavaScript</a> during lunch on yesterday. I’m pretty sure they’ll be calling it YavaScript on and off for the next 11 weeks.</p>
-     
+
         <nav class="post-actions">
           <a href="#" class="fa fa-heart">favorite this</a>
           <a href="#" class="fa fa-retweet">reblog this</a>
           <a href="#" class="fa fa-share-square-o">share this</a>
         </nav>
-        
+
         <nav><a href="http://orlando.theironyard.com/post/98822138374/welcome-to-week-2">3 weeks ago</a></nav>
       </article>
-      
+
       <!-- blog entry "It's Go Time"-->
       <article>
         <h1><a href="http://orlando.theironyard.com/post/98180945049/its-go-time">It's Go Time!</a></h1>
-         
+
           <p class="author"><???>By Sarah Elbadri, Campus Director<???></p>
-         
+
           <p><b>Here we are...</b></p>
-         
+
           <p>The Iron Yard - Orlando’s inaugural class officially launched this morning! After a great dinner last night, breaking in the space with our friends and families, our class is in full Iron Yard mode. We have 14 awesome students that represent a diversity of age, backgrounds, and personalities. For those of you keeping up with our blog, we’ll post more about our individual students throughout the course of the class, and also highlight some of the blogging they’ll be doing to document their experience (the good, the bad, the ugly, and the “Ah ha!” moments) here at The Iron Yard.  </p>
-         
+
           <p><b>First Day of School!</b></p>
           <p><???>We were lucky to have Eric Dodds, a partner at The Iron Yard, in the house to talk to our students about our mission as an organization. It’s something that everyone who’s reading this should <a href="http://theironyard.com/">read through</a>, but what I’d like to reiterate about Eric’s talk is our commitment to “training the highest-quality developers in the world, <b>both in skill and in character.</b>" While we’re preparing our students to be professional programmers, we’re also helping to grow the tech community and foster good, global citizens. This isn’t just about 12 weeks in a class— this is about unleashing productive problem solvers with a view of programming as life-long study into the world to make it a better place for everyone. </p>
-         
+
           <img src="http://media.tumblr.com/30df254e641aaabb85378540108e9ef3/tumblr_inline_ncbt9ycfuc1t0hk69.jpg"/>
-         
+
           <p>After Eric’s kickoff and a welcome from me going over the logistics of our campus, our Front End Instructor David Rogers, known to many in the tech community as “Al_The_X”, took over, circled up the class, and initiated our inaugural, daily morning stand-up by asking our students to answer 3 simple questions:</p>
-         
+
           <ul>
             <li>What did you do yesterday?</li>
             <li>What are you doing today?</li>
             <li>What, if anything, is in your way?</li>
           </ul>
-         
+
           <p>This is going to be standard operating procedure for our class moving forward, but it was interesting to hear how each of our students spent their time preparing for the first day of class, which ranged from finishing up pre-work David assigned, to reviewing Code School courses, to mentally preparing for these 12 weeks with mediation. </p>
-         
+
           <p>While our class has just started, we’re all looking forward to the epic journey this will be for our students!  It’s going to be really difficult for all them, and probably one of the greatest challenges they’ll ever face, but it’s incredible how much they’ll learn in 12 weeks and where they’ll be after The Iron Yard. Today was just Day 1!</p>
-         
+
           <nav class="post-actions">
           <a href="#" class="fa fa-heart">favorite this</a>
           <a href="#" class="fa fa-retweet">reblog this</a>
           <a href="#" class="fa fa-share-square-o">share this</a>
           </nav>
-        
+
           <nav><a href="http://orlando.theironyard.com/post/98180945049/its-go-time">1 month ago</a></nav>
       </article>
-     
+
       <!-- blog entry "Code School: Scholarship-->
       <article>
         <h1><a href="http://orlando.theironyard.com/post/97086023659/code-school-2-500-scholarship-to-finance-your-future">Code School: $2500 Scholarship to Finance Your Future</a></h1>
-        
+
         <p>Because the folks at Code School really believe in the power of education, they’re providing a scholarship for one lucky student of our inaugural Orlando Front End Engineering course!</p>
-        
+
         <p>If you’ve wanted to take the plunge into the world of full-time web development, Code School and The Iron Yard are providing a once-in-a-lifetime opportunity to start a new career with hands-on training, mentoring, and job placement support.</p>
-        
+
         <p>The Iron Yard is very excited to announce the first cohort of Front End Engineering students in Orlando starting September 22nd, and even more excited to announce a partnership with Code School to provide a $2,500 scholarship toward a student’s tuition.</p>
-        
+
         <p>The Iron Yard program allows students with little technical experience to learn to develop web applications in HTML, CSS, and JavaScript from a 15-year industry veteran. Lasting 12 immersive and demanding weeks, the program concludes with a production-quality capstone project imagined and executed by the students, where they put every skill they’ve learned to use. Online learning programs like Code School help support this quick-paced curriculum learning.</p>
-        
+
         <blockquote><???>
             Together, The Iron Yard and Code School are preparing the next generation of developers, filling the already overwhelming demand for tech talent in the Orlando market and beyond. This is a tremendous opportunity to make a potentially life-changing career move.
             <p><cite>— <a href="http://al-the-x.me/">David Rogers</a>, <a href="http://theironyard.com/about/team/#david-rogers">Front End Instructor, The Iron Yard Orlando</a></cite></p>
         </blockquote>
-        
+
         <h3>What would you build with a Code School scholarship to The Iron Yard?</h3>
-        
+
         <p>In order to apply for The Iron Yard’s Orlando inaugural class, which begins on September 22nd, submit an application and write a short 250 word essay explaining what you would build when you graduate from The Iron Yard. <a href="http://theironyard.com/about/team/#elbadri">Our Campus Director, Sarah Elbadri</a>, will accept email submissions from qualified applicants only. Submissions will be accepted through September 20 and will be judged jointly by The Iron Yard and Code School. Be creative with your submission and excite us about the possibilities!</p>
-        
-        <a href="https://theironyard.typeform.com/to/X5SCGY">APPLY NOW!</a>  
-          
+
+        <a href="https://theironyard.typeform.com/to/X5SCGY">APPLY NOW!</a>
+
         <nav class="post-actions">
           <a href="#" class="fa fa-heart">favorite this</a>
           <a href="#" class="fa fa-retweet">reblog this</a>
           <a href="#" class="fa fa-share-square-o">share this</a>
         </nav>
-        
+
         <nav><a href="http://orlando.theironyard.com/post/97086023659/code-school-2-500-scholarship-to-finance-your-future">1 month ago</a></nav>
-          
+
       </article>
     </section>
-    
+
     <footer>
       <section id="bottom-image"><img src="http://static.tumblr.com/37ca133c1a84d5b7856c51a7682df3e9/w5gxxfv/6j4n8vkw8/tumblr_static_20mtuue2w17o0sksogs0c44cw.png"/>
-      </section>     
+      </section>
       <section id="bottom">
       <p>THE IRON YARD | ORLANDO</p>
       <p>Happenings and updates from The Iron Yard in Orlando, FL.</p>
       <p>Longform Theme by Pixel Union. Powered by Tumblr.</p>
       </section>
-      
+
     </footer>
     </div>
   </body>

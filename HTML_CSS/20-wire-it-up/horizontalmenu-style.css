@@ -74,7 +74,7 @@
   #products{
     border: 2px solid orange;
     padding: 20px 40px 80px 40px;
-    display: ;
+    display: none;
   }
   #products1{
     float: left;
