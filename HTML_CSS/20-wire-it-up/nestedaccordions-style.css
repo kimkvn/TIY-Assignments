@@ -57,7 +57,7 @@
     color: #5E9DC8;
   }
 
-  .post{
+  .accordion{
     /*border: solid 1px purple;*/
     margin: 0 50px 0 50px;
     padding: 0 40px 0 40px;
@@ -67,7 +67,7 @@
     font-family: 'Asap', sans-serif;
   }
 
-  .post h2{
+  .accordion h2{
     border-bottom: 2px #9EAEB3 solid;
     padding: 10px 0 10px 0;
     margin: 5px 0 10px 0;
@@ -76,19 +76,14 @@
     color: #69BCE6;
   }
 
-  .post p{
+  .accordion p{
     margin-right: 0;
     line-height: 25px;
   }
 
-  .sub-post{
-    /*border: 1px orange solid;*/
-    margin: 25px 0 20px 40px;
-    padding-right: 10px;
-  }
-
-  .sub-post h3{
+  .accordion h3{
     /*border: 1px solid red;*/
+    border-bottom: 1px #9EAEB3 dashed;
     padding: 0 0 5px 0;
     margin-bottom: 0px;
     font-family: 'Asap', sans-serif;
@@ -96,10 +91,16 @@
     color: #69BCE6;
   }
 
-  .sub-post p{
-    margin-top: 0px;
-  }
+.accordion h3 p {
+  margin-top: 0px;
+}
 
+.accordion li > :first-child ~ * {
+  display: none; /* targets nested ul and its children */
+}
+.accordion li.accordion-open > :first-child ~ * {
+  display: block;
+}
 
 
 </style>
