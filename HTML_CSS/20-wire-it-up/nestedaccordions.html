@@ -10,48 +10,15 @@
 
   <script type='text/javascript'>
 
-  // function onOff(id){
-  //   var thisPost = document.getElementById(id);
-  //     if(thisPost.style.display==''){
-  //       thisPost.style.display='none';
-  //     }
-  //     else{
-  //       thisPost.style.display='';
-  //     }
-  // }
-
-  function addOpenClass(element){
-    element.className = 'accordion-open' //function that assigns classname the string 'accordion-open'
-  }
-
-  function remOpenClass(element){
-    element.className= ''; //function that empties 'accordion-open'
-  }
-
-  function hasOpenClass(element){
-    if(element.className === 'accordion-open'){
-      return true;
-    }
-    return false;
-  }
-
-
-  function toggleOpenClass(element){
-    if (hasOpenClass(element)){       //if function hasOpenClass finds 'accordion-open' (true)...
-      return remOpenClass(element);   //
-    }
-  }
-
-
-
-  function funClick(tagName){
-
-    for (var index = 0; index<elements.length; index++){
-      elements[index].onclick = function(event){
-        togg
+  function onOff(id){
+    var thisPost = document.getElementById(id);
+      if(thisPost.style.display==''){
+        thisPost.style.display='none';
       }
-    }
-    }
+      else{
+        thisPost.style.display='';
+      }
+  }
 
   </script>
 
