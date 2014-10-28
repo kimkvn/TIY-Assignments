@@ -57,7 +57,7 @@ header nav{
 
 ol{
   border-left:0.5em solid;
-  border-color: rgb(104, 192, 240);
+  border-color: rgb(104, 192, 240); /* blue */
   list-style: none;
   margin-left: 8em;
   padding-left: 1.5em;
