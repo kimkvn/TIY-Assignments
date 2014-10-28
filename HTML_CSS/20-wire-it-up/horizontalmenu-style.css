@@ -1,4 +1,4 @@
-<style>
+
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,9 +52,7 @@
     margin: 0;
   }
 
-  a{
-    text-decoration: none;
-  }
+
 /* ============MENU TABS=========*/
   .tabs ul{
     /*border: 1px solid red;*/
@@ -74,7 +72,6 @@
   #products{
     border: 2px solid orange;
     padding: 20px 40px 80px 40px;
-    display: none;
   }
   #products1{
     float: left;
@@ -112,5 +109,3 @@
     width: 33%;
     border: 1px solid red;
   }
-
-</style>
