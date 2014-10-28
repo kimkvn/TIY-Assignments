@@ -67,7 +67,7 @@ ol{
 /*========DATE/TIME===========*/
 time {
   outline: 2px solid red;
-  margin-left: 15%;
+  margin-left: -8em;
   float: left;
   position: absolute
 }
@@ -87,6 +87,7 @@ time big {
 /*=========PAIN-IN-THE-BUTT VERTICAL LINE=======*/
 li{
   position: relative;
+  margin-top: 2em;
 }
 
 
@@ -105,27 +106,30 @@ li:before {
     left: -3.25em;
 }
 
+ li article:after {
+    content: "\25C0";
+    color: rgb(107, 191, 238);
+    position: absolute;
+    top: 0.75em; right: 100%;
+    letter-spacing: -0.2em;
+}
+
 /*=====POSTS=====*/
-.post{
-  border: solid 1px purple;
-  margin: 0 10% 25px 25%;
-  padding: 20px 40px 30px 40px;
+article{
+  /*border: solid 1px purple;*/
   border-radius: 8px;
   background-color: #69BCE6;
   color: white;
   font-family: 'Asap', sans-serif;
 }
 
-.post h3{
+article h3{
   border-bottom: 1px #F5F5FF solid;
-  /*padding: 10px 0 10px 0;
-  margin: 5px 0 10px 0;*/
   font-family: 'Merriweather-Sans', sans-serif;
   font-size: 25px
 }
 
-.post p{
+article p{
   line-height: 25px;
-  border: solid red 1px;
-  /*margin-top: 20px;*/
+  /*border: solid red 1px;*/
 }
