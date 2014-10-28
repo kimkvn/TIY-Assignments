@@ -23,15 +23,25 @@
 
 <script type="text/javascript">
 
-  function showMenu(){
-    //starts with display=off
-    //onclick: menu --> display chosen menu
-    //onclick: diferent-menu --> display chosen menu, display-off previous menu
-    //onclick: not-menu --> display=off
 
-  document.getElementById().onClick
+  function hello(){alert("hello")}
 
+  function openMenu(element){
+    document.getElementById(element).style.display = 'block';
   }
+
+  function closeMenu(element){
+    document.getElementById(element).style.display = 'none';
+  }
+
+
+  function toggleMenu(element){
+    if (document.getElementById(element).style.display === 'none'){
+      return openMenu(element);
+    }
+    return closeMenu(element);
+  }
+
 
 </script>
 </head>
@@ -51,71 +61,72 @@
 
   <nav class="tabs">
     <ul>
-      <li>Products</li>
-      <li>Downloads</li>
+      <li onClick="toggleMenu('products')">Products</li>
+      <li onClick="toggleMenu('downloads')">Downloads</li>
       <li>Applications</li>
       <li>Projects</li>
       <li>Freeware</li>
     </ul>
   </nav>
 
-  <section id="products">
-    <div id="products1" class="clearfix">
-      <h1>Learning & Games</h1>
-        <ul>
-          <li>Cath the Bullet</li>
-          <li>Snoopydoo</li>
-          <li>Fallen Angel</li>
-          <li>Sui Maker</li>
-          <li>Wave Master</li>
-          <li>Golf Pro</li>
-        </ul>
-    </div>
-    <div id="products2" class="clearfix">
-        <h1>Utilities</h1>
+<ul>
+    <section id="products">
+      <div id="products1" class="clearfix">
+        <h3>Learning & Games</h3>
           <ul>
-            <li>Gadget Finder</li>
-            <li>Green Tree Express</i>
-            <li>Gree Treen Pro</li>
-            <li>Wobbler 3.0</li>
-            <li>Coolkid</li>
+            <li>Cath the Bullet</li>
+            <li>Snoopydoo</li>
+            <li>Fallen Angel</li>
+            <li>Sui Maker</li>
+            <li>Wave Master</li>
+            <li>Golf Pro</li>
           </ul>
-    </div>
-    <div id="products3" class="clearfix">
-        <h1>Education</h1>
-          <ul>
-            <li>Learn Thai</li>
-            <li>Math Genius</li>
-            <li>Chemokid</li>
-          </ul>
-        <h1>Professionals</h1>
-          <ul>
-            <li>Success 1.0</li>
-            <li>Moneymaker</li>
-          </ul>
-    </div>
-  </section>
+      </div>
+      <div id="products2" class="clearfix">
+          <h3>Utilities</h3>
+            <ul>
+              <li>Gadget Finder</li>
+              <li>Green Tree Express</li>
+              <li>Gree Treen Pro</li>
+              <li>Wobbler 3.0</li>
+              <li>Coolkid</li>
+            </ul>
+      </div>
+      <div id="products3" class="clearfix">
+          <h3>Education</h3>
+            <ul>
+              <li>Learn Thai</li>
+              <li>Math Genius</li>
+              <li>Chemokid</li>
+            </ul>
+          <h3>Professionals</h3>
+            <ul>
+              <li>Success 1.0</li>
+              <li>Moneymaker</li>
+            </ul>
+      </div>
+    </section>
 
   <section id="downloads">
     <div id="downloads1" class="clearfix">
-      <h1>Education & Learning</h1>
+      <h3>Education & Learning</h3>
         <ul>
           <li>Learn Thai</li>
           <li>Math Genius</li>
           <li>Chemokid</li>
         </ul>
 
-      <h1>Professionals</h1>
+      <h3>Professionals</h3>
         <ul>
           <li>Success 1.0</li>
           <li>Moneymaker</li>
         </ul>
     </div>
     <div id="downloads2" class="clearfix">
-      <h1>Entertainment</h1>
+      <h3>Entertainment</h3>
         <ul>
           <li>Gadget Finder</li>
-          <li>Green Tree Express</i>
+          <li>Green Tree Express</li>
           <li>Gree Treen Pro</li>
           <li>Holy Cannoli</li>
           <li>Wobbler 3.0</li>
@@ -123,7 +134,7 @@
         <ul>
     </div>
     <div id="downloads3" class="clearfix">
-      <h1>Games</h1>
+      <h3>Games</h3>
         <ul>
           <li>Cath the Bullet</li>
           <li>Snoopydoo</li>
@@ -133,15 +144,15 @@
           <li>Golf Pro</li>
         </ul>
     </div>
-  </section>
+    </section>
 
 <!--  <section id="applications">
-    <h1>Learning & Games</h1>
+    <h3>Learning & Games</h3>
       <ul>
         <li>Snoopydoo</li>
         <li>Catch The Bullet</li>
       </ul>
-    <h1>Utilities</h1>
+    <h3>Utilities</h3>
       <ul>
         <li>Gadget Finder</li>
         <li>Green Tree Express</i>
@@ -149,13 +160,13 @@
         <li>Wobbler 3.0</li>
         <li>Coolkid</li>
       </ul>
-    <h1>Education</h1>
+    <h3>Education</h3>
       <ul>
         <li>Learn Thai</li>
         <li>Math Genius</li>
         <li>Chemokid</li>
       </ul>
-    <h1>Professionals</h1>
+    <h3>Professionals</h3>
       <ul>
         <li>Success 1.0</li>
         <li>Moneymaker</li>
@@ -163,18 +174,18 @@
   </section>
 
   <section id="projects">
-    <h1>Learning & Games</h1>
+    <h3>Learning & Games</h3>
       <ul>
         <li>Snoopydoo</li>
         <li>Catch The Bullet</li>
         <li>Golf Pro</li>
       </ul>
-    <h1>Utilities</h1>
+    <h3>Utilities</h3>
       <ul>
         <li>Gadget Finder</li>
         <li>Green Tree Express</i>
       </ul>
-    <h1>Entertainment</h1>
+    <h3>Entertainment</h3>
       <ul>
         <li>Gadget Finder</li>
         <li>Green Tree Express</i>
@@ -186,23 +197,23 @@
   </section>
 
   <section id="freeware">
-    <h1>Utilities</h1>
+    <h3>Utilities</h3>
       <ul>
         <li>Gadget Finder</li>
         <li>Green Tree Express</i>
       </ul>
-    <h1>Education</h1>
+    <h3>Education</h3>
       <ul>
         <li>Learn Thai</li>
         <li>Math Genius</li>
         <li>Chemokid</li>
       </ul>
-    <h1>Professionals</h1>
+    <h3>Professionals</h3>
       <ul>
         <li>Success 1.0</li>
         <li>Moneymaker</li>
       </ul>
-    <h1>Learning & Games</h1>
+    <h3>Learning & Games</h3>
       <ul>
         <li>Snoopydoo</li>
         <li>Catch The Bullet</li>
@@ -211,8 +222,38 @@
   </section>
 
   -->
-<script>
+<script type="text/javascript">
 
+
+
+
+
+  function remOpenClass(element){
+    element.className.display:none;
+  }
+
+  /**
+   * @param HTMLElement element
+   * @return Boolean whether `element` has `className` of "accordion-open"
+   */
+  function hasOpenClass(element){
+    if ( element.className === 'menuDrop' ){
+      return true;
+    }
+
+    return false;
+  }
+
+  function toggleDrop(element){
+    if ( hasOpenClass(element) ){
+        return remOpenClass(element);
+    }
+
+    addOpenClass(element);
+  }
+
+
+</script>
 
 </body>
 
