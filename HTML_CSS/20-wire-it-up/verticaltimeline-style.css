@@ -69,7 +69,8 @@ time {
   outline: 2px solid red;
   margin-left: -8em;
   float: left;
-  position: absolute
+  position: absolute;
+  font-family: 'Asap', sans-serif;
 }
 time > *{
   display: block;
@@ -77,11 +78,14 @@ time > *{
 }
 
 time small {
-  font-size: 90%;
-  color: ;
+  font-size: 80%;
+  color: grey;
+
 }
 time big {
   font-size:160%;
+  color: rgb(107, 191, 238);
+
 }
 
 /*=========PAIN-IN-THE-BUTT VERTICAL LINE=======*/
@@ -110,7 +114,9 @@ li:before {
     content: "\25C0";
     color: rgb(107, 191, 238);
     position: absolute;
-    top: 0.75em; right: 100%;
+    top: 0.75em;
+    left: 0.25em;
+    right: 100%;
     letter-spacing: -0.2em;
 }
 
@@ -121,6 +127,8 @@ article{
   background-color: #69BCE6;
   color: white;
   font-family: 'Asap', sans-serif;
+  padding: 0.5em 1em 1em 1em;
+  margin-left: 1em;
 }
 
 article h3{
