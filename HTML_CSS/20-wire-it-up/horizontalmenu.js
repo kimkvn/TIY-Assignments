@@ -3,7 +3,6 @@
 */
 
 
-
   function openMenu(element){
     document.getElementById(element).style.display = 'block';
 };
@@ -18,6 +17,9 @@ var allMenus = ['products', 'downloads', 'applications', 'projects', 'freeware']
 
   function toggleMenu(element){
       for(var i = 0; i < allMenus.length; i++){
+        if(document.getElementById(element).style.display === 'block'){
+          return closeMenu(element);
+        }
         if(allMenus[i] !== element){
          closeMenu(allMenus[i]);
        }
@@ -26,12 +28,6 @@ return openMenu(element);
   };
 
 
-
- function selfToggle(element){
-   if(openMenu(element)){
-     return closeMenu(element);
-   }
- }
 
 //this function will be in the header and makes it so clicking anywhere in the header resets the menus.
 function clearAll(){
