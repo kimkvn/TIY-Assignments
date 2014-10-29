@@ -17,17 +17,13 @@ var allMenus = ['products', 'downloads', 'applications', 'projects', 'freeware']
 
 
   function toggleMenu(element){
-      for(var i = 0; i<allMenus.length; i++){
+      for(var i = 0; i < allMenus.length; i++){
         if(allMenus[i] !== element){
          closeMenu(allMenus[i]);
        }
-
-
       }
 return openMenu(element);
   };
-
-
 
 
 
