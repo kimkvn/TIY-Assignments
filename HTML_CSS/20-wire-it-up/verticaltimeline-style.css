@@ -1,143 +1,130 @@
+/* Stolen directly from the Blueprint... */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-/*This is a block of code to reset default margins, borders, padding etc to zero*/
-          html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed,
-        figure, figcaption, footer, header, hgroup,
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
-          margin: 0;
-          padding: 0;
-          border: 0;
-          vertical-align: baseline;
-        }
-
-
-
-/*=======HEADER=======*/
-header{
-  /*border: solid 2px green;*/
-  padding: 20px 20px 0 20px;
-  margin: 30px 40px 0 40px;
-  font-family: 'Asap', sans-serif;
-  line-height: 20px;
-  color: #5E9DC8;
-}
-header h1{
-  font-size: 30px;
-  /*border: 1px solid red;*/
-  margin-bottom: 20px;
-}
-header nav a{
-  display: inline;
-  /*border: solid 1px blue;*/
-  margin: 5px;
-  text-decoration: none;
-  color: #5E9DC8;
-
-}
-header nav{
-  /*outline: 1px solid green;*/
-  padding-right: 40px;
-  margin-bottom: 30px;
+/**
+ * Colors:
+ *
+ * - light-blue: rgb(107, 191, 238)
+ * - dark-blue: rgb(52, 148, 203)
+ * - grayish blue: #BDD0DC (time)
+ */
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
 }
 
-#container{w
-  margin: auto;
-  width: 80%;
-  /*outline: 2pt solid red;*/
+#container {
+    width: 80%; margin: auto;
 }
 
-ol{
-  border-left:0.5em solid;
-  border-color: rgb(104, 192, 240); /* blue */
-  list-style: none;
-  margin-left: 8em;
-  padding-left: 1.5em;
+.timeline {
+    border-left: 0.5em solid;
+    border-color: rgb(107, 191, 238);
+    padding-left: 2em;
+    margin-left: 8em;
+    list-style: none;
 }
 
-
-/*========DATE/TIME===========*/
-time {
-  /*outline: 2px solid red;*/
-  margin-left: -8em;
-  float: left;
-  position: absolute;
-  font-family: 'Asap', sans-serif;
-}
-time > *{
-  display: block;
-  text-align: right;
+.timeline > li {
+    position: relative;
+    margin-top: 10pt;
+    color: white;
 }
 
-time small {
-  font-size: 80%;
-  color: grey;
-
-}
-time big {
-  font-size:160%;
-  color: rgb(107, 191, 238);
-
-}
-
-/*=========PAIN-IN-THE-BUTT VERTICAL LINE=======*/
-li{
-  position: relative;
-  margin-top: 2em;
-}
-
-
-li:before {
-    content: "\260E";
+.timeline > li:before {
     background-color: rgb(52, 148, 203);
     text-align: center;
 
     width: 2em; height: 2em;
     line-height: 2em;
 
-    border: .5em solid rgb(107, 191, 238);
+    font-size: 110%;
+
+    border: 0.5em solid rgb(107, 191, 238);
     border-radius: 50%;
 
     position: absolute;
-    left: -3.25em;
+    right: 100%; margin-right: 1em;
+}
+.timeline > li.call:before {
+    content: "\260E";
+}
+.timeline > li.flight:before {
+    content: '\2708';
+}
+.timeline > li.todo:before {
+    content: '\2714';
+}
+.timeline > li.email:before {
+    content: '\0040';
 }
 
- li article:after {
+.timeline > li time {
+    display: block;
+    text-align: right;
+
+    position: absolute;
+    right: 100%; margin-right: 5em;
+}
+.timeline > li time > * {
+    display: block;
+}
+.timeline > li time small {
+    color: #BDD0DC;
+    font-size: 80%;
+}
+.timeline > li time big {
+    color: rgb(107, 191, 238);
+    font-size: 300%;
+}
+.timeline > li:nth-child(even) time big {
+    color: rgb(52, 148, 203); /* dark blue */
+}
+
+.timeline > li article {
+    background-color: rgb(107, 191, 238);
+    margin: 0; padding: 5pt 2em;
+    border-radius: 5pt;
+}
+.timeline > li article:after {
     content: "\25C0";
     color: rgb(107, 191, 238);
     position: absolute;
-    top: 0.75em;
-    left: 0.25em;
-    right: 100%;
+    top: 0.75em; right: 100%;
     letter-spacing: -0.2em;
 }
-
-/*=====POSTS=====*/
-article{
-  /*border: solid 1px purple;*/
-  border-radius: 8px;
-  background-color: #69BCE6;
-  color: white;
-  font-family: 'Asap', sans-serif;
-  padding: 0.5em 1em 1em 1em;
-  margin-left: 1em;
+/* http://css-tricks.com/how-nth-child-works/ */
+.timeline > li:nth-child(even) article {
+    background-color: rgb(52, 148, 203); /* dark blue */
+}
+.timeline > li:nth-child(even) article:after {
+    color: rgb(52, 148, 203); /* dark blue */
 }
 
-article h3{
-  border-bottom: 1px #F5F5FF solid;
-  font-family: 'Merriweather-Sans', sans-serif;
-  font-size: 25px
+.timeline > li article h3 {
+    padding-bottom: 5pt;
+    border-bottom: 1pt dotted;
+    margin-bottom: 10pt;
 }
 
-article p{
-  line-height: 25px;
-  /*border: solid red 1px;*/
+@media (max-width: 1048px) {
+    .timeline > li time big {
+        font-size: 200%;
+    }
+}
+@media (max-width: 768px) {
+    .timeline {
+        border: none;
+    }
+    .timeline > li:before {
+        position: static;
+        float: right;
+    }
+    .timeline > li time {
+        position: static;
+        float: left;
+    }
+    .timeline > li article {
+        clear: both;
+    }
 }
