@@ -13,13 +13,14 @@ also this example is helpful:   http://learnlayout.com/position-example.html  --
 
 <html>
   <head>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script type="text/javascript">
 
+    //need to apply this to other posts because different dates.
       window.onload=function(){
-        var start = new Date(2014, 10, 28);
-        var end = new Date();
+        var start = new Date(2014, 10, 23);
+        var end = new Date(2014, 10, 29);
         var change = (end.getTime() - start.getTime())/3600000;
         var units = ' hours ago';
         change = Math.floor(change);
