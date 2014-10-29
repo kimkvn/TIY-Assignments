@@ -21,33 +21,12 @@
 <link href='http://fonts.googleapis.com/css?family=Asap: 700, 400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Merriweather-Sans: 700, 400' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript">
+<script src="horizontalmenu.js"></script>
 
-
-  function hello(){alert("hello")}
-
-  function openMenu(element){
-    document.getElementById(element).style.display = 'block';
-  }
-
-  function closeMenu(element){
-    document.getElementById(element).style.display = 'none';
-  }
-
-
-  function toggleMenu(element){
-    if (document.getElementById(element).style.display === 'none'){
-      return openMenu(element);
-    }
-    return closeMenu(element);
-  }
-
-
-</script>
 </head>
 
 <body>
-  <header>
+  <header onclick="clearAll()">
     <p>B L U E P R I N T</p><???unicode ? icon WITH HOVER that displays info about Blueprints<???>
     <h1>Horizontal Drop-down Menu</h1>
 
@@ -63,13 +42,13 @@
     <ul>
       <li onClick="toggleMenu('products')">Products</li>
       <li onClick="toggleMenu('downloads')">Downloads</li>
-      <li>Applications</li>
-      <li>Projects</li>
-      <li>Freeware</li>
+      <li onClick="toggleMenu('applications')">Applications</li>
+      <li onClick="toggleMenu('projects')">Projects</li>
+      <li onClick="toggleMenu('freeware')">Freeware</li>
     </ul>
   </nav>
 
-<ul>
+
     <section id="products">
       <div id="products1" class="clearfix">
         <h3>Learning & Games</h3>
@@ -146,114 +125,96 @@
     </div>
     </section>
 
-<!--  <section id="applications">
-    <h3>Learning & Games</h3>
-      <ul>
-        <li>Snoopydoo</li>
-        <li>Catch The Bullet</li>
-      </ul>
-    <h3>Utilities</h3>
-      <ul>
-        <li>Gadget Finder</li>
-        <li>Green Tree Express</i>
-        <li>Gree Treen Pro</li>
-        <li>Wobbler 3.0</li>
-        <li>Coolkid</li>
-      </ul>
-    <h3>Education</h3>
-      <ul>
-        <li>Learn Thai</li>
-        <li>Math Genius</li>
-        <li>Chemokid</li>
-      </ul>
-    <h3>Professionals</h3>
-      <ul>
-        <li>Success 1.0</li>
-        <li>Moneymaker</li>
-      </ul>
-  </section>
+    <section id="applications">
+     <div id="applications1" class="clearfix">
+      <h3>Learning & Games</h3>
+        <ul>
+          <li>Snoopydoo</li>
+          <li>Catch The Bullet</li>
+        </ul>
+      <h3>Utilities</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+          <li>Gree Treen Pro</li>
+          <li>Wobbler 3.0</li>
+          <li>Coolkid</li>
+        </ul>
+      </div>
+      <div id="applications2" class="clearfix">
+        <h3>Education</h3>
+          <ul>
+            <li>Learn Thai</li>
+            <li>Math Genius</li>
+            <li>Chemokid</li>
+          </ul>
+        <h3>Professionals</h3>
+          <ul>
+            <li>Success 1.0</li>
+            <li>Moneymaker</li>
+          </ul>
+        </div>
+      </section>
+
 
   <section id="projects">
-    <h3>Learning & Games</h3>
-      <ul>
-        <li>Snoopydoo</li>
-        <li>Catch The Bullet</li>
-        <li>Golf Pro</li>
-      </ul>
-    <h3>Utilities</h3>
-      <ul>
-        <li>Gadget Finder</li>
-        <li>Green Tree Express</i>
-      </ul>
-    <h3>Entertainment</h3>
-      <ul>
-        <li>Gadget Finder</li>
-        <li>Green Tree Express</i>
-        <li>Gree Treen Pro</li>
-        <li>Holy Cannoli</li>
-        <li>Wobbler 3.0</li>
-        <li>Coolkid</li>
-      <ul>
+    <div id="projects1" class="clearfix">
+      <h3>Learning & Games</h3>
+        <ul>
+          <li>Snoopydoo</li>
+          <li>Catch The Bullet</li>
+          <li>Golf Pro</li>
+        </ul>
+      <h3>Utilities</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+        </ul>
+    </div>
+    <div id="projects2" class="clearfix">
+      <h3>Entertainment</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+          <li>Gree Treen Pro</li>
+          <li>Holy Cannoli</li>
+          <li>Wobbler 3.0</li>
+          <li>Coolkid</li>
+        <ul>
+    </div
   </section>
 
   <section id="freeware">
-    <h3>Utilities</h3>
-      <ul>
-        <li>Gadget Finder</li>
-        <li>Green Tree Express</i>
-      </ul>
-    <h3>Education</h3>
-      <ul>
-        <li>Learn Thai</li>
-        <li>Math Genius</li>
-        <li>Chemokid</li>
-      </ul>
-    <h3>Professionals</h3>
-      <ul>
-        <li>Success 1.0</li>
-        <li>Moneymaker</li>
-      </ul>
-    <h3>Learning & Games</h3>
-      <ul>
-        <li>Snoopydoo</li>
-        <li>Catch The Bullet</li>
-        <li>Golf Pro</li>
-      </ul>
+    <div id="freeware1" class="clearfix">
+      <h3>Utilities</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+        </ul>
+      <h3>Education</h3>
+        <ul>
+          <li>Learn Thai</li>
+          <li>Math Genius</li>
+          <li>Chemokid</li>
+        </ul>
+    </div>
+    <div id="freeware2" class="clearfix">
+      <h3>Professionals</h3>
+        <ul>
+          <li>Success 1.0</li>
+          <li>Moneymaker</li>
+        </ul>
+    </div>
+    <div id="freeware3" class="clearfix">
+      <h3>Learning & Games</h3>
+        <ul>
+          <li>Snoopydoo</li>
+          <li>Catch The Bullet</li>
+          <li>Golf Pro</li>
+        </ul>
+    </div>
   </section>
 
-  -->
-<script type="text/javascript">
-
-
-
-
-
-  function remOpenClass(element){
-    element.className.display:none;
-  }
-
-  /**
-   * @param HTMLElement element
-   * @return Boolean whether `element` has `className` of "accordion-open"
-   */
-  function hasOpenClass(element){
-    if ( element.className === 'menuDrop' ){
-      return true;
-    }
-
-    return false;
-  }
-
-  function toggleDrop(element){
-    if ( hasOpenClass(element) ){
-        return remOpenClass(element);
-    }
-
-    addOpenClass(element);
-  }
-
-
-</script>
 
 </body>
 

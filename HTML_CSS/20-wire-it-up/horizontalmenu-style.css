@@ -21,8 +21,8 @@
 /*==========HEADER============*/
   header{
     border: solid 2px green;
-    padding: 20px 20px 0 20px;
-    margin: 30px 40px 30px 40px;
+    padding: 20px 20px 30px 20px;
+    margin: 0;
     font-family: 'Asap', sans-serif;
     line-height: 20px;
     color: #5E9DC8;
@@ -55,9 +55,11 @@
 
 
 /* ============MENU TABS=========*/
+
   .tabs ul{
-    /*border: 1px solid red;*/
+    border: 1px solid red;
     text-align: center;
+    margin-top: 0;
   }
   .tabs li{
     border: 1px solid purple;
@@ -95,7 +97,7 @@
   #downloads{
     border: 2px solid purple;
     padding: 20px 40px 60px 40px;
-    display: none;
+    display: block;
   }
   #downloads1{
     float: left;
@@ -112,3 +114,61 @@
     width: 33%;
     border: 1px solid red;
   }
+
+/*=======APPLICATIONS MENU========*/
+  #applications{
+    border: 2px solid purple;
+    padding: 20px 40px 60px 40px;
+    display: block;
+  }
+  #applications1{
+    float: left;
+    width: 33%;
+    border: 1px solid red;
+  }
+  #applications2{
+    display: inline-block;
+    width: 33%;
+    border: 1px solid red;
+  }
+
+/*===========PROJECTS MENU===========*/
+
+#projects{
+  border: 2px solid purple;
+  padding: 20px 40px 60px 40px;
+  display: block;
+}
+#projects1{
+  float: left;
+  width: 33%;
+  border: 1px solid red;
+}
+#projects2{
+  display: inline-block;
+  width: 33%;
+  border: 1px solid red;
+}
+
+/*==========FREEWARE MENU=======*/
+
+#freeware{
+  border: 2px solid black;
+  padding: 20px 40px 90px 40px;
+  display: block;
+}
+#freeware1{
+  float: left;
+  width: 33%;
+  border: 1px solid red;
+}
+#freeware2{
+  display: inline-block;
+  width: 33%;
+  border: 1px solid red;
+}
+#freeware3{
+  float: right;
+  width: 33%;
+  border: 1px solid red;
+}
