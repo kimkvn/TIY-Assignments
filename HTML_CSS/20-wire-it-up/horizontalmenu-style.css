@@ -75,7 +75,7 @@
   #products{
     border: 2px solid orange;
     padding: 20px 40px 80px 40px;
-    display: block;
+    display: none;
   }
   #products1{
     float: left;
@@ -97,7 +97,7 @@
   #downloads{
     border: 2px solid purple;
     padding: 20px 40px 60px 40px;
-    display: block;
+    display: none;
   }
   #downloads1{
     float: left;
@@ -117,9 +117,9 @@
 
 /*=======APPLICATIONS MENU========*/
   #applications{
-    border: 2px solid purple;
+    border: 2px solid yellow;
     padding: 20px 40px 60px 40px;
-    display: block;
+    display: none;
   }
   #applications1{
     float: left;
@@ -135,9 +135,9 @@
 /*===========PROJECTS MENU===========*/
 
 #projects{
-  border: 2px solid purple;
+  border: 2px solid green;
   padding: 20px 40px 60px 40px;
-  display: block;
+  display: none;
 }
 #projects1{
   float: left;
@@ -155,7 +155,7 @@
 #freeware{
   border: 2px solid black;
   padding: 20px 40px 90px 40px;
-  display: block;
+  display: none;
 }
 #freeware1{
   float: left;
