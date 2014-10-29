@@ -1,1 +1,26 @@
 /* stylesheet for vertical timeline, responsive web design style */
+
+ol {
+  list-style-type: none;
+}
+
+#container {
+  outline:1px solid red;
+}
+
+time{
+  display: table-caption;
+}
+
+article {
+  border: 2px solid blue;
+  background-color: blue;
+  color: white;
+  margin-right: 12%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+h3 {
+  border-bottom: 1px solid white;
+}
