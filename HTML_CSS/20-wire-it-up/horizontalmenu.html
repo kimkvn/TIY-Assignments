@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="horizontalmenu-style.css">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Asap: 700, 400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather-Sans: 700, 400' rel='stylesheet' type='text/css'>
+
+<script src="horizontalmenu.js"></script>
+
+</head>
+
+<body>
+  <header onclick="clearAll()">
+    <p>B L U E P R I N T</p><???unicode ? icon WITH HOVER that displays info about Blueprints<???>
+    <h1>Horizontal Drop-down Menu</h1>
+
+    <nav>
+      <a class="fa fa-arrow-circle-o-left fa-2x" href="http://tympanus.net/Blueprints/ScrollingLayout/"></a><? hover text: previous Blueprint>
+      <a class="fa fa-arrow-circle-o-right fa-2x" href="http://tympanus.net/Blueprints/HorizontalSlideOutMenu/"></a><? hovertext: next Blueprint>
+      <a class="fa fa-tint fa-2x" href="http://tympanus.net/codrops/?p=14941"></a><? hovertext: back to the Codrops article>
+      <a class="fa fa-inbox fa-2x" href="http://tympanus.net/codrops/category/blueprints/"></a><? hovertext: Blueprints archive>
+    </nav>
+  </header>
+
+  <nav class="tabs">
+    <ul>
+      <li onClick="toggleMenu('products')">Products</li>
+      <li onClick="toggleMenu('downloads')">Downloads</li>
+      <li onClick="toggleMenu('applications')">Applications</li>
+      <li onClick="toggleMenu('projects')">Projects</li>
+      <li onClick="toggleMenu('freeware')">Freeware</li>
+    </ul>
+  </nav>
+
+
+    <section id="products">
+      <div id="products1" class="clearfix">
+        <h3>Learning & Games</h3>
+          <ul>
+            <li>Cath the Bullet</li>
+            <li>Snoopydoo</li>
+            <li>Fallen Angel</li>
+            <li>Sui Maker</li>
+            <li>Wave Master</li>
+            <li>Golf Pro</li>
+          </ul>
+      </div>
+      <div id="products2" class="clearfix">
+          <h3>Utilities</h3>
+            <ul>
+              <li>Gadget Finder</li>
+              <li>Green Tree Express</li>
+              <li>Gree Treen Pro</li>
+              <li>Wobbler 3.0</li>
+              <li>Coolkid</li>
+            </ul>
+      </div>
+      <div id="products3" class="clearfix">
+          <h3>Education</h3>
+            <ul>
+              <li>Learn Thai</li>
+              <li>Math Genius</li>
+              <li>Chemokid</li>
+            </ul>
+          <h3>Professionals</h3>
+            <ul>
+              <li>Success 1.0</li>
+              <li>Moneymaker</li>
+            </ul>
+      </div>
+    </section>
+
+  <section id="downloads">
+    <div id="downloads1" class="clearfix">
+      <h3>Education & Learning</h3>
+        <ul>
+          <li>Learn Thai</li>
+          <li>Math Genius</li>
+          <li>Chemokid</li>
+        </ul>
+
+      <h3>Professionals</h3>
+        <ul>
+          <li>Success 1.0</li>
+          <li>Moneymaker</li>
+        </ul>
+    </div>
+    <div id="downloads2" class="clearfix">
+      <h3>Entertainment</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+          <li>Gree Treen Pro</li>
+          <li>Holy Cannoli</li>
+          <li>Wobbler 3.0</li>
+          <li>Coolkid</li>
+        <ul>
+    </div>
+    <div id="downloads3" class="clearfix">
+      <h3>Games</h3>
+        <ul>
+          <li>Cath the Bullet</li>
+          <li>Snoopydoo</li>
+          <li>Fallen Angel</li>
+          <li>Sui Maker</li>
+          <li>Wave Master</li>
+          <li>Golf Pro</li>
+        </ul>
+    </div>
+    </section>
+
+    <section id="applications">
+     <div id="applications1" class="clearfix">
+      <h3>Learning & Games</h3>
+        <ul>
+          <li>Snoopydoo</li>
+          <li>Catch The Bullet</li>
+        </ul>
+      <h3>Utilities</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+          <li>Gree Treen Pro</li>
+          <li>Wobbler 3.0</li>
+          <li>Coolkid</li>
+        </ul>
+      </div>
+      <div id="applications2" class="clearfix">
+        <h3>Education</h3>
+          <ul>
+            <li>Learn Thai</li>
+            <li>Math Genius</li>
+            <li>Chemokid</li>
+          </ul>
+        <h3>Professionals</h3>
+          <ul>
+            <li>Success 1.0</li>
+            <li>Moneymaker</li>
+          </ul>
+        </div>
+      </section>
+
+
+  <section id="projects">
+    <div id="projects1" class="clearfix">
+      <h3>Learning & Games</h3>
+        <ul>
+          <li>Snoopydoo</li>
+          <li>Catch The Bullet</li>
+          <li>Golf Pro</li>
+        </ul>
+      <h3>Utilities</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+        </ul>
+    </div>
+    <div id="projects2" class="clearfix">
+      <h3>Entertainment</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+          <li>Gree Treen Pro</li>
+          <li>Holy Cannoli</li>
+          <li>Wobbler 3.0</li>
+          <li>Coolkid</li>
+        <ul>
+    </div>
+  </section>
+
+  <section id="freeware">
+    <div id="freeware1" class="clearfix">
+      <h3>Utilities</h3>
+        <ul>
+          <li>Gadget Finder</li>
+          <li>Green Tree Express</li>
+        </ul>
+      <h3>Education</h3>
+        <ul>
+          <li>Learn Thai</li>
+          <li>Math Genius</li>
+          <li>Chemokid</li>
+        </ul>
+    </div>
+    <div id="freeware2" class="clearfix">
+      <h3>Professionals</h3>
+        <ul>
+          <li>Success 1.0</li>
+          <li>Moneymaker</li>
+        </ul>
+    </div>
+    <div id="freeware3" class="clearfix">
+      <h3>Learning & Games</h3>
+        <ul>
+          <li>Snoopydoo</li>
+          <li>Catch The Bullet</li>
+          <li>Golf Pro</li>
+        </ul>
+    </div>
+  </section>
+
+
+</body>
+
+
+</html>
