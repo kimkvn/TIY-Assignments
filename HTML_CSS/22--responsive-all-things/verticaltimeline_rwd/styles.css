@@ -36,7 +36,7 @@ article p {
   line-height: 3.2ex;
 }
 
-/* tiny triangle attached to each article*/
+/* ==== tiny triangle attached to each article ====== */
 .timeline > li article:before{
   content: '\25B2';
   position: absolute;
@@ -45,6 +45,7 @@ article p {
   color: blue;
 }
 
+/* ===== Icons ======== */
 .timeline > li:before {
 float: right;
 margin-top: 1em;
@@ -70,20 +71,25 @@ border-radius: 50%;
 }
 
 
+
+
 @media (min-width: 755px){
 
   time{
 border: 1px red solid;
 margin-top: 3ex;
-margin-left: -22ex;
-margin-bottom: -4ex;
+margin-left: -23ex;
 padding-bottom: 20px;
+position: absolute;
+display: table-caption;
   }
 
-  time > * {
-    display: block;
+  #container > article {
+    padding-top: 1ex;
   }
 
+
+/* ==== pain-in-the-ass-vertical-line === */
   .timeline {
     border-left: 0.5em solid;
     border-color: grey;
