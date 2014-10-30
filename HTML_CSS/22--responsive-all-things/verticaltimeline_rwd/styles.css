@@ -72,7 +72,46 @@ border-radius: 50%;
 
 @media (min-width: 755px){
 
-  article{
-    color: red;
+  time{
+border: 1px red solid;
+margin-top: 3ex;
+margin-left: -22ex;
+margin-bottom: -4ex;
+padding-bottom: 20px;
+  }
+
+  time > * {
+    display: block;
+  }
+
+  .timeline {
+    border-left: 0.5em solid;
+    border-color: grey;
+    padding-left: 2em;
+    margin-left: 8em;
+    list-style: none;
+  }
+
+  .timeline > li {
+      position: relative;
+      margin-top: 10pt;
+  }
+
+  .timeline > li.article:before{
+    display:none;
+  }
+
+
+  .timeline > li article:before{
+    content: '\25C0';
+    margin-top: -0.1em;
+    margin-left: -1.4em;
+  }
+  .timeline > li:before {
+  position: absolute;
+  margin-top: 1.8em;
+  margin-left: -2.2em;
+
+  
   }
 }
