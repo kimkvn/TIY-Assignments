@@ -10,6 +10,11 @@ ol {
 
 time{
   display: table-caption;
+  margin-top: 3ex;
+  margin-bottom: 3.5ex;
+}
+big {
+  font-size: 3.5ex;
 }
 
 article {
@@ -17,10 +22,50 @@ article {
   background-color: blue;
   color: white;
   margin-right: 12%;
+  margin-bottom: 2ex;
   padding-left: 1em;
   padding-right: 1em;
 }
 
 h3 {
   border-bottom: 1px solid white;
+}
+
+article p {
+  line-height: 3.2ex;
+}
+
+/* tiny triangle attached to each article*/
+.timeline > li article:before{
+  content: '\25B2';
+  position: absolute;
+  margin-top: -1em;
+  font-size: 1.5em;
+  color: blue;
+}
+
+.timeline > li:before {
+position: absolute;
+margin-left: 60%;
+margin-top: 1em;
+font-size: 1.75em;
+background-color: blue;
+color: white;
+border: 6px solid grey;
+padding: 0.5px 6.5px 0.5px 6.5px;
+border-radius: 50%;
+}
+
+.timeline > li.call:before{
+  content: "\260E";
+
+}
+.timeline > li.flight:before {
+    content: '\2708';
+}
+.timeline > li.todo:before {
+    content: '\2714';
+}
+.timeline > li.email:before {
+    content: '\0040';
 }
