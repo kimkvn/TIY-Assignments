@@ -34,6 +34,14 @@ h3{
 
 
 @media (min-width: 512px){
-
-
+    h2 {
+      font-size: 7ex;
+    }
+    p {
+      font-size: 2.5ex;
+      line-height: 3.5ex;
+    }
+    h3 {
+      font-size: 2.8ex;
+    }
 } /*END @media*/
