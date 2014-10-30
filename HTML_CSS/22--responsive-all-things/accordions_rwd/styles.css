@@ -1,111 +1,23 @@
-<style>
+/* styles doc for nested accordions, responsive, mobile-first */
 
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      vertical-align: baseline;
-      }
-
-  a{
-    text-decoration: none;
-    color: #69BCE6;
-  }
-
-  a:visited{
-    color: #69BCE6;
-  }
-
-  #header{
-    /*border: solid 2px green;*/
-    padding: 20px 20px 0 20px;
-    margin: 30px 40px 30px 40px;
-    font-family: 'Asap', sans-serif;
-    line-height: 20px;
-    color: #5E9DC8;
-  }
-
-  #header h1{
-    font-size:10ex;
-    /*border: 1px solid red;*/
-    margin-bottom: 20px;
-    margin-top: 5px;
-  }
-
-  /*#header nav{
-    border: 1px orange solid;
-  }*/
-
-  #header nav a{
-    align: right;
-    display: ;
-    /*border: solid 1px blue;*/
-    margin: 5px;
-    text-decoration: none;
-    color: #5E9DC8;
-  }
-
-  #header nav{
-    font-size: 10px;
-  }
-
-  .accordion{
-    /*border: solid 1px purple;*/
-    margin: 0 50px 0 50px;
-    padding: 0 40px 0 40px;
-    border-radius: 8px;
-    /*background-color: #69BCE6;*/
-    color: #9EAEB3;
-    font-family: 'Asap', sans-serif;
-  }
-
-  .accordion h2{
-    border-bottom: 2px #9EAEB3 solid;
-    padding: 2ex 0 10px 0;
-    margin: 5px 0 10px 0;
-    font-family: 'Asap', sans-serif;
-    font-size: 5.5em;
-    color: #69BCE6;
-  }
-
-  .accordion > p{
-    margin-right: 0;
-    line-height: 1.75ex;
-
-  }
-
-  .accordion h3{
-    /*border: 1px solid red;*/
-    border-bottom: 1px #9EAEB3 dashed;
-    padding: 0 0 5px 0;
-    margin-bottom: 0px;
-    font-family: 'Asap', sans-serif;
-    font-size: 18px;
-    color: #69BCE6;
-  }
-
-.accordion h3 p {
-  margin-top: 0px;
+h2 {
+  font-size: 4ex;
+  color: red;
 }
 
-.accordion li > :first-child ~ * {
-  display: none; /* targets nested ul and its children */
+p{
+  line-height: 3ex;
+}
+
+h3{
+  font-size: 2.2ex;
+}
+
+
+/* targets nested ul and its children */
+/*.accordion li > :first-child ~ * {
+  display: none;
 }
 .accordion li.accordion-open > :first-child ~ * {
   display: block;
-}
-
-
-</style>
+}*/
