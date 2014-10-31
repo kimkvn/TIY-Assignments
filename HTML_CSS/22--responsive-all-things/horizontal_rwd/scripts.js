@@ -1,7 +1,5 @@
 /* javascripts for dropdown menus, responsive, mobile-first */
 
-var navItems = document.getElementsByTagName('h3'); //collects all h3 tags and assigns them to array navItems
-
 
 //assigns chosen element the class 'open'
 function makeItOpen(element){
