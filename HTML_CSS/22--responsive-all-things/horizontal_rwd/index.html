@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <script src="/node_modules/lodash/lodash.js"></script>
+
   </head>
 
   <body>
-    <ul id="menus">
+    <ul class="menus">
       <h3>Products</h3>
 
-        <ul>
+        <li><ul class="submenu">
           <h4>Learning&Games</h4>
             <li>Checkers</li>
             <li>Backgammon</li>
@@ -34,10 +37,11 @@
             <li>Leon</li>
             <li>Mathilda</li>
         </ul>
-
+      </li>
+      <li>
       <h3>Downloads</h3>
 
-        <ul>
+        <ul class="submenu">
           <h4>Professionals</h4>
             <li>Leon</li>
             <li>Mathilda</li>
@@ -61,7 +65,7 @@
 
       <h3>Applications</h3>
 
-        <ul>
+        <ul class="submenu">
           <h4>Likes</h4>
             <li>Gin</li>
             <li>Red Pandas</li>
@@ -81,10 +85,11 @@
             <li>Leon</li>
             <li>Mathilda</li>
         </ul>
-
+      </li>
+      <li>
       <h3>Projects</h3>
 
-        <ul>
+        <ul class="submenu">
           <h4>Utilities</h4>
             <li>Water</li>
             <li>Electric</li>
@@ -106,10 +111,11 @@
             <li>Uni</li>
             <li>PostGrad</li>
         </ul>
-
+      </li>
+      <li>
       <h3>Freeware</h3>
 
-      <ul>
+      <ul class="submenu">
         <h4>Education</h4>
           <li>Elementary</li>
           <li>Middle</li>
@@ -129,7 +135,10 @@
           <li>Conway</li>
           <li>Ultimate Frizbee</li>
           <li>Milk Pong</li>
-    </ul>
+      </ul>
+  </li>
+
+  <script src="scripts.js"></script>
 
   </body>
 </html>

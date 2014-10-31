@@ -2,14 +2,9 @@
 
 /*#00a2ff = blue */
 
-#menus {
-  /*margin-left: -2em;
-  padding-left: 2em;*/
-
-}
 
 h3 {
-  border-bottom: 2px solid #00a2ff;
+  border-bottom: 2px solid #2fb689;;
   margin-left: -2em;
   margin-bottom: 0;
   padding-left: 2em;
@@ -19,9 +14,18 @@ li {
   list-style-type: none;
 }
 
-#menus ul{
+.submenu{
+  display: none;
+}
+
+.menus ul{
   padding-top: 5px;
   padding-left: 35px;
-  background-color: #00a2ff;
+  background-color: #2fb689;
   margin-left: -2.3em;
+}
+
+.open {
+  background: #2fb689;
+
 }
