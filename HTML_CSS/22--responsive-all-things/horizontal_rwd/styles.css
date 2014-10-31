@@ -1,5 +1,27 @@
 /* styles for dropdown menus, responsive, mobile-first */
 
+/*#00a2ff = blue */
+
+#menus {
+  /*margin-left: -2em;
+  padding-left: 2em;*/
+
+}
+
 h3 {
-  color: blue;
+  border-bottom: 2px solid #00a2ff;
+  margin-left: -2em;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+li {
+  list-style-type: none;
+}
+
+#menus ul{
+  padding-top: 5px;
+  padding-left: 35px;
+  background-color: #00a2ff;
+  margin-left: -2.3em;
 }
