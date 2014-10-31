@@ -25,8 +25,8 @@ li {
   margin-left: -2.3em;
 }
 
-.menus > li.open .submenu{
-  display: block;
+.menu > li.open .submenu{
+  display: inline;
 }
 
 .open {

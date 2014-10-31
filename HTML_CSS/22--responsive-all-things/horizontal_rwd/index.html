@@ -12,7 +12,7 @@
   <body>
     <ul class="menus">
 
-      <li class="open">
+      <li>
       <h3>Products</h3>
 
         <ul class="submenu">
@@ -39,7 +39,7 @@
         </ul>
       </li>
 
-      <li class="open">
+      <li>
       <h3>Downloads</h3>
 
         <ul class="submenu">
@@ -64,7 +64,7 @@
             <li>League</li>
         </ul>
       </li>
-      <li class="open">
+      <li>
       <h3>Applications</h3>
 
         <ul class="submenu">
@@ -88,10 +88,10 @@
             <li>Mathilda</li>
         </ul>
       </li>
-      <li class="open">
+      <li>
       <h3>Projects</h3>
-
-        <ul class="submenu">
+      <div class="submenu">
+        <ul>
           <h4>Utilities</h4>
             <li>Water</li>
             <li>Electric</li>
@@ -113,11 +113,14 @@
             <li>Uni</li>
             <li>PostGrad</li>
         </ul>
+        <div>
       </li>
-      <li class="open">
+
+      <li>
       <h3>Freeware</h3>
 
-      <ul class="submenu">
+      <div class"submenu">
+      <ul>
         <h4>Education</h4>
           <li>Elementary</li>
           <li>Middle</li>
@@ -138,8 +141,9 @@
           <li>Ultimate Frizbee</li>
           <li>Milk Pong</li>
       </ul>
+    </div>
   </li>
-
+</ul>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
   <script src="scripts.js"></script>
 
@@ -147,7 +151,7 @@
   var navItems = document.getElementsByTagName('h3'); //collects all h3 tags and assigns them to array navItems
     _.each(navItems, function(navItem){
 
-      navItems.onClick = clickNavItem; //applies clickNavItem function to to each h3 tag
+      navItems.onclick = clickNavItem; //applies clickNavItem function to to each h3 tag
 
     });
 
