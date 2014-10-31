@@ -11,6 +11,7 @@
 
   <body>
     <ul class="menus">
+
       <li class="open">
       <h3>Products</h3>
 
@@ -37,6 +38,7 @@
             <li>Mathilda</li>
         </ul>
       </li>
+
       <li class="open">
       <h3>Downloads</h3>
 
@@ -145,7 +147,7 @@
   var navItems = document.getElementsByTagName('h3'); //collects all h3 tags and assigns them to array navItems
     _.each(navItems, function(navItem){
 
-      navItem.onClick = clickNavItem; //applies clickNavItem function to to each h3 tag
+      navItems.onClick = clickNavItem; //applies clickNavItem function to to each h3 tag
 
     });
 

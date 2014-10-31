@@ -14,7 +14,7 @@ li {
   list-style-type: none;
 }
 
-.submenu{
+.menus >li.submenu{
   display: none;
 }
 
@@ -25,7 +25,11 @@ li {
   margin-left: -2.3em;
 }
 
+.menus > li.open .submenu{
+  display: block;
+}
+
 .open {
   background: #2fb689;
-  display: blocks;
+  display: block;
 }
