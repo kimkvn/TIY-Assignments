@@ -11,7 +11,7 @@
 
   }
 
-  div.col-sm-4.col-md-4 {
+  div.col-md-4 {
     outline: 1pt solid blue;
   }
 
@@ -20,13 +20,16 @@
     border-radius: 4px;
   }
 
+  .container.navbar {
+    width: 100%;
+  }
+
   </style>
 
 </head>
 
 <body>
 
-<div class="container">
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -56,7 +59,9 @@
     </div> <!-- end container navbar-->
   </nav>
 
-  <aside class="col-sm-4 col-md-4">
+<div class="container"> <!-- main body container -->
+
+  <aside class="col-sm-4 col-md-3">
     <a href="#" id="avatar"><img src="https://avatars2.githubusercontent.com/u/8834946?v=2&s=460"></a>
     <h2>Kevin Kim</h2>
     <h4>kimkvn</h4>
@@ -136,6 +141,8 @@
   </div><!-- end left side content-->
 
 </div><!--end super container-->
+
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 </body>
 </html>
