@@ -8,14 +8,37 @@
 <body>
 
 <div class="container">
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" role="navigation">
     <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-togle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">This</span>
+          <span class="icon-bar">is</span>
+          <span class="icon-bar">GITHUB</span>
+        </button>
+
       <a class="brand" href="#">Github</a>
-    </div>
+    </div> <!-- github logo -->
+
+  <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="search github">
+      </div>
+  </form> <!-- end search github-->
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Explore</a></a></li>
+          <li><a href="#">Gist</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div> <!--end nav links (next to search)-->
+    </div> <!-- end container navbar-->
   </nav>
 
 
-</div>
+</div><!--end super container-->
 
 </body>
 </html>
