@@ -3,6 +3,20 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+  body > .container > * {
+    outline: 1pt solid red;
+  }
+
+  #avatar > img {
+    width: 15em;
+    border-radius: 4px;
+  }
+
+  </style>
+
 </head>
 
 <body>
@@ -37,8 +51,50 @@
     </div> <!-- end container navbar-->
   </nav>
 
+  <aside class="col-sm-4 col-md-4">
+    <a href="#" id="avatar"><img src="https://avatars2.githubusercontent.com/u/8834946?v=2&s=460"></a>
+    <h2>Kevin Kim</h2>
+    <h4>kimkvn</h4>
+
+    <section id="info">
+      <a href="#">kimkvn@gmail.com</a>
+      <p>
+        Joined on Sep 19, 2014.
+      </p>
+    </section>
+
+    <section id="follow-stats">
+      <nav>
+        <a href="#">1 Follower</a>
+        <a href="#">1 Starred</a>
+        <a href="#">0 Following</a>
+      </nav>
+    </section>
+
+    <section id="organizations">
+      <nav>
+        <a href="#">TheIronYard--Orlando</a>
+        <a href="#">LearnEverywhere</a>
+      </nav>
+    </section>
+  </aside>  <!-- end avatar aside-->
+
+  <div class="col-sm-4 col-md-4">
+    <h5>Contributions</h5>
+    <div class="panel panel-default">
+      <div class="panel-heading">Popular repositories</div>
+      <table class="table">
+        <td>
+          code--notes
+        </td>
+        <td>
+          FEE--2014--FALL
+        </td>
+      </table>
+
+    </div>
+  </div>
 
 </div><!--end super container-->
-
 </body>
 </html>
