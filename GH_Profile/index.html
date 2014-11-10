@@ -25,6 +25,14 @@
     width: 100%;
   }
 
+  .panel {
+    margin-left: -1em;
+  }
+
+  .contributions > li > a {
+    color: inherit;
+  }
+
   </style>
 
 
@@ -69,16 +77,20 @@
 
   <aside class="col-sm-4 col-md-3">
     <a href="#" id="avatar"><img src="https://avatars2.githubusercontent.com/u/8834946?v=2&s=460"></a>
-    <h2>{{name}}</h2>
-    <h4>{{login}}</h4>
+    <h2 id="name">{{name}}</h2>
+    <h4 id="login">{{login}}</h4>
+
+    <hr>
 
     <section id="info">
-      <a href="#"><span class="octicon octicon-mail"></span>{{email}}</a>
+      <a href="#"><span class="octicon octicon-mail" id="email"></span>{{email}}</a>
       <p>
-        <span class="octicon octicon-clock"></span>
+        <span class="octicon octicon-clock" id="created"></span>
         {{joined-on date/"created at"}}
       </p>
     </section>
+
+    <hr>
 
     <section id="follow-stats">
       <nav>
@@ -88,6 +100,8 @@
       </nav>
     </section>
 
+    <hr>
+
     <section id="organizations">
       <nav>
         <a href="#">TheIronYard--Orlando</a>
@@ -96,10 +110,22 @@
     </section>
   </aside>  <!-- end avatar aside-->
 
-  <div class="container" id="left-content">
-    <h5>Contributions (tab)</h5>
-    <div class="col-sm-4 col-md-4">
+  <div class="container col-sm-8 col-md-8" id="left-content">
+    <ul class="contributions nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#"><span class="octicon octicon-diff-added"></span>Contributions</a>
+      </li>
+      <li role="presentation">
+         <a href="#"><span class="octicon octicon-repo"></span>Repositories</a>
+      </li>
+      <li role="presentation">
+         <a href="#"><span class="octicon octicon-rss"></span>Public Activity</a>
+      </li>
+    </ul>
 
+    <br>
+
+    <div class="col-sm-4 col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading">Popular repositories</div>
         <table class="table">
@@ -122,7 +148,7 @@
       </div> <!-- end Contributions table-->
     </div>
 
-    <div class="col-sm-4 col-md-4">
+    <div class="col-sm-4 col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading">Repositories contributed to</div>
         <table class="table">
@@ -151,9 +177,21 @@
 
   <script>
 
-    $.getJSON("")  
+    $( "h2" ).css("border", "3px solid green");
 
-    $( "h2" ).css("border", "3 px solid green");
+
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/users/kimkvn',
+      success: function(bananas){
+        $('#name').html(bananas.name);
+        $('#login').html(bananas.login);
+        $('#email').html(bananas.email);
+      }
+    });
+
+
+
 
 
   </script>
