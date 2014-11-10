@@ -83,11 +83,8 @@
     <hr>
 
     <section id="info">
-      <a href="#"><span class="octicon octicon-mail" id="email"></span>{{email}}</a>
-      <p>
-        <span class="octicon octicon-clock" id="created"></span>
-        {{joined-on date/"created at"}}
-      </p>
+      <span class="octicon octicon-mail"></span><a href="#" id="email">{{email}}</a>
+      <p><span class="octicon octicon-clock"></span><span id="created">{{joined-on date/"created at"}}</span></p>
     </section>
 
     <hr>
@@ -187,6 +184,7 @@
         $('#name').html(bananas.name);
         $('#login').html(bananas.login);
         $('#email').html(bananas.email);
+        $('#created').html(bananas.created_at);
       }
     });
 
