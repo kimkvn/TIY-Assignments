@@ -7,14 +7,12 @@
 
   <style>
 
-  body > .container > * {
-    outline: 1pt solid red;
-
+  .mega-octicon {
+    margin-top: -0.3ex;
   }
 
-  #avatar {
-    width: 15em;
-    border-radius: 4px;
+  body > .container > * {
+    outline: 1pt solid red;
   }
 
   .octicon {
@@ -50,20 +48,16 @@
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-togle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">This</span>
-          <span class="icon-bar">is</span>
-          <span class="icon-bar">GITHUB</span>
-        </button>
+        <a class="navbar-brand" href="#">
+          <span class="mega-octicon octicon-mark-github"></span>
+        </a>
+      </div> <!-- github logo -->
 
-      <a class="brand" href="#">Github</a>
-    </div> <!-- github logo -->
-
-  <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="search github">
-      </div>
-  </form> <!-- end search github-->
+      <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="search github">
+          </div>
+      </form> <!-- end search github-->
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -79,7 +73,7 @@
 <div class="container"> <!-- main body container -->
 
   <aside class="col-sm-4 col-md-3">
-    <a href="#"><img id="avatar"></a>
+    <a href="#" class="thumbnail"><img id="avatar"></a>
     <h2 id="name">{{name}}</h2>
     <h4 id="login">{{login}}</h4>
 
@@ -113,68 +107,86 @@
   <div class="container col-sm-8 col-md-8" id="left-content">
     <ul class="contributions nav nav-tabs" role="tablist">
       <li role="presentation" class="active">
-        <a href="#"><span class="octicon octicon-diff-added"></span>Contributions</a>
+        <a href="#contributions" role="tab" data-toggle="tab"><span class="octicon octicon-diff-added"></span>Contributions</a>
       </li>
       <li role="presentation">
-         <a href="#"><span class="octicon octicon-repo"></span>Repositories</a>
+         <a href="#repositories" role="tab" data-toggle="tab"><span class="octicon octicon-repo"></span>Repositories</a>
       </li>
       <li role="presentation">
-         <a href="#"><span class="octicon octicon-rss"></span>Public Activity</a>
+         <a href="#public" role="tab" data-toggle="tab"><span class="octicon octicon-rss"></span>Public Activity</a>
       </li>
     </ul>
 
     <br>
 
-    <div class="col-sm-4 col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">Popular repositories</div>
-        <table class="table">
-          <tr>
-            <td>code--notes</td>
-          </tr>
-          <tr>
-            <td>FEE--2014--FALL</td>
-          </tr>
-          <tr>
-            <td>gifshot</td>
-          </tr>
-          <tr>
-            <td>kimkvn.github.io</td>
-          </tr>
-          <tr>
-            <td>learn-mocha</td>
-          </tr>
-        </table>
-      </div> <!-- end Contributions table-->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="contributions">
+        <div class="col-sm-4 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Popular repositories</div>
+            <table class="table">
+              <tr>
+                <td>code--notes</td>
+              </tr>
+              <tr>
+                <td>FEE--2014--FALL</td>
+              </tr>
+              <tr>
+                <td>gifshot</td>
+              </tr>
+              <tr>
+                <td>kimkvn.github.io</td>
+              </tr>
+              <tr>
+                <td>learn-mocha</td>
+              </tr>
+            </table>
+          </div> <!-- end Contributions table-->
+        </div>
+
+        <div class="col-sm-4 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Repositories contributed to</div>
+            <table class="table">
+              <tr>
+                <td>TheIronYard--Orlando/FEE-2014-FALL</td>
+              </tr>
+              <tr>
+                <td>asoper29/24--Weekend-Warriors</td>
+              </tr>
+              <tr>
+                <td>xdonze/25--Scotts-Tots</td>
+              </tr>
+            </table>
+          </div> <!-- end Contributions table-->
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <h5>Contributions</h5>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="repositories">
+        <h2>Big list of repos</h2>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="public">
+        <h2>Big list of all my hot github action</h2>
+      </div>
+
     </div>
 
-    <div class="col-sm-4 col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">Repositories contributed to</div>
-        <table class="table">
-          <tr>
-            <td>TheIronYard--Orlando/FEE-2014-FALL</td>
-          </tr>
-          <tr>
-            <td>asoper29/24--Weekend-Warriors</td>
-          </tr>
-          <tr>
-            <td>xdonze/25--Scotts-Tots</td>
-          </tr>
-        </table>
-      </div> <!-- end Contributions table-->
-    </div>
 
-    <div class="col-sm-8 col-md-8">
-      <h5>Contributions</h5>
 
-    </div>
+
+
 
 
   </div><!-- end left side content-->
 
 </div><!--end super container-->
 
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script>
 
 
