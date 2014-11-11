@@ -21,6 +21,10 @@
     border-radius: 4px;
   }
 
+  .octicon {
+    margin-right: 0.25em;
+  }
+
   .container.navbar {
     width: 100%;
   }
@@ -76,7 +80,7 @@
 <div class="container"> <!-- main body container -->
 
   <aside class="col-sm-4 col-md-3">
-    <a href="#" id="avatar"><img src="https://avatars2.githubusercontent.com/u/8834946?v=2&s=460"></a>
+    <a href="#" id="avatar_url"></a>
     <h2 id="name">{{name}}</h2>
     <h4 id="login">{{login}}</h4>
 
@@ -174,9 +178,6 @@
 
   <script>
 
-    $( "h2" ).css("border", "3px solid green");
-
-
     $.ajax({
       type: 'GET',
       url: 'https://api.github.com/users/kimkvn',
@@ -185,6 +186,7 @@
         $('#login').html(bananas.login);
         $('#email').html(bananas.email);
         $('#created').html(bananas.created_at);
+        $('#starred').html(bananas.starred_url);
       }
     });
 
