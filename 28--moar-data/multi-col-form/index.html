@@ -1,18 +1,52 @@
 <!doctype html>
 <html>
 
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-</head>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>28--Multi Column Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 
 
+    <style>
+      body {
+        background-color: #038cc7;
+      }
 
-<body>
+    </style>
+  </head>
 
-</body>
+  <body>
+    <div class="container"> <!--main super container-->
+
+      <form role="form">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="Leeroy">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Jenkins">
+        </div>
+        <div class="form-group">
+          <label for="emailAddress">Email Address</label>
+          <input type="text" class="form-control" id="emailAddress" placeholder="alrightletsdothis@wow.net">
+        </div>
+        <label for="country">Country</label>
+          <select class="form-control">
+              <option>USA</option>
+              <option>AMERICA</option>
+              <option>'MURICA</option>
+              <option>US of MUTHERFUCKIN A</option>
+          </select>
+      </form>
 
 
+    </div> <!-- end main super container -->
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
 </html>
