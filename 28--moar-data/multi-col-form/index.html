@@ -14,13 +14,17 @@
         background-color: #038cc7;
       }
 
+      input:invalid {
+        border: 3px solid red;
+      }
+
     </style>
   </head>
 
   <body>
     <div class="container"> <!--main super container-->
 
-      <form role="form">
+      <form role="form" method="POST" class="awesomeForm">
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="form-group">
             <label for="firstName">First Name</label>
@@ -28,7 +32,7 @@
           </div>
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Jenkins">
+            <input type="text" class="form-control" id="lastName" placeholder="Jenkins" required>
           </div>
           <div class="form-group">
             <label for="emailAddress">Email Address</label>
@@ -83,7 +87,7 @@
             <br>
             <div class="form-group">
               <label for="drink">Favorite Drink</label>
-              <input type="text" class="form-control" id="drink" placeholder="Gin and Tonic">
+              <input type="text" class="form-control" id="drink" placeholder="Gin and Tonic" required>
             </div>
             <div class="form-group">
               <label for="power">Special Power</label>
@@ -91,13 +95,13 @@
             </div>
             <div class="form-group">
               <label for="weapon">Weapon Of Choice</label>
-              <input type="text" class="form-control" id="weapon" placeholder="Giant Pink Dildo">
+              <input type="text" class="form-control" id="weapon" placeholder="Giant Pink Dildo" required>
             </div>
             <label for="comments">Comments"</label>
               <textarea class="form-control" rows="5"></textarea>
         </div><!-- end column 3 -->
         <div class="col-md-12">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Send Your Data</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Send Your Data</button>
       </div>
       </form>
 
@@ -105,8 +109,14 @@
 
     </div> <!-- end main super container -->
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script>
+      $('#awesomeForm').submit(function(event){
+        event.preventDefault();
+        alert('yo this shits working... for now');
+      });
+
+    </script>
   </body>
 </html>
