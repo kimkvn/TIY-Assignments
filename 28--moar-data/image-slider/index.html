@@ -3,6 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylsheet" href="*/bower_components/bootstrap/dist/css/bootstrap.css">
   </head>
 
 
@@ -20,8 +21,13 @@
             </li>
           </template>
         </ol>
-      </div>
-    </div>
+          <nav class="bullets">
+            <template>
+              <a href="#image-{{index}}" >&bull;</a>
+            </template>
+          </nav>
+      </div> <!-- end .slider -->
+    </div> <!-- end .container-fluid -->
   </body>
 
 </html>
