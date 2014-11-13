@@ -7,7 +7,21 @@
 
 
   <body>
-
+    <div class="container-fluid">
+      <div class="slider">
+        <nav class="buttons">
+          <a href="#" class="prev btn btn-default">PREVIOUS</a>
+          <a href="#" class="next btn btn-default">NEXT</a>
+        </nav>
+        <ol class="list-inline row slides">
+          <template>
+            <li>
+              <a href="{{image.src}}" class="thumbnail"><img src="{{image.src}}"></a>
+            </li>
+          </template>
+        </ol>
+      </div>
+    </div>
   </body>
 
 </html>
