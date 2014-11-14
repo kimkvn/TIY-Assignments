@@ -44,7 +44,21 @@
     { src: '/images/redpanda3.jpg' },
     { src: '/images/redpanda4.jpg' },
     { src: '/images/redpanda5.jpg' },
-  };
+    ];
+
+    //lodash action, detects data property values to inject
+    _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+
+
+    //setting up variables to cut down on string-quote typing
+    var $slides = $('.slides'),
+        $slide = $($slides.find('template').prop('content').children),
+        slideTpl = _.template($slide.html()),
+        $buttons = $('.buttons'),
+        $bullets = $('.bullets'),
+        $bullet = $($('template', $bullets).prop('content').children);
+
+  }; //end first function
 
     </script>
 
