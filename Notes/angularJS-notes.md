@@ -2,13 +2,13 @@
 
 ####functions
 
-1) ``angular.module`` -
+1) ``angular.module`` - the main hub for all Angular module traffic: creating, registering, and retrieving modules.
 
-2) ``angular.extends`` -
+2) ``angular.extends`` - affect the destiation ``dst``; copies properties from ``src`` objects to ``dst``. Multiple ``src`` objects can be sourced.
 
-3) ``angular.copy`` -
+3) ``angular.copy`` - creates a deep copy of ``src``, which is an object or array.
 
-4) ``angular.element`` -
+4) ``angular.element`` - wraps a DOM element or HTML string as a jQuery element.
 
 
 ####Directives
@@ -25,7 +25,7 @@
 
 10) ``ngDblclick`` - specficy behavior when an element is double clicked.
 
-11) ``ngForm`` -
+11) ``ngForm`` - alias of ``form`` directive, nestable version.
 
 12) ``ngKeyup`` - specify custom behavior on a keyup event (set the keyup value to its corresponding keyboard value)
 
@@ -33,4 +33,4 @@
 
 14) ``ngRepeat`` - indicates infomration should be repeated/appended onto specified html templates.
 
-15) ``ngSubmit`` - enables binding angular expressions to onsubmit eevents. 
+15) ``ngSubmit`` - enables binding angular expressions to onsubmit eevents.
