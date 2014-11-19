@@ -1,0 +1,68 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <!-- bower:css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylsheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylsheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <!-- endbower -->
+  </head>
+
+
+  <body>
+    <div class="container-fluid">
+      <div class="slider">
+        <nav class="buttons btn btn-default">
+          <a href="#" class="prev">PREVIOUS</a>
+          <a href="#" class="next">NEXT</a>
+        </nav>
+        <ol class="list-inline row slides">
+          <template>
+            <li>
+              <a href="{{image.src}}" class="thumbnail"><img src="{{image.src}}"></a>
+            </li>
+          </template>
+        </ol>
+          <nav class="bullets">
+            <template>
+              <a href="#image-{{index}}" >&bull;</a>
+            </template>
+          </nav>
+      </div> <!-- end .slider -->
+    </div> <!-- end .container-fluid -->
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/lodash/dist/lodash.compat.js"></script>
+
+    <script>
+    //semicolon at the start bc when concating/compiling, will help separate functions and variables
+  ;(function){
+    var images = [
+    { src: '/images/redpanda1.jpg' },
+    { src: '/images/redpanda2.jpg' },
+    { src: '/images/redpanda3.jpg' },
+    { src: '/images/redpanda4.jpg' },
+    { src: '/images/redpanda5.jpg' },
+    ];
+
+    //lodash action, detects data property values to inject
+    _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+
+
+    //setting up variables to cut down on string-quote typing
+    var $slides = $('.slides'),
+        $slide = $($slides.find('template').prop('content').children),
+        slideTpl = _.template($slide.html()),
+        $buttons = $('.buttons'),
+        $bullets = $('.bullets'),
+        $bullet = $($('template', $bullets).prop('content').children);
+
+  }; //end first function
+
+    </script>
+
+  </body>
+
+</html>

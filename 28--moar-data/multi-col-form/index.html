@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>28--Multi Column Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+    <style>
+      body {
+        background-color: #038cc7;
+      }
+
+      input:invalid {
+        border: 3px solid red;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container"> <!--main super container-->
+
+      <form role="form" method="POST" class="awesomeForm">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Leeroy">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Jenkins" required>
+          </div>
+          <div class="form-group">
+            <label for="emailAddress">Email Address</label>
+            <input type="text" class="form-control" id="emailAddress" placeholder="alrightletsdothis@wow.net">
+          </div>
+          <label for="country">Country</label>
+            <select class="form-control">
+                <option>USA</option>
+                <option>AMERICA</option>
+                <option>'MURICA</option>
+                <option>US of MUTHERFUCKIN A</option>
+            </select>
+          <br>
+          <label for="biography">Biography</label>
+            <textarea class="form-control" rows="5"></textarea>
+        </div><!--end column 1 -->
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="867-5309">
+          </div>
+          <label for="affiliations">Affiliations</label>
+            <textarea class="form-control" rows="5"></textarea>
+          <br>
+          <label for="occupation">Occupation</label>
+            <select class="form-control">
+              <option>BEAR WRESTLER</option>
+              <option>SNAKE VENOM EXTRACTOR</option>
+              <option>SOLO FIRE BRIGADIER</option>
+              <option>PORNSTAR FLUFFER</option>
+            </select>
+            <br>
+          <div class="form-group">
+            <label for="catsName">Cat's Name</label>
+            <input type="text" class="form-control" id="catsName" placeholder="Mr. Pickles">
+          </div>
+          <div class="form-group">
+            <label for="favorite">Favorite Cookie</label>
+            <input type="text" class="form-control" id="favorite" placeholder="Oatmeal Chocolate Chip">
+          </div>
+        </div><!-- end column 2 -->
+
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <label for="nicCage">Spirit Animal</label>
+            <select class="form-control">
+              <option>Red Panda</option>
+              <option>red panda</option>
+              <option>panda rojo</option>
+              <option>red panda best panda</option>
+            </select>
+            <br>
+            <div class="form-group">
+              <label for="drink">Favorite Drink</label>
+              <input type="text" class="form-control" id="drink" placeholder="Gin and Tonic" required>
+            </div>
+            <div class="form-group">
+              <label for="power">Special Power</label>
+              <input type="text" class="form-control" id="power" placeholder="Losing your keys">
+            </div>
+            <div class="form-group">
+              <label for="weapon">Weapon Of Choice</label>
+              <input type="text" class="form-control" id="weapon" placeholder="Giant Pink Dildo" required>
+            </div>
+            <label for="comments">Comments"</label>
+              <textarea class="form-control" rows="5"></textarea>
+        </div><!-- end column 3 -->
+        <div class="col-md-12">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Send Your Data</button>
+      </div>
+      </form>
+
+
+
+    </div> <!-- end main super container -->
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script>
+      $('#awesomeForm').submit(function(event){
+        event.preventDefault();
+        alert('yo this shits working... for now');
+      });
+
+    </script>
+  </body>
+</html>
