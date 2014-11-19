@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="octicons/octicons.css">
+
+  <style>
+
+  .mega-octicon {
+    margin-top: -0.3ex;
+  }
+
+  body > .container > * {
+    outline: 1pt solid red;
+  }
+
+  .octicon {
+    margin-right: 0.25em;
+  }
+
+  .container.navbar {
+    width: 100%;
+  }
+
+  .panel {
+    margin-left: -1em;
+  }
+
+  .contributions > li > a {
+    color: inherit;
+  }
+  .contributions > li > a:hover {
+    background-color: inherit;
+  }
+
+  </style>
+
+
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <span class="mega-octicon octicon-mark-github"></span>
+        </a>
+      </div> <!-- github logo -->
+
+      <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="search github">
+          </div>
+      </form> <!-- end search github-->
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Explore</a></a></li>
+          <li><a href="#">Gist</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div> <!--end nav links (next to search)-->
+    </div> <!-- end container navbar-->
+  </nav>
+
+<div class="container"> <!-- main body container -->
+
+  <aside class="col-sm-4 col-md-3">
+    <a href="#" class="thumbnail"><img id="avatar"></a>
+    <h2 id="name">{{name}}</h2>
+    <h4 id="login">{{login}}</h4>
+
+    <hr>
+
+    <section id="info">
+      <span class="octicon octicon-mail"></span><a href="#" id="email">{{email}}</a>
+      <p><span class="octicon octicon-clock"></span><span id="created">{{joined-on date/"created at"}}</span></p>
+    </section>
+
+    <hr>
+
+    <section id="follow-stats">
+      <nav>
+        <a href="#">1 Follower</a>
+        <a href="#">1 Starred</a>
+        <a href="#">0 Following</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section id="organizations">
+      <nav>
+        <a href="#">TheIronYard--Orlando</a>
+        <a href="#">LearnEverywhere</a>
+      </nav>
+    </section>
+  </aside>  <!-- end avatar aside-->
+
+  <div class="container col-sm-8 col-md-8" id="left-content">
+    <ul class="contributions nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#contributions" role="tab" data-toggle="tab"><span class="octicon octicon-diff-added"></span>Contributions</a>
+      </li>
+      <li role="presentation">
+         <a href="#repositories" role="tab" data-toggle="tab"><span class="octicon octicon-repo"></span>Repositories</a>
+      </li>
+      <li role="presentation">
+         <a href="#public" role="tab" data-toggle="tab"><span class="octicon octicon-rss"></span>Public Activity</a>
+      </li>
+    </ul>
+
+    <br>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="contributions">
+        <div class="col-sm-4 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Popular repositories</div>
+            <table class="table">
+              <tr>
+                <td>code--notes</td>
+              </tr>
+              <tr>
+                <td>FEE--2014--FALL</td>
+              </tr>
+              <tr>
+                <td>gifshot</td>
+              </tr>
+              <tr>
+                <td>kimkvn.github.io</td>
+              </tr>
+              <tr>
+                <td>learn-mocha</td>
+              </tr>
+            </table>
+          </div> <!-- end Contributions table-->
+        </div>
+
+        <div class="col-sm-4 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Repositories contributed to</div>
+            <table class="table">
+              <tr>
+                <td>TheIronYard--Orlando/FEE-2014-FALL</td>
+              </tr>
+              <tr>
+                <td>asoper29/24--Weekend-Warriors</td>
+              </tr>
+              <tr>
+                <td>xdonze/25--Scotts-Tots</td>
+              </tr>
+            </table>
+          </div> <!-- end Contributions table-->
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <h5>Contributions</h5>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="repositories">
+        <h2>Big list of repos</h2>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="public">
+        <h2>Big list of all my hot github action</h2>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+  </div><!-- end left side content-->
+
+</div><!--end super container-->
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script>
+
+
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/users/kimkvn',
+      success: function(bananas){
+        $('#name').html(bananas.name);
+        $('#login').html(bananas.login);
+        $('#email').html(bananas.email);
+        $('#created').html(bananas.created_at);
+        $('#starred').html(bananas.starred_url);
+        $('#avatar').attr('src', bananas.avatar_url);
+      }
+    });
+
+
+
+
+
+  </script>
+</body>
+</html>
