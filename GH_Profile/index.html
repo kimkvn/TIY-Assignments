@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="octicons/octicons.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+  <script src="angularScripts.js"></script>
   <style>
 
   .mega-octicon {
@@ -43,7 +44,7 @@
 
 </head>
 
-<body>
+<body ng-app="githubProfile">
 
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
@@ -72,16 +73,16 @@
 
 <div class="container"> <!-- main body container -->
 
-  <aside class="col-sm-4 col-md-3">
-    <a href="#" class="thumbnail"><img id="avatar"></a>
-    <h2 id="name">{{name}}</h2>
-    <h4 id="login">{{login}}</h4>
+  <aside class="col-sm-4 col-md-3" ng-controller="UserController as user">
+    <a href="{{user.info.avatar_url}}" class="thumbnail" id="avatar"><img src="{{user.infot.avatar_url"}}></a>
+    <h2 id="name">{{user.info.name}}</h2>
+    <h4 id="login">{{user.info.login}}</h4>
 
     <hr>
 
     <section id="info">
-      <span class="octicon octicon-mail"></span><a href="#" id="email">{{email}}</a>
-      <p><span class="octicon octicon-clock"></span><span id="created">{{joined-on date/"created at"}}</span></p>
+      <span class="octicon octicon-mail"></span><a href="#" id="email">{{user.info.email}}</a>
+      <p><span class="octicon octicon-clock"></span><span id="created">{{user.info.joined-on date/"created at"}}</span></p>
     </section>
 
     <hr>
@@ -176,11 +177,6 @@
     </div>
 
 
-
-
-
-
-
   </div><!-- end left side content-->
 
 </div><!--end super container-->
@@ -188,25 +184,20 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script>
-
-
-    $.ajax({
-      type: 'GET',
-      url: 'https://api.github.com/users/kimkvn',
-      success: function(bananas){
-        $('#name').html(bananas.name);
-        $('#login').html(bananas.login);
-        $('#email').html(bananas.email);
-        $('#created').html(bananas.created_at);
-        $('#starred').html(bananas.starred_url);
-        $('#avatar').attr('src', bananas.avatar_url);
-      }
-    });
-
-
-
-
-
+  //
+  //
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: 'https://api.github.com/users/kimkvn',
+  //     success: function(bananas){
+  //       $('#name').html(bananas.name);
+  //       $('#login').html(bananas.login);
+  //       $('#email').html(bananas.email);
+  //       $('#created').html(bananas.created_at);
+  //       $('#starred').html(bananas.starred_url);
+  //       $('#avatar').attr('src', bananas.avatar_url);
+  //     }
+  //   });
   </script>
 </body>
 </html>
