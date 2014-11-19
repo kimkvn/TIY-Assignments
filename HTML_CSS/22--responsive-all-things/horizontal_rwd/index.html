@@ -1,0 +1,161 @@
+<!-- html file for dropdown menus, responsive mobile-first -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+  <body>
+    <ul class="menus">
+
+      <li>
+      <h3>Products</h3>
+
+        <ul class="submenu">
+          <h4>Learning&Games</h4>
+            <li>Checkers</li>
+            <li>Backgammon</li>
+            <li>Conway</li>
+            <li>Ultimate Frizbee</li>
+            <li>Milk Pong</li>
+          <h4>Utilities</h4>
+            <li>Water</li>
+            <li>Electric</li>
+            <li>Gas</li>
+            <li>Internets</li>
+          <h4>Education</h4>
+            <li>Elementary</li>
+            <li>Middle</li>
+            <li>High</li>
+            <li>Uni</li>
+            <li>PostGrad</li>
+          <h4>Professionals</h4>
+            <li>Leon</li>
+            <li>Mathilda</li>
+        </ul>
+      </li>
+
+      <li>
+      <h3>Downloads</h3>
+
+        <ul class="submenu">
+          <h4>Professionals</h4>
+            <li>Leon</li>
+            <li>Mathilda</li>
+          <h4>Learning&Games</h4>
+            <li>Checkers</li>
+            <li>Backgammon</li>
+            <li>Conway</li>
+            <li>Ultimate Frizbee</li>
+            <li>Milk Pong</li>
+          <h4>Education</h4>
+            <li>Elementary</li>
+            <li>Middle</li>
+            <li>High</li>
+            <li>Uni</li>
+            <li>PostGrad</li>
+          <h4>Likes</h4>
+            <li>Gin</li>
+            <li>Red Pandas</li>
+            <li>League</li>
+        </ul>
+      </li>
+      <li>
+      <h3>Applications</h3>
+
+        <ul class="submenu">
+          <h4>Likes</h4>
+            <li>Gin</li>
+            <li>Red Pandas</li>
+            <li>League</li>
+          <h4>Learning&Games</h4>
+            <li>Checkers</li>
+            <li>Backgammon</li>
+            <li>Conway</li>
+            <li>Ultimate Frizbee</li>
+            <li>Milk Pong</li>
+          <h4>Utilities</h4>
+            <li>Water</li>
+            <li>Electric</li>
+            <li>Gas</li>
+            <li>Internets</li>
+          <h4>Professionals</h4>
+            <li>Leon</li>
+            <li>Mathilda</li>
+        </ul>
+      </li>
+      <li>
+      <h3>Projects</h3>
+      <div class="submenu">
+        <ul>
+          <h4>Utilities</h4>
+            <li>Water</li>
+            <li>Electric</li>
+            <li>Gas</li>
+            <li>Internets</li>
+          <h4>Professionals</h4>
+            <li>Leon</li>
+            <li>Mathilda</li>
+          <h4>Learning&Games</h4>
+            <li>Checkers</li>
+            <li>Backgammon</li>
+            <li>Conway</li>
+            <li>Ultimate Frizbee</li>
+            <li>Milk Pong</li>
+          <h4>Education</h4>
+            <li>Elementary</li>
+            <li>Middle</li>
+            <li>High</li>
+            <li>Uni</li>
+            <li>PostGrad</li>
+        </ul>
+        <div>
+      </li>
+
+      <li>
+      <h3>Freeware</h3>
+
+      <div class"submenu">
+      <ul>
+        <h4>Education</h4>
+          <li>Elementary</li>
+          <li>Middle</li>
+          <li>High</li>
+          <li>Uni</li>
+          <li>PostGrad</li>
+        <h4>Likes</h4>
+          <li>Gin</li>
+          <li>Red Pandas</li>
+          <li>League</li>
+        <h4>Professionals</h4>
+          <li>Leon</li>
+          <li>Mathilda</li>
+        <h4>Learning&Games</h4>
+          <li>Checkers</li>
+          <li>Backgammon</li>
+          <li>Conway</li>
+          <li>Ultimate Frizbee</li>
+          <li>Milk Pong</li>
+      </ul>
+    </div>
+  </li>
+</ul>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+  <script src="scripts.js"></script>
+
+  <script>
+  var navItems = document.getElementsByTagName('h3'); //collects all h3 tags and assigns them to array navItems
+    _.each(navItems, function(navItem){
+
+      navItems.onclick = clickNavItem; //applies clickNavItem function to to each h3 tag
+
+    });
+
+  </script>
+
+  </body>
+</html>

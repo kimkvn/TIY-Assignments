@@ -49,7 +49,7 @@ header nav{
   margin-bottom: 30px;
 }
 
-#container{w
+#container{
   margin: auto;
   width: 80%;
   /*outline: 2pt solid red;*/
@@ -66,7 +66,7 @@ ol{
 
 /*========DATE/TIME===========*/
 time {
-  /*outline: 2px solid red;*/
+  outline: 2px solid red;
   margin-left: -8em;
   float: left;
   position: absolute;

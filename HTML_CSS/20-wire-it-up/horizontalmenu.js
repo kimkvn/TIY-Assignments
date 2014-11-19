@@ -5,11 +5,11 @@
 
   function openMenu(element){
     document.getElementById(element).style.display = 'block';
-};
+}
 
   function closeMenu(element){
     document.getElementById(element).style.display = 'none';
-};
+}
 
 
 var allMenus = ['products', 'downloads', 'applications', 'projects', 'freeware'];
@@ -25,7 +25,7 @@ var allMenus = ['products', 'downloads', 'applications', 'projects', 'freeware']
        }
       }
 return openMenu(element);
-  };
+  }
 
 
 
@@ -34,4 +34,4 @@ function clearAll(){
     for( var i = 0; i < allMenus.length; i++){
         closeMenu(allMenus[i]);
     }
-}; //END clearAll
+} //END clearAll

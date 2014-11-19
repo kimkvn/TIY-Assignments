@@ -1,0 +1,47 @@
+/* styles doc for nested accordions, responsive, mobile-first */
+
+h2 {
+  font-size: 4ex;
+  color: red;
+  border-bottom: 1.5px solid grey;
+}
+
+p{
+  line-height: 3ex;
+  padding-bottom: 3ex;
+  margin: 0;
+}
+
+h3{
+  font-size: 2.2ex;
+}
+
+
+.accordion {
+  padding-right: 3.25em;
+  padding-left: 2em;
+  margin-left: 2.5%;
+  list-style-type: none;
+}
+
+/* targets nested ul and its children */
+.accordion li > :first-child ~ * {
+  display: none;
+}
+.accordion li.accordion-open > :first-child ~ * {
+  display: block;
+}
+
+
+@media (min-width: 512px){
+    h2 {
+      font-size: 7ex;
+    }
+    p {
+      font-size: 2.5ex;
+      line-height: 3.5ex;
+    }
+    h3 {
+      font-size: 2.8ex;
+    }
+} /*END @media*/

@@ -1,0 +1,35 @@
+/* styles for dropdown menus, responsive, mobile-first */
+
+/*#00a2ff = blue */
+
+
+h3 {
+  border-bottom: 2px solid #2fb689;;
+  margin-left: -2em;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menus >li.submenu{
+  display: none;
+}
+
+.menus ul{
+  padding-top: 5px;
+  padding-left: 35px;
+  background-color: #2fb689;
+  margin-left: -2.3em;
+}
+
+.menu > li.open .submenu{
+  display: inline;
+}
+
+.open {
+  background: #2fb689;
+  display: block;
+}

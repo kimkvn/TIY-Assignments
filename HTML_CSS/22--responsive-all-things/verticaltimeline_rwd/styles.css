@@ -1,0 +1,123 @@
+/* stylesheet for vertical timeline, responsive web design style */
+
+ol {
+  list-style-type: none;
+  margin-right: 12%;
+  margin-left: 2%;
+}
+
+#container {
+  outline:1px solid red;
+}
+
+time{
+  display: table-caption;
+  margin-top: 3ex;
+  margin-bottom: 3.5ex;
+}
+big {
+  font-size: 3.5ex;
+}
+
+article {
+  border: 2px solid blue;
+  background-color: blue;
+  color: white;
+  margin-bottom: 2ex;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+h3 {
+  border-bottom: 1px solid white;
+}
+
+article p {
+  line-height: 3.2ex;
+}
+
+/* ==== tiny triangle attached to each article ====== */
+.timeline > li article:before{
+  content: '\25B2';
+  position: absolute;
+  margin-top: -1em;
+  font-size: 1.5em;
+  color: blue;
+}
+
+/* ===== Icons ======== */
+.timeline > li:before {
+float: right;
+margin-top: 1em;
+font-size: 1.75em;
+background-color: blue;
+color: white;
+border: 6px solid grey;
+padding-right: 5px;
+padding-left: 5px;
+border-radius: 50%;
+}
+.timeline > li.call:before{
+  content: "\260E";
+}
+.timeline > li.flight:before {
+    content: '\2708';
+}
+.timeline > li.todo:before {
+    content: '\2714';
+}
+.timeline > li.email:before {
+    content: '\0040';
+}
+
+
+
+
+@media (min-width: 755px){
+
+  time{
+border: 1px red solid;
+margin-top: 3ex;
+margin-left: -23ex;
+padding-bottom: 20px;
+position: absolute;
+display: table-caption;
+  }
+
+  #container > article {
+    padding-top: 1ex;
+  }
+
+
+/* ==== pain-in-the-ass-vertical-line === */
+  .timeline {
+    border-left: 0.5em solid;
+    border-color: grey;
+    padding-left: 2em;
+    margin-left: 8em;
+    list-style: none;
+  }
+
+  .timeline > li {
+      position: relative;
+      margin-top: 10pt;
+  }
+
+  .timeline > li.article:before{
+    display:none;
+  }
+
+
+  .timeline > li article:before{
+    content: '\25C0';
+    margin-top: -0.1em;
+    margin-left: -1.4em;
+  }
+  .timeline > li:before {
+  position: absolute;
+  margin-top: 1.8em;
+  margin-left: -2.2em;
+
+
+  }
+}
