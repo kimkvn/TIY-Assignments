@@ -46,16 +46,18 @@
 
       <section id="info">
         <span class="octicon octicon-mail"></span><a href="#" id="email">{{user.info.email}}</a>
-        <p><span class="octicon octicon-clock"></span><span id="created">{{user.info.created_at}}</span></p>
+        <p><span class="octicon octicon-clock"></span><span id="created">Joined on {{user.info.created_at | date}}</span></p>
       </section>
 
       <hr>
 
       <section id="follow-stats">
         <nav>
-          <a href="#">1 Follower</a>
+          <a href="#">{{user.info.followers}} Follower</a>
+          <br>
           <a href="#">1 Starred</a>
-          <a href="#">0 Following</a>
+          <br>
+          <a href="#">{{user.info.following}} Following</a>
         </nav>
       </section>
 
