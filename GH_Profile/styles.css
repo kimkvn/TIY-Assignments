@@ -1,0 +1,26 @@
+.mega-octicon {
+  margin-top: -0.3ex;
+}
+
+/*body > .container > * {
+  outline: 1pt solid red;
+} */
+
+.octicon {
+  margin-right: 0.25em;
+}
+
+.container.navbar {
+  width: 100%;
+}
+
+.panel {
+  margin-left: -1em;
+}
+
+.contributions > li > a {
+  color: inherit;
+}
+.contributions > li > a:hover {
+  background-color: inherit;
+}
