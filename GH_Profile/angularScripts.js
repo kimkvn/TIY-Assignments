@@ -12,7 +12,17 @@
   //     });
   //   }]);
 
-  
+  angular.module('profile', ['restangular']);
+
+  angular.module('profile').controller('userController', function($scope, Restangular){
+
+    var baseAccounts = Restangular.all('kimkvn.json');
+
+    baseAccounts.getList().then(function(accounts){
+      $scope.allAccounts = accounts;
+    });
+
+  });
 
 
 })();
