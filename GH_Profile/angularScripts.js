@@ -6,7 +6,7 @@
 
       var user = this;
       user.info = [];
-      $http.get('https://api.github.com/users/kimkvn').success(function(data){
+      $http.get('kimkvn.json').success(function(data){
         user.info = data;
 
       });
