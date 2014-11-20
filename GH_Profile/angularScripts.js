@@ -1,11 +1,12 @@
 (function(){
 
-  var app = angular.module('githubProfile', []);
+  var app = angular.module('profile', []);
 
-    app.controller('UserController', ['$http', function($http){
+    app.controller('userController', ['$http', function($http){
 
+      var user = this;
       user.info = [];
-      $http.get('/kimkvn.json').success(function(data){
+      $http.get('https://api.github.com/users/kimkvn').success(function(data){
         user.info = data;
 
       });
