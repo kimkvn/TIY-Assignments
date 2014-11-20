@@ -14,15 +14,19 @@
 
   angular.module('profile', ['restangular']);
 
-  angular.module('profile').controller('userController', function($scope, Restangular){
+  angular.module('profile').controller('userController', function(Restangular){
 
-    var baseAccounts = Restangular.all('kimkvn.json');
+    Restangular.setBaseUrl('https://api.github.com');
 
-    baseAccounts.getList().then(function(accounts){
-      $scope.allAccounts = accounts;
+    this.user = {};
+
+    var user = Restangular.one('users', 'kimkvn')
+      .get().then(function(data){
+      self.user = data;
+
     });
 
-  });
 
+    });
 
 })();
