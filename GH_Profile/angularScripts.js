@@ -12,20 +12,13 @@
   //     });
   //   }]);
 
-  angular.module('profile', ['restangular']);
+  var app =
 
   angular.module('profile').controller('userController', function(Restangular){
 
     Restangular.setBaseUrl('https://api.github.com');
 
-    this.user = {};
-
-    var user = Restangular.one('users', 'kimkvn')
-      .get().then(function(data){
-      self.user = data;
-
-    });
-
+    this.user = Restangular.one('users', 'kimkvn').get().$object;
 
     });
 
