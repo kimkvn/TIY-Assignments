@@ -37,27 +37,27 @@
 
   <div class="container" ng-app="profile"> <!-- main body container -->
 
-    <aside ng-controller="userController as user" class="col-sm-4 col-md-3">
-      <a href="#" class="thumbnail" id="avatar"><img src="{{user.info.avatar_url}}"}}></a>
-      <h2 id="name">{{user.info.name}}</h2>
-      <h4 id="login">{{user.info.login}}</h4>
+    <aside ng-controller="userController as person" class="col-sm-4 col-md-3">
+      <a href="#" class="thumbnail" id="avatar"><img src="{{person.user.avatar_url}}"}}></a>
+      <h2 id="name">{{person.user.name}}</h2>
+      <h4 id="login">{{person.user.login}}</h4>
 
       <hr>
 
       <section id="info">
-        <span class="octicon octicon-mail"></span><a href="#" id="email">{{user.info.email}}</a>
-        <p><span class="octicon octicon-clock"></span><span id="created">Joined on {{user.info.created_at | date}}</span></p>
+        <span class="octicon octicon-mail"></span><a href="#" id="email">{{person.user.email}}</a>
+        <p><span class="octicon octicon-clock"></span><span id="created">Joined on {{person.user.created_at | date}}</span></p>
       </section>
 
       <hr>
 
       <section id="follow-stats">
         <nav>
-          <a href="#">{{user.info.followers}} Follower</a>
+          <a href="#">{{person.user.followers}} Follower</a>
           <br>
           <a href="#">1 Starred</a>
           <br>
-          <a href="#">{{user.info.following}} Following</a>
+          <a href="#">{{person.user.following}} Following</a>
         </nav>
       </section>
 

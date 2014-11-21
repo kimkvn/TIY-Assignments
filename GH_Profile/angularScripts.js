@@ -16,7 +16,7 @@
 
 'use-strict';
 
-angular.module('profile').constant('API', {
+var app = angular.module('profile').constant('API', {
   base: 'https://api.github.com'
 })
   .run(function(Restangular, API){
@@ -27,12 +27,12 @@ angular.module('profile').constant('API', {
     })
       .controller('userController', function(Users){
 
-        var User =  Users.one('kimkvn');
+        var user =  Users.one('kimkvn');
 
         this.user = User.get().$object;
 
         this.user.repos = Use.all('repos').getList().$object;
-        
+
       });
 
 // var app =
