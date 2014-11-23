@@ -37,8 +37,9 @@
       function initialize() {
 
       var mapOptions = {
-        zoom: 18,
-        center: new google.maps.LatLng(33.732431, -84.371642 )
+        zoom: 5,
+        // center: new google.maps.LatLng(33.732431, -84.371642 ) //Atlanta Zoo Coordinates
+        center: new google.maps.LatLng( 40.566, -98.587)
       };
 
       var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -104,6 +105,19 @@
 
   </div>
 
+    <script>
+
+      var zoos = [
+        ['Zoo Atlanta', 33.732, -84.371],
+        ['Sacramento Zoo', 38.541728, -121.500640],
+        ['San Francisco Zoo', 37.732623, -122.501852],
+        ['Lincoln Park Zoo', 41.920079, -87.633308],
+        ['Chattanooga Zoo', 35.042743, -85.282188],
+        ['Smithsonian National Zoological Park', 38.929561, -77.049824]
+        ['Central Park Zoo', 40.767729, -73.971807]
+        ];
+
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
